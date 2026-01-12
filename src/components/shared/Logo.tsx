@@ -1,7 +1,5 @@
 import { cn } from '@/utils/cn';
 import bayxLogo from '@public/images/shared/bayx-logo.svg';
-import logoIcon from '@public/images/shared/logo.svg';
-import logoIconDark from '@public/images/shared/logo-dark.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -88,8 +86,7 @@ export const Logo = ({ variant = 'full', size = 'md', linkToHome = true, classNa
           </figure>
           {/* Mobile: Icon Only */}
           <figure className={cn('block lg:hidden', sizeClasses[size].icon)}>
-            <Image src={logoIcon} alt="BayX" className="block w-full dark:hidden" priority />
-            <Image src={logoIconDark} alt="BayX" className="hidden w-full dark:block" priority />
+            <Image src="/icon.svg" alt="BayX" width={44} height={44} className="w-full h-auto" priority />
           </figure>
         </>
       );
@@ -98,8 +95,7 @@ export const Logo = ({ variant = 'full', size = 'md', linkToHome = true, classNa
     if (variant === 'icon') {
       return (
         <figure className={cn(sizeClasses[size].icon, className)}>
-          <Image src={logoIcon} alt="BayX" className="block w-full dark:hidden" priority />
-          <Image src={logoIconDark} alt="BayX" className="hidden w-full dark:block" priority />
+          <Image src="/icon.svg" alt="BayX" width={44} height={44} className="w-full h-auto" priority />
         </figure>
       );
     }

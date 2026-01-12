@@ -26,20 +26,23 @@ const MobileMenuItem = ({ id, title, children, hasSubmenu = false }: MobileMenuI
     <li className="space-y-2">
       <button
         onClick={handleToggle}
-        className={cn('flex w-full cursor-pointer items-center justify-between p-2.5 transition-all duration-200')}
+        className={cn(
+          'flex w-full cursor-pointer items-center justify-between py-2.5 px-0 transition-all duration-200 hover:translate-x-0.5',
+          isActive && 'translate-x-0.5'
+        )}
         aria-expanded={hasSubmenu ? isActive : undefined}
         aria-controls={hasSubmenu ? `submenu-${id}` : undefined}>
         <span
           className={cn(
-            'text-tagline-1 ease block font-normal transition-colors duration-300',
-            isActive ? 'text-secondary dark:text-accent font-medium' : 'text-secondary/60 dark:text-accent/60',
+            'text-body-1 ease block font-medium transition-colors duration-300',
+            isActive ? 'text-secondary dark:text-accent' : 'text-secondary dark:text-accent',
           )}>
-          {title}{' '}
+          {title}
         </span>
         {hasSubmenu && (
           <span
             className={cn(
-              'stroke-secondary/60 dark:stroke-accent/60 size-5 transition-transform duration-300 ease-in-out',
+              'stroke-secondary dark:stroke-accent size-5 transition-transform duration-300 ease-in-out',
               isActive && 'rotate-90',
             )}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
@@ -54,7 +57,7 @@ const MobileMenuItem = ({ id, title, children, hasSubmenu = false }: MobileMenuI
         <div
           id={`submenu-${id}`}
           className={cn(
-            'dark:bg-background-7 ml-3.5 w-full overflow-y-hidden bg-white transition-[height,opacity] duration-300 ease-in-out',
+            'ml-0 w-full overflow-y-hidden transition-[height,opacity] duration-300 ease-in-out',
             isActive ? 'pointer-events-auto h-fit opacity-100' : 'pointer-events-none h-0 opacity-0',
           )}>
           {/* render submenu  */}
