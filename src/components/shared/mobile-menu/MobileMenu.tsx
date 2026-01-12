@@ -1,11 +1,8 @@
 // crypto marketing mobile menu
 'use client';
+import Logo from '@/components/shared/Logo';
 import { useMobileMenuContext } from '@/context/MobileMenuContext';
 import { cn } from '@/utils/cn';
-import logoDark from '@public/images/shared/logo-dark.svg';
-import logoIcon from '@public/images/shared/logo.svg';
-import Image from 'next/image';
-import Link from 'next/link';
 import MenuCloseButton from './MenuCloseButton';
 import MobileMenuItem from './MobileMenuItem';
 
@@ -37,13 +34,9 @@ const MobileMenu = ({ menuData }: { menuData: MobileMenuGroup[] }) => {
       )}>
       <div className="space-y-4 p-5 sm:p-8 lg:p-9">
         <div className="flex items-center justify-between">
-          <Link href="/" onClick={handleLinkClick}>
-            <span className="sr-only">Home</span>
-            <figure className="max-w-[44px]">
-              <Image src={logoIcon} alt="BayX" className="block w-full dark:hidden" />
-              <Image src={logoDark} alt="BayX" className="hidden w-full dark:block" />
-            </figure>
-          </Link>
+          <div onClick={handleLinkClick}>
+            <Logo variant="icon" size="md" />
+          </div>
           {/* close btn  */}
           <MenuCloseButton />
         </div>

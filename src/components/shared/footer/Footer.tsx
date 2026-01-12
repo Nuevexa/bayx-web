@@ -1,4 +1,5 @@
 import RevealAnimation from '@/components/animation/RevealAnimation';
+import Logo from '@/components/shared/Logo';
 import { footerLinks } from '@/data/footer-data';
 import { cn } from '@/utils/cn';
 import behance from '@public/images/icons/behance.svg';
@@ -8,7 +9,6 @@ import instagram from '@public/images/icons/instagram.svg';
 import linkedin from '@public/images/icons/linkedin.svg';
 import youtube from '@public/images/icons/youtube.svg';
 import gradientImg from '@public/images/ns-img-532.png';
-import darkLogo from '@public/images/shared/logo-dark.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import FooterDivider from './FooterDivider';
@@ -26,9 +26,7 @@ const Footer = ({ className }: { className?: string }) => {
           <RevealAnimation delay={0.1}>
             <div className="col-span-12 xl:col-span-4">
               <div className="max-w-[306px]">
-                <figure>
-                  <Image src={darkLogo} alt="NextSass Logo" />
-                </figure>
+                <Logo variant="full" size="lg" />
                 <p className="text-accent/60 text-tagline-1 mt-4 mb-7 font-normal">
                   Build better products with flexible tools, helpful documentation, and a team that champions your
                   growth.

@@ -24,6 +24,9 @@ const defaultMetadata: Metadata = {
     description: DEFAULT_DESCRIPTION,
     images: [DEFAULT_IMAGE_URL],
   },
+  other: {
+    'theme-color': '#0f766e',
+  },
 };
 
 const generateMetadata = (title?: string, description?: string, canonicaUrl?: string, imageUrl?: string): Metadata => {

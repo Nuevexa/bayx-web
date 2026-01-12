@@ -1,14 +1,11 @@
 'use client';
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import LinkButton from '@/components/ui/button/Button';
+import Logo from '@/components/shared/Logo';
 import { MobileMenuProvider } from '@/context/MobileMenuContext';
 import { mobileMenuData } from '@/data/navbar-data';
 import { useNavbarScroll } from '@/hooks/useScrollHeader';
 import { cn } from '@/utils/cn';
-import logoDark from '@public/images/shared/logo-dark.svg';
-import logo from '@public/images/shared/logo.svg';
-import mainLogo from '@public/images/shared/main-logo.svg';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import MobileMenu from '../mobile-menu/MobileMenu';
@@ -35,18 +32,7 @@ const Navbar = ({ showTopNav }: { showTopNav: boolean }) => {
         )}>
         <RevealAnimation direction="up" offset={100} delay={0.1} instant>
           <div className="dark:bg-background-7 flex items-center justify-between rounded-full bg-white/60 px-2.5 py-2.5 backdrop-blur-[25px] xl:py-0">
-            <div>
-              <Link href="/">
-                <span className="sr-only">Home</span>
-                <figure className="hidden lg:block lg:max-w-[198px]">
-                  <Image src={mainLogo} alt="BayX" className="dark:invert" />
-                </figure>
-                <figure className="block max-w-[44px] lg:hidden">
-                  <Image src={logo} alt="BayX" className="block w-full dark:hidden" />
-                  <Image src={logoDark} alt="BayX" className="hidden w-full dark:block" />
-                </figure>
-              </Link>
-            </div>
+            <Logo responsive size="md" />
             <nav className="hidden items-center xl:flex">
               <ul className="flex items-center">
                 {/* Features Dropdown */}
