@@ -1,0 +1,92 @@
+[
+  {
+    "question": "What are the subscription tiers and their limits?",
+    "answer": "BayX offers three tiers: Starter (up to 3 technicians, 2 bays, 50 jobs/month), Professional (up to 8 technicians, 5 bays, 200 jobs/month with revenue stats and profitability dashboard), and Unlimited (no limits, priority support). Advanced features like revenue stats, efficiency reports, and custom thresholds require Professional or higher.",
+    "category": "pricing",
+    "order": 1
+  },
+  {
+    "question": "What features are locked on the Starter tier?",
+    "answer": "On the Starter tier, the following features are locked: Revenue statistics, Profitability dashboard, Efficiency reports, Customer communication tools, Custom margin thresholds, and Advanced settings like Auto-Share Findings and Auto-Share Photos. Upgrade to Professional to unlock these features.",
+    "category": "pricing",
+    "order": 2
+  },
+  {
+    "question": "How do technicians clock in and out on jobs?",
+    "answer": "Technicians use the Tech Portal to manage their time. To start work, tap a job and press 'START' to clock in. While working, they can pause the timer (selecting a reason like Personal Break, Lunch, Waiting Parts, or Waiting Approval), or press 'STOP' to clock out completely. The timer automatically tracks their work hours.",
+    "category": "technicians",
+    "order": 3
+  },
+  {
+    "question": "What can technicians do in the Tech Portal?",
+    "answer": "The Tech Portal shows assigned jobs with vehicle info, service type, and bay assignment. Technicians can: Clock in/out on jobs, Pause timer with break reasons, Upload photos using their phone camera, Request parts by name, Mark jobs as complete. The portal auto-refreshes every 30 seconds to show latest assignments.",
+    "category": "technicians",
+    "order": 4
+  },
+  {
+    "question": "What break reasons are available when pausing the timer?",
+    "answer": "When pausing the timer, technicians can select from these reasons: Personal Break, Lunch Break, Waiting for Parts, Waiting for Approval, or Other (with optional note). This helps track time spent on breaks vs. actual work time for accurate efficiency calculations.",
+    "category": "technicians",
+    "order": 5
+  },
+  {
+    "question": "How does the job workflow work?",
+    "answer": "Jobs move through these statuses: Intake (new job received), Inspecting (technician is diagnosing), Waiting Approval (estimate sent to customer), Waiting Parts (approved but parts needed), In Progress (work being done), Ready Pickup (work complete), and Completed (paid and closed). Use the Operations board to move jobs between stages.",
+    "category": "features",
+    "order": 6
+  },
+  {
+    "question": "How do I configure my shop's labor and tax rates?",
+    "answer": "Go to Dashboard > Settings to configure billing rates. Set your Labor Rate per hour (default $75) and Tax Rate percentage (default 8.25%). The system automatically calculates the total with tax. For example, 1 hour at $75 with 8.25% tax = $81.19.",
+    "category": "getting-started",
+    "order": 7
+  },
+  {
+    "question": "What are margin thresholds and how do I use them?",
+    "answer": "Margin thresholds color-code jobs by profitability. Enable 'Margin Thresholds' in Settings to highlight jobs below your target margin (default 30%) in red. With the Custom Thresholds option (Professional+), you can set your own Low Margin and Target Margin percentages to match your business goals.",
+    "category": "features",
+    "order": 8
+  },
+  {
+    "question": "Can I get alerts for low-margin jobs?",
+    "answer": "Yes! Enable 'Low Margin Alerts' in Settings (requires margin thresholds enabled). You can add multiple email recipients, choose between instant alerts or daily summaries, and set a minimum revenue threshold to only alert for significant jobs. This helps you catch profitability issues before they hurt your bottom line.",
+    "category": "features",
+    "order": 9
+  },
+  {
+    "question": "What do the dashboard metrics show?",
+    "answer": "The dashboard displays four key metrics: Estimated Revenue (total from all jobs), Average Margin (percentage profit), In Progress (jobs being worked on), and Needs Attention (intake + awaiting approval counts). Revenue and margin stats require Professional tier or higher.",
+    "category": "features",
+    "order": 10
+  },
+  {
+    "question": "How do I upload my garage logo?",
+    "answer": "Go to Settings > Garage section. Click the logo placeholder or 'Upload' button to select an image from your device. The logo appears on customer-facing pages and invoices. This feature requires Professional tier or higher.",
+    "category": "getting-started",
+    "order": 11
+  },
+  {
+    "question": "What is the Job Prefix setting?",
+    "answer": "The Job Prefix is a short code (up to 5 characters) that appears before each job number. For example, if your prefix is 'BAY', jobs will be numbered BAY-0001, BAY-0002, etc. By default, it uses the first 3 letters of your garage name. You can customize it in Settings.",
+    "category": "getting-started",
+    "order": 12
+  },
+  {
+    "question": "What are the Auto-Share settings?",
+    "answer": "Two auto-share options are available (Professional+ only): Auto-Share Findings automatically shares inspection findings with customers, and Auto-Share Photos automatically shares job photos uploaded by technicians. These features streamline customer communication without manual steps.",
+    "category": "features",
+    "order": 13
+  },
+  {
+    "question": "How do technicians request parts?",
+    "answer": "From the Tech Portal, technicians tap 'Request Part' on any job they're working on, enter the part name (e.g., 'Oil Filter' or 'Brake Pads'), and submit. The request is sent to the shop owner for ordering. This ensures parts are ordered without technicians leaving their work station.",
+    "category": "technicians",
+    "order": 14
+  },
+  {
+    "question": "Why do I see a lock icon on some dashboard stats?",
+    "answer": "Lock icons indicate features that require a higher subscription tier. On the Starter tier, Revenue and Margin statistics are locked. Upgrade to Professional or Unlimited to unlock these insights. Click the 'Upgrade' link on any locked card to view available plans.",
+    "category": "troubleshooting",
+    "order": 15
+  }
+]

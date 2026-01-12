@@ -1,0 +1,131 @@
+/* =========================
+All the varaiables are added here
+=========================== */
+@theme {
+  /* =============== FONTS =============== */
+  --font-inter-tight: 'Inter Tight', sans-serif;
+  /* =============== COLORS =============== */
+  /* EVOLVED BRAND: Deep Teal & Ceramic */
+  --color-primary-50: #f0fdfa;
+  /* Teal 50 */
+  --color-primary-100: #ccfbf1;
+  /* Teal 100 */
+  --color-primary-200: #99f6e4;
+  /* Teal 200 */
+  --color-primary-300: #5eead4;
+  /* Teal 300 */
+  --color-primary-400: #2dd4bf;
+  /* Teal 400 */
+  --color-primary-500: #0f766e;
+  /* Teal 600 (Main Brand) */
+  --color-primary-600: #0d9488;
+  /* Teal 500 */
+  --color-primary-700: #0f766e;
+  /* Teal 700 */
+  --color-primary-800: #115e59;
+  /* Teal 800 */
+  --color-secondary: #1a1a1c;
+  --color-accent: #fcfcfc;
+  --color-split-text: #1a1a1c;
+  --color-background-1: #fafafa;
+  /* Ceramic White */
+  --color-background-2: #f9fafb;
+  --color-background-3: #f4f5f8;
+  --color-background-4: #f0f2f6;
+  --color-background-5: #13171e;
+  --color-background-6: #0f1217;
+  --color-background-7: #181d26;
+  --color-background-8: #070b10;
+  --color-background-9: #1f252f;
+  --color-background-10: #ebebeb;
+  --color-background-11: #b5b5b9;
+  --color-background-12: #eaeceb;
+  --color-stroke-1: #dfe4eb;
+  --color-stroke-2: #e3e7ed;
+  --color-stroke-3: #d7dde5;
+  --color-stroke-4: #eceff4;
+  --color-stroke-5: #1b232f;
+  --color-stroke-6: #202731;
+  --color-stroke-7: #2a333e;
+  --color-stroke-8: #303b49;
+  --color-stroke-9: var(--color-background-8);
+  --color-ns-yellow: #f9eb57;
+  /*--color-ns-green: #0f766e;*/
+  --color-ns-green: #4f8480;
+  /*subheading*/
+  --color-ns-green-rounded: #b4dfdc;
+  /* Deep Teal */
+  --color-ns-red: #ffb9a2;
+  --color-ns-cyan: #2dd4bf;
+  /* Teal 400 */
+  --color-ns-green-light: #ccfbf1;
+  /* Teal 100 */
+  --color-ns-cyan-light: #99f6e4;
+  /* Teal 200 */
+  --color-ns-yellow-light: #fdf7bc;
+
+  /* Gradients Updated to Teal/Cyan Theme */
+  --color-gradient-1: linear-gradient(135deg, #2dd4bf 0%, #0f766e 100%);
+  --color-gradient-2: linear-gradient(135deg, #ccfbf1 0%, #2dd4bf 100%);
+  --color-gradient-3: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+  --color-gradient-4: linear-gradient(135deg, #0f766e 0%, #2dd4bf 100%);
+  --color-gradient-5: linear-gradient(165deg, rgba(255, 255, 255, 0.5) 0.51%, rgba(255, 255, 255, 0) 64.43%);
+  --color-gradient-6: linear-gradient(#2dd4bf 0%, #0f766e 100%);
+  --color-gradient-7: linear-gradient(#ffffff 0%, #99f6e4 100%);
+  --color-gradient-8: linear-gradient(156deg, #ffffff 32.92%, #2dd4bf 91%);
+  --color-gradient-9: linear-gradient(156deg, #ccfbf1 32.92%, #5eead4 91%);
+  --color-gradient-10: linear-gradient(135deg, #0f766e 0%, #2dd4bf 100%);
+  --color-gradient-11: linear-gradient(179deg, rgba(255, 255, 255, 0) 0.68%, #fff 79.47%);
+  --color-gradient-12: radial-gradient(73.01% 80.77% at 19.23% 47.79%, #2dd4bf 0%, rgba(15, 118, 110, 0) 100%);
+
+  /* =============== TYPOGRAPHY =============== */
+  --text-heading-1: 4.25rem;
+  --text-heading-1--line-height: 110%;
+  --text-heading-2: 3.25rem;
+  --text-heading-2--line-height: 120%;
+  --text-heading-3: 2.5rem;
+  --text-heading-3--line-height: 120%;
+  --text-heading-4: 2rem;
+  --text-heading-4--line-height: 130%;
+  --text-heading-5: 1.5rem;
+  --text-heading-5--line-height: 140%;
+  --text-heading-6: 1.25rem;
+  --text-heading-6--line-height: 140%;
+  --text-tagline-1: 1rem;
+  --text-tagline-1--line-height: 150%;
+  --text-tagline-2: 0.875rem;
+  --text-tagline-2--line-height: 150%;
+  --text-tagline-3: 0.75rem;
+  --text-tagline-3--line-height: 150%;
+
+  /* blur  */
+  --blur-ns-badge-blur: 17.228288650512695px;
+
+  /* =============== ease =============== */
+  --team-ease-1: cubic-bezier(10.34, 10.56, 0.64, 40);
+
+  /* ==========BREAKPOINTS========== */
+  --breakpoint-lp: 1440px;
+
+  /* ==========Shadows========== */
+  --shadow-1: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --shadow-2: 0px 10px 20px -5px rgba(28, 34, 43, 0.05), 0px 20px 65px -5px rgba(28, 34, 43, 0.05);
+  --shadow-3: 0px 25px 80px -12px rgba(28, 34, 43, 0.1);
+  --shadow-4: 0px 10px 20px -5px rgba(28, 34, 43, 0.05), 0px 20px 65px -5px rgba(28, 34, 43, 0.05);
+  --shadow-5: 0px 25px 80px -12px rgba(28, 34, 43, 0.1);
+  --shadow-6: 0px 44px 64px 0px rgba(29, 32, 35, 0.16);
+  --shadow-7: 0px 4px 6px -1px rgba(28, 34, 43, 0.1), 0px 2px 4px -1px rgba(28, 34, 43, 0.05);
+  --shadow-8: 0px 12.5px 40px -6px rgba(28, 34, 43, 0.1);
+  --shadow-9: 0px 1px 2px 0px rgba(28, 34, 43, 0.05);
+  --shadow-10: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --shadow-11: 0px 12px 20px rgba(185, 166, 241, 0.16);
+  --shadow-12: 0px 1px 2px 0px rgba(16, 24, 40, 0.26);
+  --shadow-13: 0 7.818px 15.637px -3.909px rgba(28, 34, 43, 0.05), 0 15.637px 50.819px -3.909px rgba(28, 34, 43, 0.05);
+  --shadow-14: 0 1px 2px 0 rgba(16, 24, 40, 0.06);
+  --shadow-15: 40px 28px 80px 0 rgba(0, 0, 0, 0.08);
+  --stack-cards-gap: 2rem;
+}
+
+.dark {
+  --color-split-text: #fcfcfc;
+}
