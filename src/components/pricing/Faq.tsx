@@ -32,11 +32,11 @@ const Faq = () => {
                     titleClassName="flex-1 text-left xl:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent"
                     value="1"
                     iconType="arrow">
-                    How does the 14-day free trial work?
+                    How does early access work?
                   </AccordionTrigger>
 
                   <AccordionContent value="1">
-                    You get full access to all Fleet Master features during your trial. At the end of 14 days, pick the plan that fits your shop and continue right where you left off. All your jobs, customers, and data carry over.
+                    Join our early access program to be among the first to use BayX. You'll get full access to all features at our founding member rates. Your feedback helps shape the product, and you'll lock in special pricing for life.
                   </AccordionContent>
                 </AccordionItem>
 

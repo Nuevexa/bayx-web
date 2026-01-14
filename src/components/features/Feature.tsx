@@ -44,9 +44,9 @@ const Feature = ({ className, btnClassName }: { className?: string; btnClassName
                   Built for garage owners who are tired of guessing where their money goes.
                 </h2>
                 <LinkButton
-                  href="https://bayx.app/auth/signup"
+                  href="/early-access"
                   btnClass={cn('btn-md-v2 btn-v2-white group-hover/btn-v2:btn-primary-v2', btnClassName)}>
-                  Start Free Trial
+                  Join Early Access
                 </LinkButton>
               </div>
               <div>

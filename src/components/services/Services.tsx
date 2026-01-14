@@ -42,7 +42,7 @@ const Services = () => {
                     </div>
                     <div>
                       <LinkButton
-                        href="/services/profitability-analytics"
+                        href="/features/profitability-analytics"
                         btnClass="btn-md-v2 btn-v2-white group-hover/btn-v2:btn-primary-v2">
                         Read more
                       </LinkButton>
@@ -88,7 +88,7 @@ const Services = () => {
                     </div>
                     <div>
                       <LinkButton
-                        href="/services/batch-image-processing"
+                        href="/features/batch-image-processing"
                         btnClass="btn-md-v2 btn-v2-white group-hover/btn-v2:btn-primary-v2">
                         View more
                       </LinkButton>
@@ -112,7 +112,7 @@ const Services = () => {
                     </div>
                     <div>
                       <LinkButton
-                        href="/services/cloud-integration"
+                        href="/features/cloud-integration"
                         btnClass="btn-md-v2 btn-v2-white group-hover/btn-v2:btn-primary-v2">
                         View more
                       </LinkButton>
@@ -198,7 +198,7 @@ const Services = () => {
                     </div>
                     <div>
                       <LinkButton
-                        href="/services/color-correction-and-enhancement"
+                        href="/features/color-correction-and-enhancement"
                         btnClass="btn-md-v2 btn-v2-white group-hover/btn-v2:btn-primary-v2">
                         Read more
                       </LinkButton>

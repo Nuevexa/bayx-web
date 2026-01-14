@@ -40,7 +40,7 @@ const Services = () => {
                     <p className="text-tagline-1 text-secondary/60 line-clamp-4">{services[0]?.description}</p>
                   </blockquote>
                   <Link
-                    href={`/services/${services[0]?.slug || ''}`}
+                    href={`/features/${services[0]?.slug || ''}`}
                     className="hover:bg-primary-500 group bg-secondary relative flex h-10 w-18 items-center justify-center space-y-5 overflow-hidden rounded-[40px] p-4 ring-8 ring-white transition-all duration-500 ease-in-out md:h-13 md:w-22 md:p-5">
                     <figure className="relative size-6 items-center justify-center overflow-hidden">
                       <Image
@@ -80,7 +80,7 @@ const Services = () => {
                     <p className="text-tagline-1 text-secondary/60 line-clamp-4">{services[5]?.description}</p>
                   </blockquote>
                   <Link
-                    href={`/services/${services[5]?.slug || ''}`}
+                    href={`/features/${services[5]?.slug || ''}`}
                     className="hover:bg-primary-500 group bg-secondary relative flex h-10 w-18 items-center justify-center space-y-5 overflow-hidden rounded-[40px] p-4 ring-8 ring-white transition-all duration-500 ease-in-out md:h-13 md:w-22 md:p-5">
                     <figure className="relative size-6 items-center justify-center overflow-hidden">
                       <Image
@@ -112,7 +112,7 @@ const Services = () => {
                     <p className="text-tagline-1 text-secondary/60 line-clamp-4">{services[3]?.description}</p>
                   </blockquote>
                   <Link
-                    href={`/services/${services[3]?.slug || ''}`}
+                    href={`/features/${services[3]?.slug || ''}`}
                     className="hover:bg-primary-500 group bg-secondary relative flex h-10 w-18 items-center justify-center space-y-5 overflow-hidden rounded-[40px] p-4 ring-8 ring-white transition-all duration-500 ease-in-out md:h-13 md:w-22 md:p-5">
                     <figure className="relative size-6 items-center justify-center overflow-hidden">
                       <Image
@@ -150,7 +150,7 @@ const Services = () => {
                     <p className="text-tagline-1 text-secondary/60 line-clamp-4">{services[1]?.description}</p>
                   </blockquote>
                   <Link
-                    href={`/services/${services[1]?.slug || ''}`}
+                    href={`/features/${services[1]?.slug || ''}`}
                     className="hover:bg-primary-500 group bg-secondary relative flex h-10 w-18 items-center justify-center space-y-5 overflow-hidden rounded-[40px] p-4 ring-8 ring-white transition-all duration-500 ease-in-out md:h-13 md:w-22 md:p-5">
                     <figure className="relative size-6 items-center justify-center overflow-hidden">
                       <Image
@@ -188,7 +188,7 @@ const Services = () => {
                     <p className="text-tagline-1 text-secondary/60 line-clamp-4">{services[2]?.description}</p>
                   </blockquote>
                   <Link
-                    href={`/services/${services[2]?.slug || ''}`}
+                    href={`/features/${services[2]?.slug || ''}`}
                     className="hover:bg-primary-500 group bg-secondary relative flex h-10 w-18 items-center justify-center space-y-5 overflow-hidden rounded-[40px] p-4 ring-8 ring-white transition-all duration-500 ease-in-out md:h-13 md:w-22 md:p-5">
                     <figure className="relative size-6 items-center justify-center overflow-hidden">
                       <Image

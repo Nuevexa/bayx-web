@@ -81,8 +81,8 @@ const BlogPage = async () => {
         className="dark:bg-background-7 bg-white"
         badgeClass="hidden"
         ctaHeading="Ready to see your shop's true profit?"
-        description="Start your 14-day free trial."
-        ctaBtnText="Start Free Trial"
+        description="Join our early access program today."
+        ctaBtnText="Get Early Access"
       />
     </main>
   );

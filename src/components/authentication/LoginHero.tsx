@@ -61,8 +61,8 @@ const LoginHero = () => {
                 <div>
                   <p className="text-tagline-2 text-secondary dark:text-accent flex items-center justify-center gap-1 text-center font-normal">
                     Not registered yet?
-                    <Link href="https://bayx.app/auth/signup" className="text-tagline-1 footer-link-v2 font-medium">
-                      Create an Account
+                    <Link href="/early-access" className="text-tagline-1 footer-link-v2 font-medium">
+                      Join Early Access
                     </Link>
                   </p>
                   <div className="py-8 text-center">

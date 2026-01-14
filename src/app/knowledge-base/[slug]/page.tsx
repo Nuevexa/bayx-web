@@ -78,7 +78,7 @@ const portableTextComponents: Partial<PortableTextReactComponents> = {
     },
     types: {
         image: ({ value }) => {
-            if (!value?.asset?._ref) return null;
+            if (!value?.asset?._ref) {return null;}
             return (
                 <figure className="my-10">
                     <Image

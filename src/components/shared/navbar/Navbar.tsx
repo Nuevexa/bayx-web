@@ -93,15 +93,15 @@ const Navbar = ({ showTopNav }: { showTopNav: boolean }) => {
                 </li>
               </ul>
             </nav>
-            {/* Right side: Login + Start Free Trial */}
+            {/* Right side: Join Early Access */}
             <div className="hidden items-center justify-center gap-2 xl:flex">
-              <Link
-                href="https://bayx.app/auth/login"
+              {/* <Link
+                href="/early-access"
                 className="text-tagline-1 text-secondary/60 hover:text-secondary dark:text-accent/60 dark:hover:text-accent px-4 py-2 font-normal transition-all duration-200">
                 Login
-              </Link>
-              <LinkButton href="https://bayx.app/auth/signup" btnClass="btn-md-v2 btn-secondary-v2 border group-hover/btn-v2:btn-v2-white">
-                Start Free Trial
+              </Link> */}
+              <LinkButton href="/early-access" btnClass="btn-md-v2 btn-secondary-v2 border group-hover/btn-v2:btn-v2-white">
+                Join Early Access
               </LinkButton>
             </div>
             <MobileMenuButton />

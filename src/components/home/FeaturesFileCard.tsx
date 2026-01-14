@@ -92,9 +92,9 @@ const FeaturesFileCard = () => {
         </div>
         <RevealAnimation delay={0.1} start="top 97%">
           <div className="relative z-20 max-md:space-y-0.5">
-            <h3 className="text-heading-6 md:text-heading-5">Estimates and invoices ready.</h3>
+            <h3 className="text-heading-6 md:text-heading-5">Estimates and approvals ready.</h3>
             <p className="max-w-[450px]">
-              Create professional estimates in minutes. Customers approve online and you convert to invoices with one click.
+              Create professional estimates in minutes. Customers review and approve online instantly.
             </p>
           </div>
         </RevealAnimation>

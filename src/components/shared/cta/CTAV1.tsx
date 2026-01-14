@@ -21,11 +21,11 @@ const CTAV1 = ({
   ctaHeading,
   spanText,
   description,
-  ctaBtnText = 'Start Free Trial',
+  ctaBtnText = 'Join Early Access',
   badgeText,
   descriptionClass,
   headingClass,
-  ctaLink = 'https://bayx.app/auth/signup',
+  ctaLink = '/early-access',
 }: CTAV1Props) => {
   return (
     <section className={cn('py-[50px] md:py-20 lg:py-28', className)} aria-label="cta section">

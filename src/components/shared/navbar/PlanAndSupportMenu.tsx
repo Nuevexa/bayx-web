@@ -26,16 +26,16 @@ type PlanSupportLink = {
 };
 
 const accountLinks: PlanSupportLink[] = [
+  // {
+  //   title: 'Login',
+  //   description: 'Join the waitlist',
+  //   href: '/early-access',
+  //   icon: LoginIcon,
+  // },
   {
-    title: 'Login',
-    description: 'Login to continue',
-    href: 'https://bayx.app/auth/login',
-    icon: LoginIcon,
-  },
-  {
-    title: 'Create Account',
-    description: 'Learn more about this',
-    href: 'https://bayx.app/auth/signup',
+    title: 'Join Early Access',
+    description: 'Be the first to access BayX',
+    href: '/early-access',
     icon: SignUpIcon,
   },
   {

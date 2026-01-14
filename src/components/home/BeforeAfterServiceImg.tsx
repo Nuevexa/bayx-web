@@ -49,7 +49,7 @@ const BeforeAfterServiceImg = ({
               <p className="text-tagline-1 text-secondary/60">{service?.description}</p>
             </blockquote>
             <Link
-              href={`/services/${service?.slug}`}
+              href={`/features/${service?.slug}`}
               className="hover:bg-primary-500 group bg-secondary relative flex h-10 w-18 items-center justify-center space-y-5 overflow-hidden rounded-[40px] p-4 ring-8 ring-white transition-all duration-500 ease-in-out md:h-13 md:w-22 md:p-5">
               <figure className="relative size-6 items-center justify-center overflow-hidden">
                 <Image

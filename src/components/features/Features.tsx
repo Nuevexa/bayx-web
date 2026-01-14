@@ -49,7 +49,7 @@ const Features = () => {
           <div className="flex flex-col items-center justify-center gap-y-8 sm:flex-row sm:gap-x-8">
             {/* Card 1: Job Board */}
             <RevealAnimation delay={0.5}>
-              <Link href="/services/job-board" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
+              <Link href="/features/job-board" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
                 <div className="dark:bg-background-5 w-full max-w-[409px] rounded-[20px] bg-white p-2.5 transition-shadow duration-300 group-hover:shadow-lg">
                   <figure className="bg-background-3 dark:bg-background-7 overflow-hidden rounded-2xl p-4">
                     <Image
@@ -75,7 +75,7 @@ const Features = () => {
 
             {/* Card 2: Profitability Analytics */}
             <RevealAnimation delay={0.6}>
-              <Link href="/services/profitability-analytics" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
+              <Link href="/features/profitability-analytics" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
                 <div className="dark:bg-background-5 w-full max-w-[409px] rounded-[20px] bg-white p-2.5 transition-shadow duration-300 group-hover:shadow-lg">
                   <figure className="bg-background-3 dark:bg-background-7 overflow-hidden rounded-2xl p-4">
                     <Image
@@ -101,7 +101,7 @@ const Features = () => {
 
             {/* Card 3: Customer Portal */}
             <RevealAnimation delay={0.7}>
-              <Link href="/services/customer-portal" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
+              <Link href="/features/customer-portal" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
                 <div className="dark:bg-background-5 w-full max-w-[409px] rounded-[20px] bg-white p-2.5 transition-shadow duration-300 group-hover:shadow-lg">
                   <figure className="bg-background-3 dark:bg-background-7 overflow-hidden rounded-2xl p-4">
                     <Image
@@ -130,7 +130,7 @@ const Features = () => {
           <div className="flex flex-col items-center justify-center gap-y-8 sm:flex-row sm:gap-x-8">
             {/* Card 4: Technician Portal */}
             <RevealAnimation delay={0.8}>
-              <Link href="/services/technician-portal" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
+              <Link href="/features/technician-portal" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
                 <div className="dark:bg-background-5 w-full max-w-[409px] rounded-[20px] bg-white p-2.5 transition-shadow duration-300 group-hover:shadow-lg">
                   <figure className="bg-background-3 dark:bg-background-7 overflow-hidden rounded-2xl p-4">
                     <Image
@@ -154,28 +154,28 @@ const Features = () => {
               </Link>
             </RevealAnimation>
 
-            {/* Card 5: Estimates & Invoices */}
+            {/* Card 5: Estimates & Approvals */}
             <RevealAnimation delay={0.9}>
-              <Link href="/services/estimates-invoices" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
+              <Link href="/features/estimates-approvals" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
                 <div className="dark:bg-background-5 w-full max-w-[409px] rounded-[20px] bg-white p-2.5 transition-shadow duration-300 group-hover:shadow-lg">
                   <figure className="bg-background-3 dark:bg-background-7 overflow-hidden rounded-2xl p-4">
                     <Image
                       src={cardFiveImg}
-                      alt="Estimates and invoices feature"
+                      alt="Estimates and approvals feature"
                       className="h-full w-full object-cover dark:hidden"
                       loading="lazy"
                     />
                     <Image
                       src={cardFiveImgDark}
-                      alt="Estimates and invoices feature"
+                      alt="Estimates and approvals feature"
                       className="hidden h-full w-full object-cover dark:block"
                       loading="lazy"
                     />
                   </figure>
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-heading-5 group-hover:text-primary-500 transition-colors duration-300">Estimates &amp; Invoices</h3>
-                  <p>Build quotes in minutes. Customers approve online. Convert to invoices in one click.</p>
+                  <h3 className="text-heading-5 group-hover:text-primary-500 transition-colors duration-300">Estimates &amp; Approvals</h3>
+                  <p>Build quotes in minutes. Customers review and approve online instantly.</p>
                 </div>
               </Link>
             </RevealAnimation>
@@ -185,7 +185,7 @@ const Features = () => {
           <div className="flex flex-col items-center justify-center gap-y-8 sm:flex-row sm:gap-x-8">
             {/* Card 6: Bay Management */}
             <RevealAnimation delay={1.0}>
-              <Link href="/services/batch-image-processing" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
+              <Link href="/features/batch-image-processing" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
                 <div className="dark:bg-background-5 w-full max-w-[409px] rounded-[20px] bg-white p-2.5 transition-shadow duration-300 group-hover:shadow-lg">
                   <figure className="bg-background-3 dark:bg-background-7 overflow-hidden rounded-2xl p-4">
                     <Image
@@ -211,7 +211,7 @@ const Features = () => {
 
             {/* Card 7: Service Menu */}
             <RevealAnimation delay={1.1}>
-              <Link href="/services/color-correction-and-enhancement" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
+              <Link href="/features/color-correction-and-enhancement" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
                 <div className="dark:bg-background-5 w-full max-w-[409px] rounded-[20px] bg-white p-2.5 transition-shadow duration-300 group-hover:shadow-lg">
                   <figure className="bg-background-3 dark:bg-background-7 overflow-hidden rounded-2xl p-4">
                     <Image
@@ -237,7 +237,7 @@ const Features = () => {
 
             {/* Card 8: Real-Time Notifications */}
             <RevealAnimation delay={1.2}>
-              <Link href="/services/cloud-integration" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
+              <Link href="/features/cloud-integration" className="group block space-y-3 transition-transform duration-300 hover:-translate-y-1">
                 <div className="dark:bg-background-5 w-full max-w-[409px] rounded-[20px] bg-white p-2.5 transition-shadow duration-300 group-hover:shadow-lg">
                   <figure className="bg-background-3 dark:bg-background-7 overflow-hidden rounded-2xl p-4">
                     <Image

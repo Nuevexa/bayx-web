@@ -148,8 +148,8 @@ const CaseStudy = () => {
 
         <RevealAnimation delay={0.2}>
           <div className="group text-center">
-            <LinkButton href="https://bayx.app/auth/signup" btnClass="btn-xl-v2 btn-secondary-v2 group-hover/btn-v2:btn-primary-v2">
-              Get started
+            <LinkButton href="/early-access" btnClass="btn-xl-v2 btn-secondary-v2 group-hover/btn-v2:btn-primary-v2">
+              Join Early Access
             </LinkButton>
           </div>
         </RevealAnimation>

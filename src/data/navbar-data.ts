@@ -6,11 +6,11 @@ export const mobileMenuData: MobileMenuGroup[] = [
     id: 'features',
     title: 'Features',
     submenu: [
-      { id: 'job-board', label: 'Job Board', href: '/services/job-board' },
-      { id: 'profitability', label: 'Profitability Analytics', href: '/services/profitability-analytics' },
-      { id: 'customer-portal', label: 'Customer Portal', href: '/services/customer-portal' },
-      { id: 'technician-portal', label: 'Technician Portal', href: '/services/technician-portal' },
-      { id: 'estimates', label: 'Estimates & Invoices', href: '/services/estimates-invoices' },
+      { id: 'job-board', label: 'Job Board', href: '/features/job-board' },
+      { id: 'profitability', label: 'Profitability Analytics', href: '/features/profitability-analytics' },
+      { id: 'customer-portal', label: 'Customer Portal', href: '/features/customer-portal' },
+      { id: 'technician-portal', label: 'Technician Portal', href: '/features/technician-portal' },
+      { id: 'estimates', label: 'Estimates & Approvals', href: '/features/estimates-approvals' },
     ],
   },
   {
@@ -31,8 +31,8 @@ export const mobileMenuData: MobileMenuGroup[] = [
     id: 'account',
     title: 'Account',
     submenu: [
-      { id: 'login', label: 'Login', href: 'https://bayx.app/auth/login' },
-      { id: 'signup', label: 'Start Free Trial', href: 'https://bayx.app/auth/signup' },
+      { id: 'early-access', label: 'Join Early Access', href: '/early-access' },
+      // { id: 'login', label: 'Login', href: '/early-access' },
     ],
   },
 ];
@@ -43,7 +43,7 @@ export const footerData: FooterOneData[] = [
     links: [
       { label: 'Features', href: '/features' },
       { label: 'Pricing', href: '/pricing' },
-      { label: 'Customer Portal', href: '/services/customer-portal' },
+      { label: 'Customer Portal', href: '/features/customer-portal' },
     ],
   },
   {

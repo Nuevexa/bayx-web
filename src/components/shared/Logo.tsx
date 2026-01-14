@@ -1,5 +1,5 @@
 import { cn } from '@/utils/cn';
-import bayxLogo from '@public/images/shared/bayx-logo.svg';
+import bayxLogo from '@public/bayx-logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -35,16 +35,16 @@ interface LogoProps {
 
 const sizeClasses: Record<LogoSize, { full: string; icon: string }> = {
   sm: {
-    full: 'max-w-[160px]',
-    icon: 'max-w-[36px]',
+    full: 'max-w-[120px]',
+    icon: 'max-w-[32px]',
   },
   md: {
-    full: 'max-w-[198px]',
-    icon: 'max-w-[44px]',
+    full: 'max-w-[150px]',
+    icon: 'max-w-[40px]',
   },
   lg: {
-    full: 'max-w-[240px]',
-    icon: 'max-w-[52px]',
+    full: 'max-w-[180px]',
+    icon: 'max-w-[48px]',
   },
 };
 
