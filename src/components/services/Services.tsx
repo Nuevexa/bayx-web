@@ -88,7 +88,7 @@ const Services = () => {
                     </div>
                     <div>
                       <LinkButton
-                        href="/features/batch-image-processing"
+                        href="/features/bay-management"
                         btnClass="btn-md-v2 btn-v2-white group-hover/btn-v2:btn-primary-v2">
                         View more
                       </LinkButton>

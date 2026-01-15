@@ -1,6 +1,6 @@
 ---
 title: 'Stop leaving money on the table'
-thumbnail: '/images/ns-img-323.png'
+thumbnail: '/landing-12.jpg'
 description: 'Know your true profit on every job. See which services make money and which ones don''t.'
 result: Increased average profit margin by 15% in the first month
 showHomePage: true

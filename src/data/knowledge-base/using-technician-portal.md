@@ -36,20 +36,20 @@ Tap a job to see:
 
 ### Clock In / Clock Out
 Big buttons at the top of each job:
-- **Clock In**: Start tracking time on this job
-- **Clock Out**: Stop tracking time
+- Clock In: Start tracking time on this job
+- Clock Out: Stop tracking time
 
 Time is automatically logged for efficiency calculations.
 
 ### Upload Photos
-- Tap **Upload Photo** to take a picture
+- Tap Upload Photo to take a picture
 - Photos are attached to the job
 - Customers can see photos on their tracking link
 - Great for documenting issues found during inspection
 
 ### Mark Complete
 When finished with a job:
-- Tap **Mark Complete**
+- Tap Mark Complete
 - The job moves to "Ready" status
 - The owner is notified
 

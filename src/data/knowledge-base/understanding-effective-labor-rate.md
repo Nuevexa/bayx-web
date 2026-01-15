@@ -10,7 +10,7 @@ order: 13
 
 Effective Labor Rate (ELR) is the actual average rate you're earning per billed hour. It often differs from your posted door rate due to discounts, flat-rate pricing, and bundled services.
 
-**Formula:**
+Formula:
 ```
 ELR = Total Labor Revenue ÷ Total Billed Hours
 ```
@@ -29,7 +29,7 @@ Look at the top metrics bar on your dashboard. ELR is displayed alongside Today'
 
 ## Why ELR Matters
 
-Your **door rate** might be $120/hour, but if your ELR is $95/hour, you're effectively giving away 21% in discounts.
+Your door rate might be $120/hour, but if your ELR is $95/hour, you're effectively giving away 21% in discounts.
 
 ELR reveals:
 - How much you're actually earning per hour
@@ -46,11 +46,11 @@ ELR reveals:
 
 ## How to Improve ELR
 
-1. **Reduce discounts**: Stick to posted rates
-2. **Review flat-rate jobs**: Make sure you're not underpricing
-3. **Upsell diagnostics**: Charge for inspection time
-4. **Track parts markup**: Don't absorb parts costs
-5. **Bill for actual time**: If jobs take longer, adjust estimates
+1. Reduce discounts: Stick to posted rates
+2. Review flat-rate jobs: Make sure you're not underpricing
+3. Upsell diagnostics: Charge for inspection time
+4. Track parts markup: Don't absorb parts costs
+5. Bill for actual time: If jobs take longer, adjust estimates
 
 ## Using ELR for Decisions
 

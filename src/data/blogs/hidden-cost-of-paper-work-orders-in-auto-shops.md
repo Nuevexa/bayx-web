@@ -27,8 +27,8 @@ Let's break down what paper-based operations actually cost your shop:
 
 How often does someone in your shop ask this question? Search time adds up:
 
-- 5 minutes searching × 10 lookups/day = **50 minutes/day**
-- That's over **4 hours/week** of paid time spent looking for paper
+- 5 minutes searching × 10 lookups/day = 50 minutes/day
+- That's over 4 hours/week of paid time spent looking for paper
 
 #### 2. Illegible Handwriting
 
@@ -60,7 +60,7 @@ You can't easily answer:
 - Which tech is fastest on brake jobs?
 - What's our average ticket size this month?
 
-**No data means no improvement.**
+No data means no improvement.
 
 #### 5. Inconsistent Estimates
 
@@ -72,7 +72,7 @@ Even worse: the estimate might not match what's on the invoice. Customers notice
 
 Here's a simple formula to estimate what paper is costing your shop:
 
-**Weekly Paper Cost =**
+Weekly Paper Cost =
 (Search time hours × hourly rate) +
 (Rework hours from errors × hourly rate) +
 (Lost revenue from missing information)
@@ -82,7 +82,7 @@ For a typical shop:
 - 2 hours/week rework × $25/hour = $50
 - Lost revenue from 1-2 customers/month = $200
 
-**That's roughly $350/week or $18,000/year** in hidden costs.
+That's roughly $350/week or $18,000/year in hidden costs.
 
 ### The Real Problem: Paper Doesn't Scale
 
@@ -121,10 +121,10 @@ Here's the reality:
 
 Shops that switch from paper to digital work orders typically report:
 
-- **30-40% reduction** in time spent looking for information
-- **Fewer errors** on parts orders and estimates
-- **Faster job completion** (no waiting for information)
-- **Better customer experience** (you can answer questions instantly)
+- 30-40% reduction in time spent looking for information
+- Fewer errors on parts orders and estimates
+- Faster job completion (no waiting for information)
+- Better customer experience (you can answer questions instantly)
 
 ### The Counter-Argument (And Why It Doesn't Hold)
 
@@ -145,9 +145,9 @@ The risk of occasional technology hiccups is far outweighed by the daily cost of
 
 You don't have to change everything overnight:
 
-1. **Week 1:** Use a digital system alongside paper
-2. **Week 2:** Make digital the primary, paper as backup
-3. **Week 3:** Drop the paper backup (you won't miss it)
+1. Week 1: Use a digital system alongside paper
+2. Week 2: Make digital the primary, paper as backup
+3. Week 3: Drop the paper backup (you won't miss it)
 
 The transition is easier than you think.
 
@@ -155,4 +155,4 @@ The transition is easier than you think.
 
 Paper work orders made sense when there were no alternatives. But trying to run a modern shop with paper is like trying to compete in a race with one hand tied behind your back.
 
-**Your competitors are going digital. Your customers expect digital. It's time to catch up.**
+Your competitors are going digital. Your customers expect digital. It's time to catch up.

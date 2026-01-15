@@ -18,16 +18,16 @@ Customers can see photos on their tracking link!
 
 ## Who Can Upload Photos?
 
-Technicians upload photos through the **Tech Portal**. Owners can also add photos when viewing job details.
+Technicians upload photos through the Tech Portal. Owners can also add photos when viewing job details.
 
 ## How Technicians Upload Photos
 
 1. Open the assigned job in the Tech Portal
-2. Tap **Upload Photo**
+2. Tap Upload Photo
 3. Allow camera access if prompted
 4. Take a photo or select from gallery
 5. Add a caption (optional but helpful)
-6. Tap **Upload**
+6. Tap Upload
 
 ## Types of Photos to Upload
 
@@ -48,14 +48,14 @@ Technicians upload photos through the **Tech Portal**. Owners can also add photo
 
 ## Photo Tips
 
-1. **Good lighting**: Take photos in well-lit areas
-2. **Clear focus**: Make sure the subject is sharp
-3. **Include context**: Show enough of the area to understand
-4. **Add captions**: Explain what the photo shows
-5. **Multiple angles**: Capture the issue from different views
+1. Good lighting: Take photos in well-lit areas
+2. Clear focus: Make sure the subject is sharp
+3. Include context: Show enough of the area to understand
+4. Add captions: Explain what the photo shows
+5. Multiple angles: Capture the issue from different views
 
 ## Where Photos Appear
 
-- **Job Details**: In the Photos tab
-- **Customer Tracking Link**: Visible to the customer
-- **Job History**: Stored for future reference
+- Job Details: In the Photos tab
+- Customer Tracking Link: Visible to the customer
+- Job History: Stored for future reference

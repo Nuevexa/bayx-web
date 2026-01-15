@@ -10,7 +10,7 @@ order: 12
 
 Technician Efficiency is a key metric that measures how productively your technicians use their time.
 
-**Formula:**
+Formula:
 ```
 Efficiency = Billed Hours ÷ Clocked Hours × 100%
 ```
@@ -25,7 +25,7 @@ Their efficiency is: 6.4 ÷ 8 = 80%
 
 ## Where to Find It
 
-Check the **Profit Pulse** sidebar on your dashboard. Each technician is listed with their current efficiency percentage.
+Check the Profit Pulse sidebar on your dashboard. Each technician is listed with their current efficiency percentage.
 
 ## What the Numbers Mean
 
@@ -49,11 +49,11 @@ High efficiency means:
 
 ## Common Causes of Low Efficiency
 
-1. **Waiting for parts**: Jobs stall mid-repair
-2. **Unclear job scope**: Technicians unsure what to do
-3. **Distractions**: Non-work activities
-4. **Training needed**: Unfamiliar with certain repairs
-5. **Tool issues**: Searching for or waiting for equipment
+1. Waiting for parts: Jobs stall mid-repair
+2. Unclear job scope: Technicians unsure what to do
+3. Distractions: Non-work activities
+4. Training needed: Unfamiliar with certain repairs
+5. Tool issues: Searching for or waiting for equipment
 
 ## How to Improve
 

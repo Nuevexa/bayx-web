@@ -32,7 +32,7 @@ The job has been paid and closed. The customer has picked up their vehicle.
 
 ## Moving Jobs Between Columns
 
-Simply **drag and drop** a job card from one column to another to update its status. The change is saved instantly and reflected everywhere.
+Simply drag and drop a job card from one column to another to update its status. The change is saved instantly and reflected everywhere.
 
 ## Job Card Information
 
@@ -45,7 +45,7 @@ Each job card shows:
 
 ## Tips for Workflow Efficiency
 
-1. **Process Intake quickly**: Jobs shouldn't sit in Intake for more than a few hours
-2. **Follow up on Waiting Approval**: Use the tracking link to remind customers
-3. **Monitor Waiting Parts**: This column often reveals supply chain issues
-4. **Celebrate Ready**: This is where you make money - get those pickups scheduled!
+1. Process Intake quickly: Jobs shouldn't sit in Intake for more than a few hours
+2. Follow up on Waiting Approval: Use the tracking link to remind customers
+3. Monitor Waiting Parts: This column often reveals supply chain issues
+4. Celebrate Ready: This is where you make money - get those pickups scheduled!

@@ -1,5 +1,6 @@
 import { cn } from '@/utils/cn';
 import bayxLogo from '@public/bayx-logo.svg';
+import bayxLogoWhite from '@public/bayx-logo-white.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -31,6 +32,11 @@ interface LogoProps {
    * @default false
    */
   responsive?: boolean;
+  /**
+   * Use white logo variant (for dark backgrounds like footer)
+   * @default false
+   */
+  useWhiteLogo?: boolean;
 }
 
 const sizeClasses: Record<LogoSize, { full: string; icon: string }> = {
@@ -73,16 +79,22 @@ const sizeClasses: Record<LogoSize, { full: string; icon: string }> = {
  *
  * // Without home link
  * <Logo linkToHome={false} />
+ *
+ * // White logo for dark backgrounds (footer)
+ * <Logo useWhiteLogo />
  * ```
  */
-export const Logo = ({ variant = 'full', size = 'md', linkToHome = true, className, responsive = false }: LogoProps) => {
+export const Logo = ({ variant = 'full', size = 'md', linkToHome = true, className, responsive = false, useWhiteLogo = false }: LogoProps) => {
+  const logoSrc = useWhiteLogo ? bayxLogoWhite : bayxLogo;
+  const logoClasses = useWhiteLogo ? 'w-full h-auto' : 'w-full h-auto dark:invert';
+
   const LogoContent = () => {
     if (responsive) {
       return (
         <>
           {/* Desktop: Full Logo */}
           <figure className={cn('hidden lg:block', sizeClasses[size].full, className)}>
-            <Image src={bayxLogo} alt="BayX" className="w-full h-auto dark:invert" priority />
+            <Image src={logoSrc} alt="BayX" className={logoClasses} priority />
           </figure>
           {/* Mobile: Icon Only */}
           <figure className={cn('block lg:hidden', sizeClasses[size].icon)}>
@@ -102,7 +114,7 @@ export const Logo = ({ variant = 'full', size = 'md', linkToHome = true, classNa
 
     return (
       <figure className={cn(sizeClasses[size].full, className)}>
-        <Image src={bayxLogo} alt="BayX" className="w-full h-auto dark:invert" priority />
+        <Image src={logoSrc} alt="BayX" className={logoClasses} priority />
       </figure>
     );
   };

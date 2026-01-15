@@ -19,12 +19,12 @@ Technician efficiency is the most overlooked metric in shop management—and it 
 
 Technician efficiency measures how much of a tech's clocked time generates revenue.
 
-**Efficiency = Billed Hours ÷ Clocked Hours × 100**
+Efficiency = Billed Hours ÷ Clocked Hours × 100
 
 Example:
 - Tech clocks in for 8 hours
 - Tech bills out 6.5 hours of work
-- Efficiency = 6.5 ÷ 8 = **81%**
+- Efficiency = 6.5 ÷ 8 = 81%
 
 An 81% efficiency rate is generally considered good. But here's where it gets interesting: the difference between 70% and 85% efficiency can mean thousands of dollars per month.
 
@@ -40,7 +40,7 @@ Let's look at two technicians with different efficiency rates:
 | Weekly revenue | $3,360 | $4,080 |
 | Monthly revenue | $13,440 | $16,320 |
 
-**The gap: $2,880/month or $34,560/year—from the same payroll cost.**
+The gap: $2,880/month or $34,560/year—from the same payroll cost.
 
 That's not a slight difference. That's a new lift or a vacation for the owner.
 
@@ -96,7 +96,7 @@ Industry benchmarks for technician efficiency:
 | Average | 70-79% | Room for improvement |
 | Concerning | Below 70% | Investigate causes |
 
-**Note:** Efficiency varies by job type. Complex diagnostics naturally have lower efficiency than routine services.
+Note: Efficiency varies by job type. Complex diagnostics naturally have lower efficiency than routine services.
 
 ### Common Causes of Low Efficiency
 
@@ -140,13 +140,13 @@ Less friction, more accurate, easier to sustain.
 
 Sharing efficiency data with technicians can be tricky. Handle it well:
 
-**Do:**
+Do:
 - Share individual data privately
 - Focus on improvement, not blame
 - Highlight what's causing the lost time
 - Set collaborative goals
 
-**Don't:**
+Don't:
 - Post rankings publicly (creates resentment)
 - Punish without understanding causes
 - Ignore systemic issues that affect everyone
@@ -155,10 +155,10 @@ Sharing efficiency data with technicians can be tricky. Handle it well:
 
 You're not trying to squeeze every second out of your techs. You're trying to:
 
-1. **Identify waste** in your workflow
-2. **Remove obstacles** that slow people down
-3. **Recognize** your top performers
-4. **Support** techs who are struggling
+1. Identify waste in your workflow
+2. Remove obstacles that slow people down
+3. Recognize your top performers
+4. Support techs who are struggling
 
 A 5% improvement in average efficiency translates directly to revenue growth with zero increase in labor cost.
 
@@ -166,11 +166,11 @@ A 5% improvement in average efficiency translates directly to revenue growth wit
 
 Here's a simple action plan:
 
-1. **Day 1-2:** Have techs log their start/stop times per job
-2. **Day 3-5:** Calculate billed hours vs. clocked hours
-3. **Week 2:** Review the data; identify patterns
-4. **Week 3:** Address one workflow bottleneck
-5. **Ongoing:** Track efficiency weekly; discuss monthly
+1. Day 1-2: Have techs log their start/stop times per job
+2. Day 3-5: Calculate billed hours vs. clocked hours
+3. Week 2: Review the data; identify patterns
+4. Week 3: Address one workflow bottleneck
+5. Ongoing: Track efficiency weekly; discuss monthly
 
 Within a month, you'll have insights you've never had before.
 
@@ -180,4 +180,4 @@ Every shop's #1 expense is labor. Every shop's #1 asset is skilled technicians.
 
 Efficiency tracking isn't about squeezing more blood from the stone. It's about understanding how your most valuable resource is being used—and making sure nothing is being wasted.
 
-**The shops that win are the ones that know their numbers. Start with efficiency.**
+The shops that win are the ones that know their numbers. Start with efficiency.

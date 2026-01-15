@@ -24,12 +24,12 @@ const Footer = ({ className }: { className?: string }) => {
       <div className="main-container px-5">
         <div className="grid grid-cols-12 justify-between gap-x-0 gap-y-16 pt-16 pb-12 xl:pt-[90px]">
           <RevealAnimation delay={0.1}>
-            <div className="col-span-12 xl:col-span-4">
+            <div className="col-span-12 opacity-100 xl:col-span-4">
               <div className="max-w-[306px]">
-                <Logo variant="full" size="lg" />
+                <Logo variant="full" size="lg" useWhiteLogo />
                 <p className="text-accent/60 text-tagline-1 mt-4 mb-7 font-normal">
-                  Build better products with flexible tools, helpful documentation, and a team that champions your
-                  growth.
+                  Helping garage owners stop leaking profit by giving them real-time visibility into every job, every
+                  technician, and every dollar.
                 </p>
                 <div className="flex items-center gap-3">
                   <Link target="_blank" href="https://www.facebook.com">
@@ -69,7 +69,7 @@ const Footer = ({ className }: { className?: string }) => {
             {footerLinks.map(({ title, links }, index) => (
               <div className="col-span-12 md:col-span-4" key={title}>
                 <RevealAnimation delay={0.2 + index * 0.1}>
-                  <div className="space-y-8">
+                  <div className="space-y-8 opacity-100">
                     <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">{title}</p>
                     <ul className="space-y-5">
                       {links.map(({ label, href }) => (
@@ -89,7 +89,7 @@ const Footer = ({ className }: { className?: string }) => {
         <div className="relative pt-[26px] pb-[42px] text-center">
           <FooterDivider className="bg-accent/10 dark:bg-stroke-6" />
           <RevealAnimation delay={0.7} offset={10} start="top 105%">
-            <p className="text-tagline-1 text-primary-50 font-normal">
+            <p className="text-tagline-1 text-primary-50 opacity-100 font-normal">
               Copyright ©Pixels71. NextSaaS – smart application for modern business
             </p>
           </RevealAnimation>

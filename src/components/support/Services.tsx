@@ -1,6 +1,6 @@
 import gradient16 from '@public/images/ns-img-495.png';
 import gradient3 from '@public/images/ns-img-508.png';
-import gradient27 from '@public/images/ns-img-515.png';
+// import gradient27 from '@public/images/ns-img-515.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/Button';
@@ -27,7 +27,7 @@ const Services = () => {
         </div>
         <div className="grid grid-cols-12 max-md:gap-y-8 md:gap-8">
           <RevealAnimation delay={0.4}>
-            <div className="col-span-12 md:col-span-4">
+            <div className="col-span-12 md:col-span-6">
               <div className="bg-background-2 dark:bg-background-6 relative z-10 space-y-6 overflow-hidden rounded-[20px] px-6 py-8">
                 {/* bg gradient */}
                 <figure className="pointer-events-none absolute -top-[66%] -left-[60%] -z-10 size-[410px] rotate-[304deg] select-none">
@@ -52,7 +52,8 @@ const Services = () => {
               </div>
             </div>
           </RevealAnimation>
-          <RevealAnimation delay={0.5}>
+          {/* Knowledge Base card hidden for early access */}
+          {/* <RevealAnimation delay={0.5}>
             <div className="col-span-12 md:col-span-4">
               <div className="bg-background-2 dark:bg-background-6 relative z-10 space-y-6 overflow-hidden rounded-[20px] px-6 py-8">
                 <figure className="pointer-events-none absolute -top-[74%] -right-[70%] -z-10 size-[410px] rotate-[175deg] select-none">
@@ -76,9 +77,9 @@ const Services = () => {
                 </div>
               </div>
             </div>
-          </RevealAnimation>
+          </RevealAnimation> */}
           <RevealAnimation delay={0.6}>
-            <div className="col-span-12 md:col-span-4">
+            <div className="col-span-12 md:col-span-6">
               <div className="bg-background-2 dark:bg-background-6 relative z-10 space-y-6 overflow-hidden rounded-[20px] px-6 py-8">
                 <figure className="pointer-events-none absolute -top-[74%] -right-[35%] -z-10 size-[410px] rotate-[175deg] select-none">
                   <Image src={gradient16} className="size-full object-contain" alt="gradient" />

@@ -1,6 +1,6 @@
 ---
 title: 'Keep your techs focused'
-thumbnail: '/images/ns-img-324.png'
+thumbnail: '/landing-10.jpg'
 description: 'Technicians see their jobs, log time, and upload photos from their phone. Less walking, more wrenching.'
 result: Billed 3 extra hours per tech per week
 showHomePage: true

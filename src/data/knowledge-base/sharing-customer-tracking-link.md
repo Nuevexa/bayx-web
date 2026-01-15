@@ -17,7 +17,7 @@ Every job in BayX has a unique tracking link that you can share with customers. 
 ## How to Share the Link
 
 1. Open the job from your Kanban board
-2. In the job details, find the **Copy Tracking Link** button
+2. In the job details, find the Copy Tracking Link button
 3. Click the button - the link is copied to your clipboard
 4. Paste the link into WhatsApp, SMS, or email
 
@@ -41,7 +41,7 @@ Any photos uploaded by technicians during inspection or repair
 If the job is in "Waiting Approval" status, customers see:
 - Full estimate breakdown
 - Total cost
-- **Approve Work** button
+- Approve Work button
 
 ## Security
 

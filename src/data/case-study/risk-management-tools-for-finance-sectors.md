@@ -1,6 +1,6 @@
 ---
 title: 'Run your shop from anywhere'
-thumbnail: '/images/ns-img-325.png'
+thumbnail: '/landing-11.jpg'
 description: 'Check job status, approve estimates, and track revenue - whether you''re on the floor or on vacation.'
 result: Managed shop remotely for 2 weeks seamlessly
 showHomePage: true

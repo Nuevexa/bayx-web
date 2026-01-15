@@ -20,9 +20,9 @@ BayX is a profitability-first shop management system designed for small independ
 ## Step 2: Choose Your Plan
 
 BayX offers three pricing tiers:
-- **Basic Bay**: For solo operators - 1 bay, essential features
-- **Pro Bay**: For growing shops - up to 3 bays
-- **Fleet Master**: For larger operations - unlimited bays
+- Basic Bay: For solo operators - 1 bay, essential features
+- Pro Bay: For growing shops - up to 3 bays
+- Fleet Master: For larger operations - unlimited bays
 
 All plans include a 14-day free trial.
 
@@ -44,6 +44,6 @@ Your dashboard is the command center of your shop. From here you can:
 
 ## What's Next?
 
-- **Create your first job**: Learn how to use Quick Intake
-- **Invite your team**: Add technicians to your account
-- **Set up your service menu**: Configure standard services and pricing
+- Create your first job: Learn how to use Quick Intake
+- Invite your team: Add technicians to your account
+- Set up your service menu: Configure standard services and pricing

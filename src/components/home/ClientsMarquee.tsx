@@ -1,21 +1,22 @@
-import clientLogo10Dark from '@public/images/icons/client-logo-10-dark.svg';
-import clientLogo10 from '@public/images/icons/client-logo-10.svg';
-import clientLogo6Dark from '@public/images/icons/client-logo-6-dark.svg';
-import clientLogo6 from '@public/images/icons/client-logo-6.svg';
-import clientLogo7Dark from '@public/images/icons/client-logo-7-dark.svg';
-import clientLogo7 from '@public/images/icons/client-logo-7.svg';
-import clientLogo8Dark from '@public/images/icons/client-logo-8-dark.svg';
-import clientLogo8 from '@public/images/icons/client-logo-8.svg';
-import clientLogo9Dark from '@public/images/icons/client-logo-9-dark.svg';
-import clientLogo9 from '@public/images/icons/client-logo-9.svg';
-import Image from 'next/image';
-import Marquee from 'react-fast-marquee';
-import RevealAnimation from '../animation/RevealAnimation';
+// import clientLogo10Dark from '@public/images/icons/client-logo-10-dark.svg';
+// import clientLogo10 from '@public/images/icons/client-logo-10.svg';
+// import clientLogo6Dark from '@public/images/icons/client-logo-6-dark.svg';
+// import clientLogo6 from '@public/images/icons/client-logo-6.svg';
+// import clientLogo7Dark from '@public/images/icons/client-logo-7-dark.svg';
+// import clientLogo7 from '@public/images/icons/client-logo-7.svg';
+// import clientLogo8Dark from '@public/images/icons/client-logo-8-dark.svg';
+// import clientLogo8 from '@public/images/icons/client-logo-8.svg';
+// import clientLogo9Dark from '@public/images/icons/client-logo-9-dark.svg';
+// import clientLogo9 from '@public/images/icons/client-logo-9.svg';
+// import Image from 'next/image';
+// import Marquee from 'react-fast-marquee';
+// import RevealAnimation from '../animation/RevealAnimation';
 
 const ClientsMarquee = () => {
   return (
-    <section>
-      <RevealAnimation delay={0.2}>
+    <section className="py-8">
+      {/* Client logos hidden for early access - spacing maintained */}
+      {/* <RevealAnimation delay={0.2}>
         <div className="relative">
           <div className="dark:from-background-5 absolute top-0 left-0 z-40 h-full w-[15%] bg-gradient-to-r from-white to-transparent md:w-[20%]" />
           <div className="dark:from-background-5 absolute top-0 right-0 z-40 h-full w-[15%] bg-gradient-to-l from-white to-transparent md:w-[20%]" />
@@ -44,7 +45,7 @@ const ClientsMarquee = () => {
             </div>
           </Marquee>
         </div>
-      </RevealAnimation>
+      </RevealAnimation> */}
     </section>
   );
 };

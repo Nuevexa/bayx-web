@@ -13,7 +13,7 @@ readTime: '8 min read'
 
 Here's a scenario every garage owner knows: You finish a brake job, charge $450, and feel good about the margin. But did you actually make money?
 
-Most shop owners quote jobs based on flat-rate labor guides and estimated parts costs. The problem? **Real-world labor time rarely matches the book**, and parts markup varies wildly between suppliers.
+Most shop owners quote jobs based on flat-rate labor guides and estimated parts costs. The problem? Real-world labor time rarely matches the book, and parts markup varies wildly between suppliers.
 
 Without tracking actual costs, you're flying blind.
 
@@ -21,11 +21,11 @@ Without tracking actual costs, you're flying blind.
 
 True job profitability isn't just revenue minus parts cost. It's:
 
-**Revenue - (Parts Cost + Actual Labor Cost + Supplies) = Real Profit**
+Revenue - (Parts Cost + Actual Labor Cost + Supplies) = Real Profit
 
 Where:
-- **Actual Labor Cost** = Hours worked × Technician's hourly cost to you (not what you charge the customer)
-- **Supplies** = Shop materials, fluids, consumables
+- Actual Labor Cost = Hours worked × Technician's hourly cost to you (not what you charge the customer)
+- Supplies = Shop materials, fluids, consumables
 
 If your tech took 3 hours on a 2-hour book job, and you're paying them $35/hour, that's an extra $35 eating into your margin.
 
@@ -52,7 +52,7 @@ Calculate what each technician actually costs you:
 - Benefits and taxes (typically 20-30% on top of wage)
 - Training time
 
-This is your **loaded labor cost**—the real number that matters.
+This is your loaded labor cost—the real number that matters.
 
 #### Step 2: Track Actual Hours Per Job
 
@@ -66,7 +66,7 @@ For each completed job:
 3. Subtract (actual hours × loaded labor cost)
 4. Subtract supplies/consumables
 
-What's left is your **real profit**.
+What's left is your real profit.
 
 ### Red Flags That Signal Profit Leakage
 
@@ -79,7 +79,7 @@ What's left is your **real profit**.
 
 Shops that track true job profitability often find:
 
-- **15-20%** of jobs are actually unprofitable
+- 15-20% of jobs are actually unprofitable
 - Certain service types need price adjustments
 - Specific technicians consistently over or under book time
 - Parts suppliers with better margins for certain categories
@@ -105,4 +105,4 @@ Profitability isn't about working harder—it's about working smarter. When you 
 - Negotiate better parts pricing
 - Stop accepting work that costs you money
 
-**Your shop's profitability is hiding in plain sight. You just need to look at the numbers.**
+Your shop's profitability is hiding in plain sight. You just need to look at the numbers.

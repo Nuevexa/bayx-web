@@ -1,7 +1,7 @@
 ---
 title: 'Profitability Analytics'
 description: 'See exactly how much you make on every job. Track revenue, costs, and margins in real time so you never leave money on the table.'
-image: '/images/ns-img-315.png'
+image: '/landing-7.png'
 imgAlt: 'service-img'
 icon: 'ns-shape-26'
 showHomePage: true
@@ -14,20 +14,20 @@ userReview:
 
 ## Know Your Profit on Every Job
 
-Our **real-time profitability dashboard** shows you exactly where your money goes. See revenue, parts costs, labor costs, and margins at a glance. Stop guessing, start knowing.
+Our real-time profitability dashboard shows you exactly where your money goes. See revenue, parts costs, labor costs, and margins at a glance. Stop guessing, start knowing.
 
-![Service images](/images/ns-img-397.png)
+![Service images](/profitability-analytics.png)
 
 ## What's included
 
 Everything you need to understand your shop's financial health.
 
-- **Job-level profitability** - See margin on each individual job.
-- **Revenue tracking** - Daily, weekly, and monthly revenue at a glance.
-- **Cost breakdown** - Parts, labor, and overhead separated clearly.
-- **Margin alerts** - Get notified when a job falls below target margin.
-- **Technician performance** - See who's most productive and profitable.
-- **Trend analysis** - Spot patterns over time.
+- Job-level profitability - See margin on each individual job.
+- Revenue tracking - Daily, weekly, and monthly revenue at a glance.
+- Cost breakdown - Parts, labor, and overhead separated clearly.
+- Margin alerts - Get notified when a job falls below target margin.
+- Technician performance - See who's most productive and profitable.
+- Trend analysis - Spot patterns over time.
 
 ![Service images](/images/ns-img-398.png)
 
@@ -35,11 +35,11 @@ Everything you need to understand your shop's financial health.
 
 Perfect for owners who want to stop leaking profit and make data-driven decisions.
 
-- **Pricing validation** - Confirm your labor rates are profitable.
-- **Quote accuracy** - Compare estimates vs actual costs.
-- **Technician ROI** - Know which techs generate the most profit.
-- **Service analysis** - Find which services are most profitable.
-- **Monthly reviews** - Clear data for business decisions.
+- Pricing validation - Confirm your labor rates are profitable.
+- Quote accuracy - Compare estimates vs actual costs.
+- Technician ROI - Know which techs generate the most profit.
+- Service analysis - Find which services are most profitable.
+- Monthly reviews - Clear data for business decisions.
 
 ![Service images](/images/ns-img-dark-217.jpg)
 
@@ -47,8 +47,8 @@ Perfect for owners who want to stop leaking profit and make data-driven decision
 
 No accounting degree required. BayX makes the numbers simple.
 
-- **Dashboard overview** with key metrics front and center.
-- **Drill-down reports** for detailed analysis.
-- **Export to spreadsheet** for your accountant.
-- **Pro Bay and Fleet Master** plans unlock full analytics.
-- **Real-time calculations** as jobs complete.
+- Dashboard overview with key metrics front and center.
+- Drill-down reports for detailed analysis.
+- Export to spreadsheet for your accountant.
+- Pro Bay and Fleet Master plans unlock full analytics.
+- Real-time calculations as jobs complete.

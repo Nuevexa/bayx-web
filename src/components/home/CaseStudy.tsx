@@ -29,23 +29,14 @@ const CaseStudy = () => {
             <RevealAnimation delay={0.3}>
               <div className="col-span-12">
                 <figure className="space-y-6">
-                  <div className="group relative h-[300px] w-full cursor-pointer overflow-hidden rounded-[20px] lg:h-[802px]">
+                  <div className="relative h-[300px] w-full overflow-hidden rounded-[20px] lg:h-[802px]">
                     <Image
                       src={caseStudyData[0]?.thumbnail || ''}
                       fill
                       priority
-                      className="h-full w-full rounded-[20px] object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="h-full w-full rounded-[20px] object-cover"
                       alt="portfolio"
                     />
-                    {/* Black Overlay */}
-                    <div className="absolute inset-0 transition-all duration-500 ease-in-out group-hover:bg-black/40" />
-                    <div className="group/btn absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%-8px)] scale-95 opacity-0 transition-all duration-500 ease-out group-hover:-translate-y-1/2 group-hover:scale-110 group-hover:opacity-100">
-                      <LinkButton
-                        href={`/case-study/${caseStudyData[0]?.slug || ''}`}
-                        btnClass="btn-xl-v2 btn-green-v2 group-hover/btn-v2:btn-primary-v2">
-                        View details
-                      </LinkButton>
-                    </div>
                   </div>
                   <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between md:gap-4">
                     <h3 className="text-heading-6 sm:text-heading-5 lg:max-w-[250px]">{caseStudyData[0].title}</h3>
@@ -58,23 +49,14 @@ const CaseStudy = () => {
             <RevealAnimation delay={0.1}>
               <div className="col-span-12 lg:col-span-6">
                 <figure className="space-y-6">
-                  <div className="group relative h-[300px] w-full cursor-pointer overflow-hidden rounded-[20px] lg:h-[802px]">
+                  <div className="relative h-[300px] w-full overflow-hidden rounded-[20px] lg:h-[802px]">
                     <Image
                       src={caseStudyData[2]?.thumbnail || ''}
-                      className="h-full w-full rounded-[20px] object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="h-full w-full rounded-[20px] object-cover"
                       alt="portfolio"
                       fill
                       priority
                     />
-                    {/* Black Overlay */}
-                    <div className="absolute inset-0 bg-black/0 transition-all duration-500 ease-in-out group-hover:bg-black/40" />
-                    <div className="group/btn absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%-8px)] scale-95 opacity-0 transition-all duration-500 ease-out group-hover:-translate-y-1/2 group-hover:scale-110 group-hover:opacity-100">
-                      <LinkButton
-                        href={`/case-study/${caseStudyData[2]?.slug || ''}`}
-                        btnClass="btn-xl-v2 btn-green-v2 group-hover/btn-v2:btn-primary-v2">
-                        View details
-                      </LinkButton>
-                    </div>
                   </div>
                   <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between md:gap-4">
                     <h3 className="text-heading-6 sm:text-heading-5 lg:max-w-[250px]">
@@ -89,23 +71,14 @@ const CaseStudy = () => {
             <RevealAnimation delay={0.2}>
               <div className="col-span-12 lg:col-span-6">
                 <figure className="space-y-6">
-                  <div className="group relative h-[300px] w-full cursor-pointer overflow-hidden rounded-[20px] lg:h-[802px]">
+                  <div className="relative h-[300px] w-full overflow-hidden rounded-[20px] lg:h-[802px]">
                     <Image
                       src={caseStudyData[3]?.thumbnail || ''}
                       fill
                       priority
                       alt="portfolio"
-                      className="h-full w-full rounded-[20px] object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="h-full w-full rounded-[20px] object-cover"
                     />
-                    {/* Black Overlay */}
-                    <div className="absolute inset-0 bg-black/0 transition-all duration-500 ease-in-out group-hover:bg-black/40" />
-                    <div className="group/btn absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%-8px)] scale-95 opacity-0 transition-all duration-500 ease-out group-hover:-translate-y-1/2 group-hover:scale-110 group-hover:opacity-100">
-                      <LinkButton
-                        href={`/case-study/${caseStudyData[3]?.slug || ''}`}
-                        btnClass="btn-xl-v2 btn-green-v2 group-hover/btn-v2:btn-primary-v2">
-                        View details
-                      </LinkButton>
-                    </div>
                   </div>
                   <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between md:gap-4">
                     <h3 className="text-heading-6 sm:text-heading-5 lg:max-w-[250px]">{caseStudyData[3].title}</h3>
@@ -118,23 +91,14 @@ const CaseStudy = () => {
             <RevealAnimation delay={0.1}>
               <div className="col-span-12">
                 <figure className="space-y-6">
-                  <div className="group relative h-[300px] w-full cursor-pointer overflow-hidden rounded-[20px] lg:h-[802px]">
+                  <div className="relative h-[300px] w-full overflow-hidden rounded-[20px] lg:h-[802px]">
                     <Image
                       src={caseStudyData[1]?.thumbnail || ''}
                       fill
                       priority
-                      className="h-full w-full rounded-[20px] object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="h-full w-full rounded-[20px] object-cover"
                       alt="portfolio"
                     />
-                    {/* Black Overlay */}
-                    <div className="absolute inset-0 bg-black/0 transition-all duration-500 ease-in-out group-hover:bg-black/40" />
-                    <div className="group/btn absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%-8px)] scale-95 opacity-0 transition-all duration-500 ease-out group-hover:-translate-y-1/2 group-hover:scale-110 group-hover:opacity-100">
-                      <LinkButton
-                        href={`/case-study/${caseStudyData[1]?.slug || ''}`}
-                        btnClass="btn-xl-v2 btn-green-v2 group-hover/btn-v2:btn-primary-v2">
-                        View details
-                      </LinkButton>
-                    </div>
                   </div>
                   <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between md:gap-4">
                     <h3 className="text-heading-6 sm:text-heading-5">{caseStudyData[1].title}</h3>

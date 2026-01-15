@@ -1,11 +1,9 @@
 import { IService } from '@/interface';
 import getMarkDownData from '@/utils/getMarkDownData';
 import newArrowWhite from '@public/images/icons/new-arrow-white.svg';
-import service03 from '@public/images/ns-img-318.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
-import BeforeAfterServiceImg from './BeforeAfterServiceImg';
 
 const Services = () => {
   const services = getMarkDownData<IService & { [key: string]: unknown }>('src/data/services').filter(
@@ -13,7 +11,7 @@ const Services = () => {
   );
 
   return (
-    <section className="mt-10 overflow-hidden py-14 md:py-16 lg:py-24 xl:py-28">
+    <section className="mt-10 overflow-hidden py-14 md:py-16 lg:mt-0 lg:py-24 xl:py-28">
       <div className="main-container">
         <div className="mb-11 text-center lg:mx-auto lg:mb-9 lg:max-w-[730px]">
           <RevealAnimation delay={0.1}>
@@ -62,42 +60,8 @@ const Services = () => {
                     width={292}
                     height={412}
                     alt="services"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full scale-[1.01] object-cover"
                   />
-                </figure>
-              </div>
-            </div>
-          </RevealAnimation>
-          {/* service card 03 */}
-          <BeforeAfterServiceImg service={services[4]} />
-          {/* service card 04 */}
-          <RevealAnimation delay={0.1} direction="left">
-            <div className="group/card-img col-span-12 lg:col-span-6">
-              <div className="bg-background-12 border-background-12 grid h-full grid-cols-12 gap-y-16 rounded-3xl border p-5 md:gap-6 md:p-8">
-                <aside className="col-span-12 flex flex-col justify-between space-y-5 pt-14 md:col-span-6">
-                  <blockquote className="space-y-2">
-                    <h3 className="text-heading-5 md:text-heading-4 line-clamp-2">{services[5]?.title}</h3>
-                    <p className="text-tagline-1 text-secondary/60 line-clamp-4">{services[5]?.description}</p>
-                  </blockquote>
-                  <Link
-                    href={`/features/${services[5]?.slug || ''}`}
-                    className="hover:bg-primary-500 group bg-secondary relative flex h-10 w-18 items-center justify-center space-y-5 overflow-hidden rounded-[40px] p-4 ring-8 ring-white transition-all duration-500 ease-in-out md:h-13 md:w-22 md:p-5">
-                    <figure className="relative size-6 items-center justify-center overflow-hidden">
-                      <Image
-                        src={newArrowWhite}
-                        alt="new-arrow"
-                        className="absolute inset-0 size-full -translate-x-6 object-cover transition-transform duration-400 ease-in-out group-hover:translate-x-1"
-                      />
-                      <Image
-                        src={newArrowWhite}
-                        alt="new-arrow"
-                        className="size-full object-cover transition-transform duration-400 ease-in-out group-hover:translate-x-6"
-                      />
-                    </figure>
-                  </Link>
-                </aside>
-                <figure className="col-span-12 mx-auto h-[360px] w-full max-w-[905px] overflow-hidden rounded-lg transition-transform duration-500 ease-in-out group-hover/card-img:scale-105 md:col-span-6 md:h-full md:rounded-[20px]">
-                  <Image src={service03} alt="services" className="h-full w-full object-cover" />
                 </figure>
               </div>
             </div>
@@ -134,7 +98,7 @@ const Services = () => {
                     width={292}
                     height={412}
                     alt="services"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full scale-[1.01] object-cover"
                   />
                 </figure>
               </div>
@@ -172,7 +136,7 @@ const Services = () => {
                     width={292}
                     height={412}
                     alt="services"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full scale-[1.01] object-cover"
                   />
                 </figure>
               </div>
@@ -210,7 +174,7 @@ const Services = () => {
                     width={292}
                     height={412}
                     alt="services"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full scale-[1.01] object-cover"
                   />
                 </figure>
               </div>
