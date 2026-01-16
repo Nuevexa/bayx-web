@@ -60,4 +60,4 @@ If you've tried these solutions and still can't log in:
 1. Clear your browser cache and cookies
 2. Try a different browser
 3. Try an incognito/private window
-4. Contact BayX support at support@bayx.io
+4. Contact BayX support at support@bayx.app

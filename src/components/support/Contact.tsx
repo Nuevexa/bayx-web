@@ -1,4 +1,4 @@
-import supportContact from '@public/images/ns-img-402.jpg';
+import supportContact from '@public/support-form.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';

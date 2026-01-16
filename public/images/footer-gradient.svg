@@ -1,0 +1,15 @@
+<svg width="1635" height="1635" viewBox="0 0 1635 1635" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bayx-footer-gradient" cx="50%" cy="50%" r="50%">
+      <!-- Center: Bright cyan (Primary-400) -->
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="1"/>
+      <!-- Transition: Medium teal (Primary-500) -->
+      <stop offset="40%" stop-color="#0f766e" stop-opacity="0.8"/>
+      <!-- Outer: Deep teal (Primary-700) -->
+      <stop offset="70%" stop-color="#0f766e" stop-opacity="0.4"/>
+      <!-- Edge: Fully transparent -->
+      <stop offset="100%" stop-color="#0f766e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1635" height="1635" fill="url(#bayx-footer-gradient)"/>
+</svg>

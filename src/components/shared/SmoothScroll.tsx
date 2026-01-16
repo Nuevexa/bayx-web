@@ -16,6 +16,19 @@ const SmoothScrollProvider = ({ children }: Readonly<SmoothScrollingProps>) => {
   const lenis = useLenis();
 
   useEffect(() => {
+    // Handle hash navigation on route change
+    const hash = window.location.hash;
+    if (hash && lenis) {
+      // Small delay to ensure DOM is ready
+      setTimeout(() => {
+        lenis.scrollTo(hash, {
+          offset: -100,
+          duration: 1.2,
+        });
+      }, 150);
+      return;
+    }
+
     // Only scroll to top if pathname actually changed (navigation), not on initial render or reload
     if (!isInitialRender.current && previousPathnameRef.current !== pathname) {
       lenis?.scrollTo(0, { immediate: true });

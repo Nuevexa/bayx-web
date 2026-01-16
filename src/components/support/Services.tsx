@@ -45,8 +45,8 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="text-center">
-                  <LinkButton href="mailto:support@bayx.io" btnClass="btn-md-v2 btn-v2-white group-hover/btn-v2:btn-secondary-v2">
-                    support@bayx.io
+                  <LinkButton href="mailto:support@bayx.app" btnClass="btn-md-v2 btn-v2-white group-hover/btn-v2:btn-secondary-v2">
+                    support@bayx.app
                   </LinkButton>
                 </div>
               </div>

@@ -2,31 +2,28 @@ import { FooterData } from '@/interface';
 
 export const footerLinks: FooterData[] = [
   {
-    title: 'Company',
+    title: 'Product',
+    links: [
+      { label: 'Features', href: '/features' },
+      { label: 'Pricing', href: '/pricing' },
+      { label: 'Blog', href: '/blog' },
+      { label: 'Early Access', href: '/early-access' },
+    ],
+  },
+  {
+    title: 'Resources',
     links: [
       { label: 'About Us', href: '/about' },
-      { label: 'Career', href: '/career' },
-      { label: 'Case Studies', href: '/case-study' },
       { label: 'Contact Us', href: '/contact-us' },
+      { label: 'Help Center', href: '/support' },
     ],
   },
   {
-    title: 'Support',
+    title: 'Legal',
     links: [
-      { label: 'FAQ', href: '/faq' },
-      { label: 'Documentation', href: '/documentation' },
-      { label: 'Tutorial', href: '/tutorial' },
-      { label: 'Community', href: '/community' },
-    ],
-  },
-  {
-    title: 'Legal Policies',
-    links: [
-      { label: 'Terms & Conditions', href: '/terms-conditions' },
       { label: 'Privacy Policy', href: '/privacy-policy' },
+      { label: 'Terms & Conditions', href: '/terms-conditions' },
       { label: 'Refund Policy', href: '/refund-policy' },
-      { label: 'GDPR Compliance', href: '/gdpr' },
-      { label: 'Affiliate Policy', href: '/affiliate-policy' },
     ],
   },
 ];

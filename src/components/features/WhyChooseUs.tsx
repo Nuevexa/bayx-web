@@ -83,10 +83,10 @@ const WhyChooseUs = ({ className }: { className?: string }) => {
 
           {/* Floating Metric Cards */}
           <div className="absolute inset-0 flex items-center justify-center px-4 py-8 sm:px-8 sm:py-12">
-            <div className="grid w-full max-w-[600px] grid-cols-2 gap-4 sm:gap-5 md:gap-6">
+            <div className="grid w-full max-w-[750px] grid-cols-2 gap-4 sm:gap-5 md:gap-6">
               {/* Card 1: 100% Visibility */}
               <RevealAnimation delay={0.5} direction="up" offset={50}>
-                <div className="backdrop-blur-md bg-white/95 dark:bg-background-6/95 rounded-[12px] px-3 py-4 text-center shadow-xl ring-1 ring-black/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl sm:rounded-[16px] sm:px-5 sm:py-6">
+                <div className="backdrop-blur-md bg-white/95 dark:bg-background-6/95 rounded-[12px] px-6 py-4 text-center shadow-xl ring-1 ring-black/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl sm:rounded-[16px] sm:px-8 sm:py-6">
                   <div className="text-heading-5 sm:text-heading-4 text-secondary dark:text-accent flex items-center justify-center font-bold">
                     <NumberAnimation number={100} speed={2000} interval={150} rooms={3} />
                     <span>%</span>
@@ -99,7 +99,7 @@ const WhyChooseUs = ({ className }: { className?: string }) => {
 
               {/* Card 2: 0 Paperwork */}
               <RevealAnimation delay={0.6} direction="up" offset={50}>
-                <div className="backdrop-blur-md bg-white/95 dark:bg-background-6/95 rounded-[12px] px-3 py-4 text-center shadow-xl ring-1 ring-black/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl sm:rounded-[16px] sm:px-5 sm:py-6">
+                <div className="backdrop-blur-md bg-white/95 dark:bg-background-6/95 rounded-[12px] px-6 py-4 text-center shadow-xl ring-1 ring-black/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl sm:rounded-[16px] sm:px-8 sm:py-6">
                   <div className="text-heading-5 sm:text-heading-4 text-secondary dark:text-accent flex items-center justify-center font-bold">
                     <NumberAnimation number={0} speed={1500} interval={150} rooms={1} />
                   </div>
@@ -111,7 +111,7 @@ const WhyChooseUs = ({ className }: { className?: string }) => {
 
               {/* Card 3: 30 Min Setup */}
               <RevealAnimation delay={0.7} direction="up" offset={50}>
-                <div className="backdrop-blur-md bg-white/95 dark:bg-background-6/95 rounded-[12px] px-3 py-4 text-center shadow-xl ring-1 ring-black/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl sm:rounded-[16px] sm:px-5 sm:py-6">
+                <div className="backdrop-blur-md bg-white/95 dark:bg-background-6/95 rounded-[12px] px-6 py-4 text-center shadow-xl ring-1 ring-black/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl sm:rounded-[16px] sm:px-8 sm:py-6">
                   <div className="text-heading-5 sm:text-heading-4 text-secondary dark:text-accent flex items-center justify-center font-bold">
                     <NumberAnimation number={30} speed={2000} interval={150} rooms={2} />
                     <span className="text-tagline-2 ml-1">min</span>
@@ -124,7 +124,7 @@ const WhyChooseUs = ({ className }: { className?: string }) => {
 
               {/* Card 4: 24/7 Access */}
               <RevealAnimation delay={0.8} direction="up" offset={50}>
-                <div className="backdrop-blur-md bg-white/95 dark:bg-background-6/95 rounded-[12px] px-3 py-4 text-center shadow-xl ring-1 ring-black/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl sm:rounded-[16px] sm:px-5 sm:py-6">
+                <div className="backdrop-blur-md bg-white/95 dark:bg-background-6/95 rounded-[12px] px-6 py-4 text-center shadow-xl ring-1 ring-black/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl sm:rounded-[16px] sm:px-8 sm:py-6">
                   <div className="text-heading-5 sm:text-heading-4 text-secondary dark:text-accent flex items-center justify-center font-bold">
                     <span>24/7</span>
                   </div>

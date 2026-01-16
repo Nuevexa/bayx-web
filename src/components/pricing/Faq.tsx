@@ -1,4 +1,4 @@
-import faqImg from '@public/images/ns-img-52.png';
+import faqImg from '@public/faq-pricing.jpg';
 import faqImgDark from '@public/images/ns-img-dark-31.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
@@ -89,15 +89,15 @@ const Faq = () => {
 
           {/* <!-- faq image --> */}
           <RevealAnimation delay={0.3}>
-            <figure className="relative w-full max-w-[684px] flex-1 overflow-hidden">
+            <figure className="relative w-full max-w-[684px] flex-1 overflow-hidden rounded-[20px]">
               <Image
-                className="size-full object-cover dark:hidden"
+                className="size-full rounded-[20px] object-cover dark:hidden"
                 src={faqImg}
                 alt="BayX pricing and subscription illustration"
                 loading="lazy"
               />
               <Image
-                className="hidden size-full object-cover dark:inline-block"
+                className="hidden size-full rounded-[20px] object-cover dark:inline-block"
                 src={faqImgDark}
                 alt="BayX pricing and subscription illustration"
                 loading="lazy"

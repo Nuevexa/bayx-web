@@ -3,6 +3,8 @@
 import { useState, FormEvent, ChangeEvent } from 'react';
 import RevealAnimation from '../animation/RevealAnimation';
 import { Check, Loader2 } from 'lucide-react';
+import Image from 'next/image';
+import bayxLogo from '@public/bayx-logo.svg';
 
 interface FormData {
   fullName: string;
@@ -217,13 +219,18 @@ const EarlyAccessHero = () => {
                 ) : (
                   <>
                     {/* Header */}
-                    <div className="mb-8 space-y-2 text-center">
-                      <h2 className="text-heading-4 text-secondary dark:text-accent font-semibold">
-                        Join Early Access
-                      </h2>
-                      <p className="text-tagline-1 text-secondary/70 dark:text-accent/70">
-                        Be among the first to experience BayX garage management software.
-                      </p>
+                    <div className="mb-8 space-y-4 text-center">
+                      <div className="flex justify-center">
+                        <Image src={bayxLogo} alt="BayX Logo" className="h-auto w-auto max-w-[180px]" priority />
+                      </div>
+                      <div className="space-y-2">
+                        <h2 className="text-heading-4 text-secondary dark:text-accent font-semibold">
+                          Join Early Access
+                        </h2>
+                        <p className="text-tagline-1 text-secondary/70 dark:text-accent/70">
+                          Be among the first to experience BayX garage management software.
+                        </p>
+                      </div>
                     </div>
 
                     {/* Form */}

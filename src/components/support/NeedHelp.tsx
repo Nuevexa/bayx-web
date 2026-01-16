@@ -1,13 +1,11 @@
-import support from '@public/images/ns-img-401.jpg';
-import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/Button';
 
 const NeedHelp = () => {
   return (
-    <section className="pt-32 pb-[100px] sm:pt-36 md:pt-42 lg:pb-[200px] xl:pt-[180px]">
+    <section className="pt-32 sm:pt-36 md:pt-42 xl:pt-[180px]">
       <div className="main-container">
-        <div className="mb-[70px] space-y-14 text-center">
+        <div className="space-y-14 text-center">
           <div className="space-y-3">
             <RevealAnimation delay={0.3}>
               <h2>Need help with BayX?</h2>
@@ -32,13 +30,6 @@ const NeedHelp = () => {
             </div>
           </RevealAnimation>
         </div>
-        <RevealAnimation delay={0.6} instant>
-          <div className="section-reveal">
-            <figure className="overflow-hidden rounded-[20px]">
-              <Image src={support} alt="BayX Support Team" />
-            </figure>
-          </div>
-        </RevealAnimation>
       </div>
     </section>
   );
