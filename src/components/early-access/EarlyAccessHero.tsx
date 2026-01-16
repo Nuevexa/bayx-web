@@ -221,13 +221,13 @@ const EarlyAccessHero = () => {
                     {/* Header */}
                     <div className="mb-8 space-y-4 text-center">
                       <div className="flex justify-center">
-                        <Image src={bayxLogo} alt="BayX Logo" className="h-auto w-auto max-w-[180px]" priority />
+                        <Image src={bayxLogo} alt="BayX Logo" className="h-auto w-auto max-w-[220px]" priority />
                       </div>
                       <div className="space-y-2">
-                        <h2 className="text-heading-4 text-secondary dark:text-accent font-semibold">
+                        <h2 className="text-heading-5 text-secondary dark:text-accent font-semibold">
                           Join Early Access
                         </h2>
-                        <p className="text-tagline-1 text-secondary/70 dark:text-accent/70">
+                        <p className="text-tagline-2 text-secondary/70 dark:text-accent/70">
                           Be among the first to experience BayX garage management software.
                         </p>
                       </div>

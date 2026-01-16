@@ -8,14 +8,14 @@ const Contact = () => {
         <div className="space-y-[70px]">
           {/* heading  */}
           <div className="main-w-[850px] mx-auto space-y-5 text-center md:w-full">
-            <RevealAnimation delay={0.2}>
+            <RevealAnimation delay={0.2} instant>
               <span className="badge badge-cyan">Contact</span>
             </RevealAnimation>
             <div className="space-y-3">
-              <RevealAnimation delay={0.3}>
+              <RevealAnimation delay={0.3} instant>
                 <h2 id="contact-heading">Still have questions?</h2>
               </RevealAnimation>
-              <RevealAnimation delay={0.4}>
+              <RevealAnimation delay={0.4} instant>
                 <p className="mx-auto max-w-[442px] sm:w-full">
                   If your question isn&apos;t listed here, feel free to contact us or start a live chat with our team.
                   We&apos;re happy to help!
@@ -24,7 +24,7 @@ const Contact = () => {
             </div>
           </div>
           {/* form */}
-          <RevealAnimation delay={0.5}>
+          <RevealAnimation delay={0.5} instant>
             <div className="contact-form dark:bg-background-6 mx-auto max-w-[850px] rounded-[20px] bg-white p-5 sm:p-[42px] md:w-full">
               <form action="/" method="POST">
                 {/* full name */}

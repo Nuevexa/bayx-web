@@ -24,6 +24,7 @@ const FAQ = () => {
         ctaHeading="Ready to see your shop's true profit?"
         description="Join our early access program today."
         ctaBtnText="Get Early Access"
+        useInstantAnimations={true}
       />
     </main>
   );

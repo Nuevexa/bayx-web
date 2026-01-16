@@ -12,14 +12,14 @@ import FooterDivider from './FooterDivider';
 const Footer = ({ className }: { className?: string }) => {
   return (
     <footer className={cn('bg-secondary dark:bg-background-8 relative z-0 overflow-hidden', className)}>
-      <RevealAnimation delay={0.3} offset={50} direction="up">
+      <RevealAnimation delay={0.3} offset={50} direction="up" instant>
         <figure className="pointer-events-none absolute -top-[1320px] left-1/2 -z-1 size-[1635px] -translate-x-1/2 select-none">
           <Image src={gradientImg} alt="footer-four-gradient" className="size-full object-cover" />
         </figure>
       </RevealAnimation>
       <div className="main-container px-5">
         <div className="grid grid-cols-12 justify-between gap-x-0 gap-y-16 pt-16 pb-12 xl:pt-[90px]">
-          <RevealAnimation delay={0.1}>
+          <RevealAnimation delay={0.1} instant>
             <div className="col-span-12 opacity-100 xl:col-span-4">
               <div className="max-w-[306px]">
                 <Logo variant="full" size="lg" useWhiteLogo />
@@ -44,7 +44,7 @@ const Footer = ({ className }: { className?: string }) => {
           <div className="col-span-12 grid grid-cols-12 gap-x-0 gap-y-8 xl:col-span-8">
             {footerLinks.map(({ title, links }, index) => (
               <div className="col-span-12 md:col-span-4" key={title}>
-                <RevealAnimation delay={0.2 + index * 0.1}>
+                <RevealAnimation delay={0.2 + index * 0.1} instant>
                   <div className="space-y-8 opacity-100">
                     <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">{title}</p>
                     <ul className="space-y-5">
@@ -64,7 +64,7 @@ const Footer = ({ className }: { className?: string }) => {
         </div>
         <div className="relative pt-[26px] pb-[42px] text-center">
           <FooterDivider className="bg-accent/10 dark:bg-stroke-6" />
-          <RevealAnimation delay={0.7} offset={10} start="top 105%">
+          <RevealAnimation delay={0.7} offset={10} start="top 105%" instant>
             <p className="text-tagline-1 text-primary-50 opacity-100 font-normal">
               Copyright © 2026 BayX. All rights reserved.
             </p>

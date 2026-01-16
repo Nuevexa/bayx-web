@@ -13,6 +13,7 @@ interface CTAV1Props {
   descriptionClass?: string;
   headingClass?: string;
   ctaLink?: string;
+  useInstantAnimations?: boolean;
 }
 
 const CTAV1 = ({
@@ -26,6 +27,7 @@ const CTAV1 = ({
   descriptionClass,
   headingClass,
   ctaLink = '/early-access',
+  useInstantAnimations = false,
 }: CTAV1Props) => {
   return (
     <section className={cn('py-[50px] md:py-20 lg:py-28', className)} aria-label="cta section">
@@ -33,19 +35,19 @@ const CTAV1 = ({
         <div className="flex flex-col items-center justify-center gap-8 text-center">
           <div className="mx-3 max-w-[649px] space-y-3 sm:mx-0 md:w-full">
             {badgeText && (
-              <RevealAnimation delay={0.3}>
+              <RevealAnimation delay={0.3} instant={useInstantAnimations}>
                 <span className={cn('badge badge-green', badgeClass)}>{badgeText}</span>
               </RevealAnimation>
             )}
 
             <div className="space-y-3">
-              <RevealAnimation delay={badgeText ? 0.4 : 0.3}>
+              <RevealAnimation delay={badgeText ? 0.4 : 0.3} instant={useInstantAnimations}>
                 <h2 className={cn('md:text-heading-2 text-heading-5', headingClass)} aria-label="cta-heading">
                   {ctaHeading}
                   {spanText && <span className="text-primary-500"> {spanText}</span>}
                 </h2>
               </RevealAnimation>
-              <RevealAnimation delay={badgeText ? 0.5 : 0.4}>
+              <RevealAnimation delay={badgeText ? 0.5 : 0.4} instant={useInstantAnimations}>
                 <p aria-label="cta-description" className={cn(descriptionClass)}>
                   {description}
                 </p>
@@ -54,7 +56,7 @@ const CTAV1 = ({
           </div>
 
           {/* CTA Button */}
-          <RevealAnimation delay={0.5}>
+          <RevealAnimation delay={0.5} instant={useInstantAnimations}>
             <div className="group/btn-v2 inline-block rounded-full transition-transform duration-500 ease-in-out">
               <Link
                 href={ctaLink}
