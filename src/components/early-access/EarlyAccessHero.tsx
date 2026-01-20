@@ -5,12 +5,14 @@ import RevealAnimation from '../animation/RevealAnimation';
 import { Check, Loader2 } from 'lucide-react';
 import Image from 'next/image';
 import bayxLogo from '@public/bayx-logo.svg';
+import '@/styles/rotated-background.css';
 
 interface FormData {
   fullName: string;
   email: string;
   phone: string;
   companyName: string;
+  agreedToTerms: boolean;
 }
 
 interface FormErrors {
@@ -18,6 +20,7 @@ interface FormErrors {
   email?: string;
   phone?: string;
   companyName?: string;
+  agreedToTerms?: string;
 }
 
 interface FormState {
@@ -32,6 +35,7 @@ const EarlyAccessHero = () => {
     email: '',
     phone: '',
     companyName: '',
+    agreedToTerms: false,
   });
 
   const [errors, setErrors] = useState<FormErrors>({});
@@ -94,6 +98,11 @@ const EarlyAccessHero = () => {
       newErrors.companyName = 'Garage name is required';
     } else if (formData.companyName.trim().length < 2) {
       newErrors.companyName = 'Garage name must be at least 2 characters';
+    }
+
+    // Terms and Privacy Policy validation
+    if (!formData.agreedToTerms) {
+      newErrors.agreedToTerms = 'You must agree to the Terms of Service and Privacy Policy';
     }
 
     setErrors(newErrors);
@@ -168,6 +177,7 @@ const EarlyAccessHero = () => {
         email: '',
         phone: '',
         companyName: '',
+        agreedToTerms: false,
       });
 
       // TODO: Log submission to analytics/tracking service
@@ -186,7 +196,9 @@ const EarlyAccessHero = () => {
     <section className="pt-[120px] pb-[70px] lg:pt-[180px] lg:pb-[100px]">
       <div className="main-container">
         <RevealAnimation delay={0.1}>
-          <div className="mx-auto w-full max-w-[866px] overflow-hidden rounded-4xl bg-cover bg-center bg-no-repeat sm:bg-[url('/images/ns-img-375.jpg')] sm:p-[70px]">
+          <div
+            className="rotated-background mx-auto w-full max-w-[866px] overflow-hidden rounded-4xl sm:p-[70px]"
+          >
             <RevealAnimation delay={0.1}>
               <div className="bg-background-1 dark:bg-background-6 max-w-[480px] rounded-[20px] px-8 py-14">
                 {/* Success Message */}
@@ -330,6 +342,52 @@ const EarlyAccessHero = () => {
                         )}
                       </fieldset>
 
+                      {/* Terms and Privacy Policy Agreement */}
+                      <fieldset className="space-y-2">
+                        <div className="flex items-start gap-3">
+                          <label htmlFor="agreedToTerms" className="flex items-center gap-x-3">
+                            <input
+                              id="agreedToTerms"
+                              type="checkbox"
+                              checked={formData.agreedToTerms}
+                              onChange={(e) =>
+                                setFormData((prev) => ({ ...prev, agreedToTerms: e.target.checked }))
+                              }
+                              disabled={formState.isSubmitting}
+                              className="peer sr-only"
+                            />
+                            <span className="border-stroke-3 dark:border-stroke-7 after:bg-primary-500 peer-checked:border-primary-500 relative size-4 cursor-pointer rounded-full border after:absolute after:top-1/2 after:left-1/2 after:size-2.5 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:opacity-0 peer-checked:after:opacity-100" />
+                          </label>
+                          <label
+                            htmlFor="agreedToTerms"
+                            className="text-tagline-3 text-secondary/70 dark:text-accent/70 cursor-pointer"
+                          >
+                            I agree to the{' '}
+                            <a
+                              href="/terms-conditions"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary-500 hover:text-primary-600 underline"
+                            >
+                              Terms of Service
+                            </a>
+                            {' '}and{' '}
+                            <a
+                              href="/privacy-policy"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary-500 hover:text-primary-600 underline"
+                            >
+                              Privacy Policy
+                            </a>
+                            <span className="text-primary-500"> *</span>
+                          </label>
+                        </div>
+                        {errors.agreedToTerms && (
+                          <p className="text-tagline-3 text-red-500 dark:text-red-400">{errors.agreedToTerms}</p>
+                        )}
+                      </fieldset>
+
                       {/* Error Message */}
                       {formState.error && (
                         <div className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800 rounded-lg border p-3">
@@ -354,13 +412,7 @@ const EarlyAccessHero = () => {
                         </button>
                       </div>
 
-                      {/* Privacy Note */}
-                      <p className="text-tagline-3 text-secondary/60 dark:text-accent/60 text-center">
-                        By submitting, you agree to our{' '}
-                        <a href="/privacy-policy" className="text-primary-500 hover:text-primary-600 underline">
-                          Privacy Policy
-                        </a>
-                      </p>
+
                     </form>
                   </>
                 )}

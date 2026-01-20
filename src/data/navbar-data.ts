@@ -64,7 +64,7 @@ export const footerData: FooterOneData[] = [
   {
     title: 'Legal',
     links: [
-      { label: 'Terms & Conditions', href: '/terms-conditions' },
+      { label: 'Terms of Service', href: '/terms-conditions' },
       { label: 'Privacy Policy', href: '/privacy-policy' },
       { label: 'Refund Policy', href: '/refund-policy' },
     ],

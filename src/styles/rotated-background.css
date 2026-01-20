@@ -1,0 +1,27 @@
+/* Rotated background for early access form */
+.rotated-background {
+  position: relative;
+}
+
+.rotated-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/background-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(-90deg) scale(1.5);
+  z-index: -1;
+  border-radius: 2.5rem;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .rotated-background::before {
+    display: none;
+  }
+}
