@@ -27,7 +27,8 @@ const Footer = ({ className }: { className?: string }) => {
                   Helping garage owners stop leaking profit by giving them real-time visibility into every job, every
                   technician, and every dollar.
                 </p>
-                <div className="flex items-center gap-3">
+                {/* Social links hidden for early access */}
+                {/* <div className="flex items-center gap-3">
                   <Link target="_blank" href="https://www.instagram.com">
                     <span className="sr-only">Instagram</span>
                     <Image className="size-6" src={instagram} alt="Instagram" />
@@ -37,7 +38,7 @@ const Footer = ({ className }: { className?: string }) => {
                     <span className="sr-only">LinkedIn</span>
                     <Image className="size-6" src={linkedin} alt="LinkedIn" />
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </RevealAnimation>

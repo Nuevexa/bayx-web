@@ -16,7 +16,7 @@ userReview:
 
 Give each tech their own mobile portal accessible from any phone browser. They see assigned jobs, log time, upload photos, and update status without leaving their bay.
 
-![Service images](/images/ns-img-397.png)
+![Service images](/technicial-mobile-portal.png)
 
 ## What's included
 

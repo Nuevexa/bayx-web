@@ -23,9 +23,6 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         description="Start your free trial today and experience the power of NexSaaS—where efficiency meets innovation."
         descriptionClass="max-w-[530px] text-accent/60"
         ctaBtnText="Get started"
-        listTextClass="text-tagline-2 text-accent dark:text-accent/60"
-        inputFieldClass="border-0 px-[18px] shadow-1 h-12 py-3 placeholder:text-accent/60 rounded-full focus:outline-1 text-accent focus:outline-primary-600 dark:focus:outline-primary-400 bg-accent/5 lg:max-w-[340px] md:w-[71%] w-full dark:border-stroke-7 dark:placeholder:text-accent/60 placeholder:font-normal font-normal"
-        checkListVariant="gray"
       />
     </main>
   );
