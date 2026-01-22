@@ -19,7 +19,7 @@ const FeaturedBlog = () => {
             </RevealAnimation>
           </div>
           {/* Featured blog swiper */}
-          <FeaturedBlogSwiper featuredBlogs={featuredBlogs} />
+          <FeaturedBlogSwiper featuredBlogs={featuredBlogs as any} isSanity={false} />
         </div>
       </div>
     </section>
