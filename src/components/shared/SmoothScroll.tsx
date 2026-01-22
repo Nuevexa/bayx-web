@@ -1,7 +1,7 @@
 'use client';
 import { ReactLenis, useLenis } from 'lenis/react';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { ReactNode, useEffect, useRef } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 
 interface SmoothScrollingProps {
   children: ReactNode;
@@ -12,8 +12,19 @@ const SmoothScrollProvider = ({ children }: Readonly<SmoothScrollingProps>) => {
   const searchParams = useSearchParams();
   const previousPathnameRef = useRef<string>(pathname);
   const isInitialRender = useRef(true);
+  const [lenisEnabled, setLenisEnabled] = useState(false);
 
   const lenis = useLenis();
+
+  // Defer Lenis initialization to prevent scroll lag on first paint
+  useEffect(() => {
+    // Wait for page to fully render before enabling smooth scroll
+    const timer = setTimeout(() => {
+      setLenisEnabled(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     // Handle hash navigation on route change
@@ -65,7 +76,7 @@ const SmoothScrollProvider = ({ children }: Readonly<SmoothScrollingProps>) => {
   }, [lenis, pathname]);
 
   return (
-    <ReactLenis root options={{ duration: 1.1 }}>
+    <ReactLenis root options={{ duration: lenisEnabled ? 0.8 : 0, lerp: lenisEnabled ? 0.1 : 1 }}>
       {children}
     </ReactLenis>
   );

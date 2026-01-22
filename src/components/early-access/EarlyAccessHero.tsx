@@ -397,12 +397,12 @@ const EarlyAccessHero = () => {
                         <button
                           type="submit"
                           disabled={formState.isSubmitting}
-                          className="btn btn-md btn-primary disabled:opacity-60 disabled:cursor-not-allowed w-full capitalize before:content-none inline-flex items-center justify-center min-w-[200px]">
+                          className="btn btn-md btn-primary disabled:opacity-60 disabled:cursor-not-allowed w-full capitalize before:content-none !inline-flex !flex-row items-center justify-center min-w-[200px] whitespace-nowrap">
                           {formState.isSubmitting ? (
-                            <span className="flex items-center justify-center gap-2 whitespace-nowrap">
-                              <Loader2 className="size-5 animate-spin" />
+                            <>
+                              <Loader2 className="size-5 animate-spin mr-2" />
                               Submitting...
-                            </span>
+                            </>
                           ) : (
                             'Request Early Access'
                           )}
