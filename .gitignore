@@ -44,3 +44,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# IDE
+/.agent/
+/.claude/
+/archived-pages/
+
+#Clean up files
+/cleanup-files
