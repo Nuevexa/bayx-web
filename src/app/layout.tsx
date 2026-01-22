@@ -4,6 +4,7 @@ import Footer from '@/components/shared/footer/Footer';
 import { AppContextProvider } from '@/context/AppContext';
 import { interTight } from '@/utils/font';
 import { generateMetadata } from '@/utils/generateMetaData';
+import { Analytics } from '@vercel/analytics/next';
 import { Metadata } from 'next';
 import { ReactNode, Suspense } from 'react';
 import './globals.css';
@@ -29,6 +30,7 @@ export default function RootLayout({
             </SmoothScrollProvider>
           </Suspense>
         </AppContextProvider>
+        <Analytics />
       </body>
     </html>
   );
