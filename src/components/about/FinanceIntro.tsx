@@ -64,10 +64,10 @@ const FinanceIntro = () => {
           <RevealAnimation delay={0.7}>
             <div>
               <LinkButton
-                href="https://bayx.app/auth/signup"
+                href="/early-access"
                 className="mx-auto block w-full md:inline-block md:w-auto"
                 btnClass="btn-xl-v2 btn-secondary-v2 group-hover/btn-v2:btn-v2-white">
-                Get started
+                Join Early Access
               </LinkButton>
             </div>
           </RevealAnimation>

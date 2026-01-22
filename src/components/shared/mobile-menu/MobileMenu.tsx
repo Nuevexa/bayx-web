@@ -1,10 +1,8 @@
 // crypto marketing mobile menu
 'use client';
+import Logo from '@/components/shared/Logo';
 import { useMobileMenuContext } from '@/context/MobileMenuContext';
 import { cn } from '@/utils/cn';
-import logoDark from '@public/images/shared/logo-dark.svg';
-import logoIcon from '@public/images/shared/logo.svg';
-import Image from 'next/image';
 import Link from 'next/link';
 import MenuCloseButton from './MenuCloseButton';
 import MobileMenuItem from './MobileMenuItem';
@@ -23,10 +21,10 @@ export interface MobileMenuGroup {
 }
 
 const MobileMenu = ({ menuData }: { menuData: MobileMenuGroup[] }) => {
-  const { isOpen, setIsOpen } = useMobileMenuContext();
+  const { isOpen, closeMenu } = useMobileMenuContext();
 
   const handleLinkClick = () => {
-    setIsOpen(false);
+    closeMenu();
   };
 
   return (
@@ -35,22 +33,18 @@ const MobileMenu = ({ menuData }: { menuData: MobileMenuGroup[] }) => {
         'dark:bg-background-8 scroll-bar fixed top-0 right-0 z-[9999] h-screen w-full translate-x-full bg-white transition-all duration-300 sm:w-1/2 sm:rounded-t-2xl sm:rounded-l-3xl xl:hidden',
         isOpen ? 'translate-x-0 opacity-100 md:translate-x-[8%]' : 'translate-x-full opacity-0',
       )}>
-      <div className="space-y-4 p-5 sm:p-8 lg:p-9">
-        <div className="flex items-center justify-between">
-          <Link href="/" onClick={handleLinkClick}>
-            <span className="sr-only">Home</span>
-            <figure className="max-w-[44px]">
-              <Image src={logoIcon} alt="BayX" className="block w-full dark:hidden" />
-              <Image src={logoDark} alt="BayX" className="hidden w-full dark:block" />
-            </figure>
-          </Link>
+      <div className="p-6 sm:p-8 lg:p-9">
+        <div className="flex items-start justify-between mb-8">
+          <div onClick={handleLinkClick} className="cursor-pointer">
+            <Logo variant="full" size="sm" />
+          </div>
           {/* close btn  */}
           <MenuCloseButton />
         </div>
 
         {/* menu items list  */}
-        <div className="scroll-bar mt-6 h-[85vh] w-full overflow-x-hidden pb-10">
-          <p className="text-secondary dark:text-accent text-tagline-1 before:bg-stroke-4 dark:before:bg-stroke-6 relative mb-2 block font-normal before:absolute before:top-1/2 before:-right-16 before:h-px before:w-full before:-translate-y-1/2 before:content-['']">
+        <div className="scroll-bar h-[calc(100vh-120px)] w-full overflow-x-hidden pb-10">
+          <p className="text-secondary/60 dark:text-accent/60 text-caption-1 before:bg-stroke-4 dark:before:bg-stroke-6 relative mb-4 block font-medium uppercase tracking-wider before:absolute before:top-1/2 before:-right-16 before:h-px before:w-full before:-translate-y-1/2 before:content-['']">
             Menu
           </p>
           <ul className="space-y-2">
@@ -59,13 +53,13 @@ const MobileMenu = ({ menuData }: { menuData: MobileMenuGroup[] }) => {
               item.submenu && item.submenu.length > 0 ? (
                 <MobileMenuItem key={item.id} id={item.id} title={item.title} hasSubmenu={true}>
                   {/* submenu items list  */}
-                  <ul>
+                  <ul className="space-y-1.5">
                     {item.submenu.map((subItem) => (
                       <li key={subItem.id}>
                         <Link
                           href={subItem.href}
                           onClick={handleLinkClick}
-                          className="text-tagline-1 text-secondary dark:text-accent ml-4 block py-2.5 text-left font-normal transition-all duration-200">
+                          className="text-body-2 text-secondary/70 dark:text-accent/70 hover:text-primary-500 dark:hover:text-primary-500 ml-6 block py-2 text-left transition-all duration-200 hover:translate-x-0.5">
                           {subItem.label}
                         </Link>
                       </li>
@@ -77,7 +71,7 @@ const MobileMenu = ({ menuData }: { menuData: MobileMenuGroup[] }) => {
                   <Link
                     href={item.href || '/'}
                     onClick={handleLinkClick}
-                    className="text-secondary dark:text-accent hover:text-primary-500 dark:hover:text-primary-500 text-heading-6 block py-3 text-left font-normal transition-all duration-200">
+                    className="text-secondary dark:text-accent hover:text-primary-500 dark:hover:text-primary-500 text-body-1 block py-2.5 text-left font-medium transition-all duration-200 hover:translate-x-0.5">
                     {item.title}
                   </Link>
                 </li>

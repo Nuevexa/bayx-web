@@ -17,12 +17,12 @@ BayX maintains a database of your customers. Each customer profile stores:
 ## Adding New Customers
 
 Customers are automatically created when you:
-1. Use **Quick Intake** with a new phone number
+1. Use Quick Intake with a new phone number
 2. Create a job with customer details not in the system
 
 You can also manually add customers:
 1. Go to the customer management area
-2. Click **Add Customer**
+2. Click Add Customer
 3. Enter their details
 4. Save the profile
 

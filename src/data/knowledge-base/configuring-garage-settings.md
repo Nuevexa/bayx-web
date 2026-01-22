@@ -8,8 +8,8 @@ order: 15
 
 ## Accessing Garage Settings
 
-1. Click **Settings** in the main navigation
-2. Select **Garage** from the sidebar
+1. Click Settings in the main navigation
+2. Select Garage from the sidebar
 3. You'll see your garage profile form
 
 ## Basic Information
@@ -24,9 +24,9 @@ Your physical shop location. This appears on:
 - Tracking pages
 
 ### Contact Information
-- **Phone Number**: Primary contact for the shop
-- **Email**: Business email for notifications
-- **Website**: Optional, for marketing purposes
+- Phone Number: Primary contact for the shop
+- Email: Business email for notifications
+- Website: Optional, for marketing purposes
 
 ## Business Settings
 
@@ -38,8 +38,8 @@ Select your local currency:
 - INR (₹) - Indian Rupee
 
 ### Tax Settings
-- **Tax Rate**: Your local sales tax percentage
-- **Tax Included**: Toggle if prices include tax (common for VAT/GST regions)
+- Tax Rate: Your local sales tax percentage
+- Tax Included: Toggle if prices include tax (common for VAT/GST regions)
 
 ### Labor Rate
 Your standard door rate for labor. This is the default rate used when creating jobs.
@@ -60,4 +60,4 @@ Upload your shop logo to personalize:
 
 ## Saving Changes
 
-After making changes, click **Save Settings**. Changes take effect immediately.
+After making changes, click Save Settings. Changes take effect immediately.

@@ -12,27 +12,27 @@ const featureLinks: FeatureLink[] = [
     {
         label: 'Job Board',
         description: 'Visual drag-and-drop job tracking',
-        href: '/services/job-board',
+        href: '/features/job-board',
     },
     {
         label: 'Profitability Analytics',
         description: 'Real-time revenue and margin insights',
-        href: '/services/profitability-analytics',
+        href: '/features/profitability-analytics',
     },
     {
         label: 'Customer Portal',
         description: 'Let customers track their vehicle',
-        href: '/services/customer-portal',
+        href: '/features/customer-portal',
     },
     {
         label: 'Technician Portal',
         description: 'Mobile app for your techs',
-        href: '/services/technician-portal',
+        href: '/features/technician-portal',
     },
     {
-        label: 'Estimates & Invoices',
-        description: 'Professional quotes in minutes',
-        href: '/services/estimates-invoices',
+        label: 'Estimates & Approvals',
+        description: 'Professional quotes and instant approvals',
+        href: '/features/estimates-approvals',
     },
 ];
 

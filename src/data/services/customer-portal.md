@@ -1,7 +1,7 @@
 ---
 title: 'Customer Tracking Portal'
 description: 'Give customers a link to track their vehicle progress. They see status updates and photos without calling you.'
-image: '/images/ns-img-321.jpg'
+image: '/landing-8.png'
 imgAlt: 'service-img'
 icon: 'ns-shape-27'
 showHomePage: true
@@ -14,20 +14,20 @@ userReview:
 
 ## Let Customers Track Their Own Vehicle
 
-Send customers a **unique tracking link** via text or WhatsApp. They can see their vehicle's status, view photos, and approve estimates without calling your shop.
+Send customers a unique tracking link via text or WhatsApp. They can see their vehicle's status, view photos, and approve estimates without calling your shop.
 
-![Service images](/images/ns-img-397.png)
+![Service images](/customer-tracking-portal.png)
 
 ## What's included
 
 Everything for transparent customer communication.
 
-- **Unique tracking links** - One link per job, no login required.
-- **Real-time status** - Customers see current job stage.
-- **Photo updates** - Techs upload photos, customers see them instantly.
-- **Estimate approval** - Customers approve additional work with one tap.
-- **Text/WhatsApp sharing** - Send links through their preferred channel.
-- **Branded experience** - Your shop name and logo on the portal.
+- Unique tracking links - One link per job, no login required.
+- Real-time status - Customers see current job stage.
+- Photo updates - Techs upload photos, customers see them instantly.
+- Estimate approval - Customers approve additional work with one tap.
+- Text/WhatsApp sharing - Send links through their preferred channel.
+- Branded experience - Your shop name and logo on the portal.
 
 ![Service images](/images/ns-img-398.png)
 
@@ -35,11 +35,11 @@ Everything for transparent customer communication.
 
 Perfect for shops that want happy customers without constant phone interruptions.
 
-- **Status transparency** - "Where's my car?" answered without a call.
-- **Photo proof** - Show customers what you found before they approve work.
-- **Digital approvals** - Get sign-off on additional repairs remotely.
-- **Trust building** - Customers appreciate the transparency.
-- **Time savings** - Less phone time, more wrench time.
+- Status transparency - "Where's my car?" answered without a call.
+- Photo proof - Show customers what you found before they approve work.
+- Digital approvals - Get sign-off on additional repairs remotely.
+- Trust building - Customers appreciate the transparency.
+- Time savings - Less phone time, more wrench time.
 
 ![Service images](/images/ns-img-dark-217.jpg)
 
@@ -47,8 +47,8 @@ Perfect for shops that want happy customers without constant phone interruptions
 
 Simple, mobile-friendly, and professional.
 
-- **No app download** required for customers.
-- **Works on any phone** or computer.
-- **Photos visible** on Pro Bay and Fleet Master plans.
-- **Instant notifications** when status changes.
-- **Professional appearance** builds trust.
+- No app download required for customers.
+- Works on any phone or computer.
+- Photos visible on Pro Bay and Fleet Master plans.
+- Instant notifications when status changes.
+- Professional appearance builds trust.

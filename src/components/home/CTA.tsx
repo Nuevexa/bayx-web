@@ -12,8 +12,8 @@ const CTA = () => {
           <div className="flex flex-col items-center justify-center gap-x-4 gap-y-3 md:flex-row md:gap-y-0">
             <RevealAnimation delay={0.4} direction="left" offset={50}>
               <div className="group w-[90%] list-none sm:w-auto">
-                <LinkButton href="https://bayx.app/auth/signup" btnClass="btn-xl-v2 btn-secondary-v2 group-hover/btn-v2:btn-primary-v2">
-                  Start 14-Day Free Trial
+                <LinkButton href="/early-access" btnClass="btn-xl-v2 btn-secondary-v2 group-hover/btn-v2:btn-primary-v2">
+                  Join Early Access
                 </LinkButton>
               </div>
             </RevealAnimation>

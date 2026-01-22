@@ -1,4 +1,4 @@
-import faqImg from '@public/images/ns-img-52.png';
+import faqImg from '@public/faq-pricing.jpg';
 import faqImgDark from '@public/images/ns-img-dark-31.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
@@ -32,11 +32,11 @@ const Faq = () => {
                     titleClassName="flex-1 text-left xl:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent"
                     value="1"
                     iconType="arrow">
-                    How does the 14-day free trial work?
+                    How does early access work?
                   </AccordionTrigger>
 
                   <AccordionContent value="1">
-                    You get full access to all Fleet Master features during your trial. At the end of 14 days, pick the plan that fits your shop and continue right where you left off. All your jobs, customers, and data carry over.
+                    Join our early access program to be among the first to use BayX. You'll get full access to all features at our founding member rates. Your feedback helps shape the product, and you'll lock in special pricing for life.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -89,15 +89,15 @@ const Faq = () => {
 
           {/* <!-- faq image --> */}
           <RevealAnimation delay={0.3}>
-            <figure className="relative w-full max-w-[684px] flex-1 overflow-hidden">
+            <figure className="relative w-full max-w-[684px] flex-1 overflow-hidden rounded-[20px]">
               <Image
-                className="size-full object-cover dark:hidden"
+                className="size-full rounded-[20px] object-cover dark:hidden"
                 src={faqImg}
                 alt="BayX pricing and subscription illustration"
                 loading="lazy"
               />
               <Image
-                className="hidden size-full object-cover dark:inline-block"
+                className="hidden size-full rounded-[20px] object-cover dark:inline-block"
                 src={faqImgDark}
                 alt="BayX pricing and subscription illustration"
                 loading="lazy"

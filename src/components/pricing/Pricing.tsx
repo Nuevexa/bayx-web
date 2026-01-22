@@ -24,14 +24,14 @@ const pricingPlans: PricingPlan[] = [
     id: 'starter',
     title: 'Basic Bay',
     description: 'For small 1-2 bay garages just getting started.',
-    price: '79',
+    price: '59',
     features: [
       { label: 'Up to 2 Service Bays', active: true },
       { label: '3 Technician Accounts', active: true },
       { label: '50 Jobs per Month', active: true },
       { label: 'Drag-and-drop Job Board', active: true },
       { label: 'Customer Tracking Portal', active: true },
-      { label: 'Estimates & Invoices', active: true },
+      { label: 'Estimates & Approvals', active: true },
 
     ],
   },
@@ -39,7 +39,7 @@ const pricingPlans: PricingPlan[] = [
     id: 'professional',
     title: 'Pro Bay',
     description: 'For growing shops with expanding teams.',
-    price: '129',
+    price: '99',
     featured: true,
     features: [
       { label: 'Up to 5 Service Bays', active: true },
@@ -55,7 +55,7 @@ const pricingPlans: PricingPlan[] = [
     id: 'unlimited',
     title: 'Fleet Master',
     description: 'For multi-location or high-volume operations.',
-    price: '199',
+    price: '149',
     features: [
       { label: 'Unlimited Service Bays', active: true },
       { label: 'Unlimited Technicians', active: true },
@@ -81,7 +81,7 @@ const Pricing = () => {
           </RevealAnimation>
           <RevealAnimation delay={0.4}>
             <p className="text-tagline-1 text-secondary/60">
-              Start your 14-day free trial on any plan.
+              Early access pricing — Lock in these rates as a founding member.
             </p>
           </RevealAnimation>
         </div>
@@ -109,20 +109,21 @@ const Pricing = () => {
                         {plan.description}
                       </p>
                       <div className="mb-7">
+                        <span className="badge badge-green-v2 mb-3 inline-block text-xs">Early Access Pricing</span>
                         <h4 className="text-heading-4 font-normal">
                           <b>$<span>{plan.price}</span></b>
                         </h4>
                         <p className="text-secondary dark:text-accent">Per Month</p>
                       </div>
                       <Link
-                        href={`https://bayx.app/auth/signup?tier=${plan.id}`}
+                        href="/early-access"
                         className={cn(
-                          'btn btn-md mb-8 block w-full text-center first-letter:uppercase before:content-none',
+                          'btn btn-md mb-8 block w-full text-center capitalize before:content-none',
                           plan.featured
                             ? 'btn-secondary dark:btn-accent hover:btn-primary'
                             : 'btn-white dark:btn-white-dark hover:btn-secondary dark:hover:btn-accent',
                         )}>
-                        Start 14-Day Free Trial
+                        Get Early Access
                       </Link>
                       <ul className="relative list-none space-y-2.5">
                         {plan.features.map((feature) => (

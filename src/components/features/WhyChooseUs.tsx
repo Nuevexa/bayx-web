@@ -3,10 +3,10 @@ import RevealAnimation from '@/components/animation/RevealAnimation';
 import { cn } from '@/utils/cn';
 import transactionChart from '@public/images/ns-img-235.svg';
 import profitChart from '@public/images/ns-img-240.png';
-import transactionRing from '@public/images/ns-img-74.png';
+import transactionRing from '@public/images/ns-img-240.png';
 import transactionChartDark from '@public/images/ns-img-dark-157.svg';
 import profitChartDark from '@public/images/ns-img-dark-161.png';
-import transactionRingDark from '@public/images/ns-img-dark-50.png';
+import transactionRingDark from '@public/images/ns-img-dark-161.png';
 import Image from 'next/image';
 
 const WhyChooseUs = ({ className }: { className?: string }) => {
@@ -67,49 +67,74 @@ const WhyChooseUs = ({ className }: { className?: string }) => {
         </div>
         <div className="relative">
           <RevealAnimation delay={0.2} direction="up" offset={150}>
-            <figure className="h-full w-full max-w-[735px] rounded-[20px] object-cover">
+            <figure className="h-full w-full max-w-[735px] overflow-hidden rounded-[20px]">
               <Image
                 src={transactionRing}
                 alt="BayX profitability dashboard"
-                className="block size-full object-cover dark:hidden"
+                className="block size-full rounded-[20px] object-cover dark:hidden"
               />
               <Image
                 src={transactionRingDark}
                 alt="BayX profitability dashboard"
-                className="hidden size-full object-cover dark:block"
+                className="hidden size-full rounded-[20px] object-cover dark:block"
               />
             </figure>
           </RevealAnimation>
-          <RevealAnimation delay={0.5} direction="right" offset={100} useSpring={true} duration={2}>
-            <figure className="absolute top-[15%] right-6 w-full max-w-[140px] overflow-hidden rounded-[20px] md:right-0 md:max-w-[253px] lg:max-w-[200px] xl:max-w-[253px]">
-              <Image
-                src={transactionChart}
-                alt="Revenue chart"
-                className="inline-block h-full w-full object-cover dark:hidden"
-              />
-              <Image
-                src={transactionChartDark}
-                alt="Revenue chart"
-                className="hidden h-full w-full object-cover dark:block"
-              />
-            </figure>
-          </RevealAnimation>
-          <RevealAnimation delay={1} direction="up" offset={100} useSpring={true} duration={1.5}>
-            <div className="absolute top-[20%] right-0 z-10 w-[92px] xl:-right-[4%]">
-              <div className="text-heading-6 md:text-heading-5 bg-ns-yellow flex -rotate-[14deg] items-center justify-center rounded-[8px] px-2 py-1 font-normal">
-                <NumberAnimation number={15} speed={2500} interval={200} rooms={2}>
-                  15
-                </NumberAnimation>
-                %
-              </div>
+
+          {/* Floating Metric Cards */}
+          <div className="absolute inset-0 flex items-center justify-center px-4 py-8 sm:px-8 sm:py-12">
+            <div className="grid w-full max-w-[750px] grid-cols-2 gap-4 sm:gap-5 md:gap-6">
+              {/* Card 1: 100% Visibility */}
+              <RevealAnimation delay={0.5} direction="up" offset={50}>
+                <div className="backdrop-blur-md bg-white/95 dark:bg-background-6/95 rounded-[12px] px-6 py-4 text-center shadow-xl ring-1 ring-black/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl sm:rounded-[16px] sm:px-8 sm:py-6">
+                  <div className="text-heading-5 sm:text-heading-4 text-secondary dark:text-accent flex items-center justify-center font-bold">
+                    <NumberAnimation number={100} speed={2000} interval={150} rooms={3} />
+                    <span>%</span>
+                  </div>
+                  <p className="text-tagline-3 sm:text-tagline-2 text-secondary/70 dark:text-accent/70 mt-1.5 font-medium sm:mt-2">
+                    Visibility
+                  </p>
+                </div>
+              </RevealAnimation>
+
+              {/* Card 2: 0 Paperwork */}
+              <RevealAnimation delay={0.6} direction="up" offset={50}>
+                <div className="backdrop-blur-md bg-white/95 dark:bg-background-6/95 rounded-[12px] px-6 py-4 text-center shadow-xl ring-1 ring-black/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl sm:rounded-[16px] sm:px-8 sm:py-6">
+                  <div className="text-heading-5 sm:text-heading-4 text-secondary dark:text-accent flex items-center justify-center font-bold">
+                    <NumberAnimation number={0} speed={1500} interval={150} rooms={1} />
+                  </div>
+                  <p className="text-tagline-3 sm:text-tagline-2 text-secondary/70 dark:text-accent/70 mt-1.5 font-medium sm:mt-2">
+                    Paperwork
+                  </p>
+                </div>
+              </RevealAnimation>
+
+              {/* Card 3: 30 Min Setup */}
+              <RevealAnimation delay={0.7} direction="up" offset={50}>
+                <div className="backdrop-blur-md bg-white/95 dark:bg-background-6/95 rounded-[12px] px-6 py-4 text-center shadow-xl ring-1 ring-black/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl sm:rounded-[16px] sm:px-8 sm:py-6">
+                  <div className="text-heading-5 sm:text-heading-4 text-secondary dark:text-accent flex items-center justify-center font-bold">
+                    <NumberAnimation number={30} speed={2000} interval={150} rooms={2} />
+                    <span className="text-tagline-2 ml-1">min</span>
+                  </div>
+                  <p className="text-tagline-3 sm:text-tagline-2 text-secondary/70 dark:text-accent/70 mt-1.5 font-medium sm:mt-2">
+                    Setup
+                  </p>
+                </div>
+              </RevealAnimation>
+
+              {/* Card 4: 24/7 Access */}
+              <RevealAnimation delay={0.8} direction="up" offset={50}>
+                <div className="backdrop-blur-md bg-white/95 dark:bg-background-6/95 rounded-[12px] px-6 py-4 text-center shadow-xl ring-1 ring-black/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl sm:rounded-[16px] sm:px-8 sm:py-6">
+                  <div className="text-heading-5 sm:text-heading-4 text-secondary dark:text-accent flex items-center justify-center font-bold">
+                    <span>24/7</span>
+                  </div>
+                  <p className="text-tagline-3 sm:text-tagline-2 text-secondary/70 dark:text-accent/70 mt-1.5 font-medium sm:mt-2">
+                    Access
+                  </p>
+                </div>
+              </RevealAnimation>
             </div>
-          </RevealAnimation>
-          <RevealAnimation delay={0.7} direction="right" offset={100} useSpring={true} duration={2}>
-            <figure className="shadow-3 absolute right-0 bottom-0 w-full max-w-[200px] overflow-hidden rounded-[20px] sm:bottom-10 sm:max-w-[320px] md:bottom-[10%] md:max-w-[395px]">
-              <Image src={profitChart} alt="Profit margins chart" className="h-full w-full dark:hidden" />
-              <Image src={profitChartDark} alt="Profit margins chart" className="hidden h-full w-full dark:block" />
-            </figure>
-          </RevealAnimation>
+          </div>
         </div>
       </div>
     </section>

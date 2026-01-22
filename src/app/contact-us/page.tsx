@@ -16,9 +16,9 @@ const ContactUs = () => {
       <CTAV1
         className="dark:bg-background-5 bg-white"
         badgeClass="hidden"
-        ctaBtnText="Start Free Trial"
+        ctaBtnText="Get Early Access"
         ctaHeading="Ready to try BayX?"
-        description="Start your 14-day free trial. No credit card required."
+        description="Join our early access program and be among the first to experience BayX."
       />
     </main>
   );

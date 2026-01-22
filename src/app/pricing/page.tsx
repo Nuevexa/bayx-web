@@ -21,8 +21,8 @@ const page = () => {
         badgeText="Get started"
         badgeClass="badge-green-v2"
         ctaHeading="Ready to streamline your shop?"
-        description="Start your 14-day free trial."
-        ctaBtnText="Start Free Trial"
+        description="Join our early access program and lock in founding member rates."
+        ctaBtnText="Get Early Access"
       />
     </main>
   );

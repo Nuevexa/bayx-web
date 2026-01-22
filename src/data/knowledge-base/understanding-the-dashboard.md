@@ -16,9 +16,9 @@ The BayX dashboard is designed as a "God View" - everything you need to manage y
 
 At the top of your dashboard, you'll see three critical metrics:
 
-1. **Today's Revenue**: Live revenue from completed jobs
-2. **Effective Labor Rate (ELR)**: Total Labor Revenue ÷ Billed Hours
-3. **Pending Approvals**: Count of estimates awaiting customer approval
+1. Today's Revenue: Live revenue from completed jobs
+2. Effective Labor Rate (ELR): Total Labor Revenue ÷ Billed Hours
+3. Pending Approvals: Count of estimates awaiting customer approval
 
 ### Left Sidebar - Quick Actions
 
@@ -33,20 +33,20 @@ Just fill in the fields and click "Create Job" - the job is automatically added 
 ### Center Stage - Kanban Board
 
 The heart of your dashboard is the drag-and-drop Kanban board with columns:
-- **Intake**: New jobs just received
-- **Waiting Approval**: Estimate sent, awaiting customer response
-- **Waiting Parts**: Approved but parts not yet received
-- **In Progress**: Technician actively working
-- **Ready**: Work complete, awaiting pickup
-- **Completed**: Job closed
+- Intake: New jobs just received
+- Waiting Approval: Estimate sent, awaiting customer response
+- Waiting Parts: Approved but parts not yet received
+- In Progress: Technician actively working
+- Ready: Work complete, awaiting pickup
+- Completed: Job closed
 
 Simply drag job cards between columns to update their status.
 
 ### Right Sidebar - Profit Pulse
 
 Real-time profitability insights:
-- **Technician Efficiency**: Shows each tech's billed hours vs. clocked hours
-- **Service Margins**: Which service types are most profitable
+- Technician Efficiency: Shows each tech's billed hours vs. clocked hours
+- Service Margins: Which service types are most profitable
 
 ## Tips for Dashboard Success
 

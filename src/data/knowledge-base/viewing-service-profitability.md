@@ -12,7 +12,7 @@ Service profitability shows you which types of repairs and services generate the
 
 ## Finding Service Margins
 
-Check the **Profit Pulse** sidebar on your dashboard. The Service Margin section shows your top service categories ranked by profit margin.
+Check the Profit Pulse sidebar on your dashboard. The Service Margin section shows your top service categories ranked by profit margin.
 
 ## How Service Margin is Calculated
 
@@ -30,12 +30,12 @@ Where Costs include:
 ## Service Categories
 
 BayX tracks margins for:
-- **Oil**: Oil changes and related services
-- **Brakes**: Brake pad, rotor, and line work
-- **Tires**: Tire sales, rotation, balancing
-- **Engine**: Engine repair and maintenance
-- **Diagnostic**: Inspection and diagnostic services
-- **Other**: All other services
+- Oil: Oil changes and related services
+- Brakes: Brake pad, rotor, and line work
+- Tires: Tire sales, rotation, balancing
+- Engine: Engine repair and maintenance
+- Diagnostic: Inspection and diagnostic services
+- Other: All other services
 
 ## Reading the Report
 
@@ -55,7 +55,7 @@ Understanding service profitability helps you:
 
 ## Improving Low-Margin Services
 
-1. **Increase prices**: market will often bear more
-2. **Find cheaper parts suppliers**: reduce cost
-3. **Improve efficiency**: bill more hours per job
-4. **Bundle services**: increase ticket size
+1. Increase prices: market will often bear more
+2. Find cheaper parts suppliers: reduce cost
+3. Improve efficiency: bill more hours per job
+4. Bundle services: increase ticket size

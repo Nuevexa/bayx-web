@@ -1,4 +1,4 @@
-import heroBanner from '@public/images/ns-img-327.png';
+import heroBanner from '@public/landing-1.svg';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/Button';
@@ -28,8 +28,8 @@ const Hero = () => {
             <ul className="flex flex-col items-center justify-center gap-x-4 gap-y-3 md:flex-row md:gap-y-0">
               <RevealAnimation delay={0.4} direction="left" instant offset={50}>
                 <div>
-                  <LinkButton href="https://bayx.app/auth/signup" btnClass="btn-xl-v2 btn-secondary-v2 group-hover/btn-v2:btn-primary-v2">
-                    Start 14-Day Free Trial
+                  <LinkButton href="/early-access" btnClass="btn-xl-v2 btn-secondary-v2 group-hover/btn-v2:btn-primary-v2">
+                    Join Early Access
                   </LinkButton>
                 </div>
               </RevealAnimation>
@@ -45,8 +45,8 @@ const Hero = () => {
           </div>
           {/* banner */}
           <RevealAnimation delay={0.4} direction="up" instant>
-            <figure className="mx-auto -mb-3 max-w-[620px] min-[1800px]:!max-w-[1166px] lg:max-w-[840px] xl:max-w-[1000px] 2xl:max-w-[1016px]">
-              <Image src={heroBanner} alt="Hero banner" className="h-full w-full object-cover" />
+            <figure className="mx-auto -mb-3 max-w-[620px] overflow-hidden rounded-[10px] min-[1800px]:!max-w-[1166px] lg:max-w-[840px] xl:max-w-[1000px] 2xl:max-w-[1016px]">
+              <Image src={heroBanner} alt="Hero banner" className="h-full w-full scale-[1.01] rounded-[10px] object-cover" />
             </figure>
           </RevealAnimation>
         </div>

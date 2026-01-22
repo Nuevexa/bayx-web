@@ -14,11 +14,11 @@ There are two ways to create a job in BayX:
 
 The Quick Intake widget on your dashboard lets you create jobs in seconds:
 
-1. Enter the customer's **phone number** - if they're an existing customer, their info auto-fills
-2. Add the customer's **name** (first and last)
-3. Enter **vehicle details** (year, make, model, license plate)
-4. Describe the **issue** or service requested
-5. Click **Create Job**
+1. Enter the customer's phone number - if they're an existing customer, their info auto-fills
+2. Add the customer's name (first and last)
+3. Enter vehicle details (year, make, model, license plate)
+4. Describe the issue or service requested
+5. Click Create Job
 
 The job is immediately added to the "Intake" column on your Kanban board.
 
@@ -37,10 +37,10 @@ For more detailed job creation, click "New Job" from the operations page:
 
 Every job can have multiple line items:
 
-- **Labor**: Hours × your labor rate
-- **Parts**: Part cost with markup
-- **Services**: Pre-configured service packages from your menu
-- **Supply Fee**: Shop supplies (consumables)
+- Labor: Hours × your labor rate
+- Parts: Part cost with markup
+- Services: Pre-configured service packages from your menu
+- Supply Fee: Shop supplies (consumables)
 
 ## Assigning a Technician
 

@@ -12,23 +12,23 @@ Service bays represent the physical work spaces in your garage. Each bay can hav
 
 ## Setting Up Bays
 
-1. Go to **Settings** > **Bays**
-2. Click **Add Bay**
+1. Go to Settings > Bays
+2. Click Add Bay
 3. Enter a name for the bay (e.g., "Bay 1", "Lift Station A")
 4. Optionally add a description
-5. Click **Save**
+5. Click Save
 
 ## Bay Limits by Plan
 
 The number of bays you can create depends on your subscription:
-- **Basic Bay**: 1 bay
-- **Pro Bay**: Up to 3 bays
-- **Fleet Master**: Unlimited bays
+- Basic Bay: 1 bay
+- Pro Bay: Up to 3 bays
+- Fleet Master: Unlimited bays
 
 ## Assigning Jobs to Bays
 
 When creating or editing a job:
-1. Look for the **Bay Assignment** dropdown
+1. Look for the Bay Assignment dropdown
 2. Select an available bay
 3. The job will be tracked against that bay
 

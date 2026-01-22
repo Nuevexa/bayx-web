@@ -1,4 +1,5 @@
-import Contact from '@/components/faq/Contact';
+
+import ContactInfo from '@/components/contact-page/ContactInfo';
 import FaqTab from '@/components/faq/FaqTab';
 import CTAV1 from '@/components/shared/cta/CTAV1';
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -17,13 +18,14 @@ const FAQ = () => {
   return (
     <main className="bg-background-3 dark:bg-background-7">
       <FaqTab />
-      <Contact />
+      <ContactInfo />
       <CTAV1
         className="dark:bg-background-6 bg-white"
         badgeClass="hidden"
         ctaHeading="Ready to see your shop's true profit?"
-        description="Start your 14-day free trial. No credit card required."
-        ctaBtnText="Start Free Trial"
+        description="Join our early access program today."
+        ctaBtnText="Get Early Access"
+        useInstantAnimations={true}
       />
     </main>
   );

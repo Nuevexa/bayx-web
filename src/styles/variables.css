@@ -58,10 +58,10 @@ All the varaiables are added here
   --color-ns-red: #ffb9a2;
   --color-ns-cyan: #2dd4bf;
   /* Teal 400 */
-  --color-ns-green-light: #ccfbf1;
-  /* Teal 100 */
-  --color-ns-cyan-light: #99f6e4;
-  /* Teal 200 */
+  --color-ns-green-light: #EBFDF5;
+  /* Updated green light for badges */
+  --color-ns-cyan-light: #EBFDF5;
+  /* Updated cyan light for badges */
   --color-ns-yellow-light: #fdf7bc;
 
   /* Gradients Updated to Teal/Cyan Theme */

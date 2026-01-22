@@ -7,9 +7,9 @@ export const faqData = [
   },
   {
     id: 2,
-    question: 'How does the 14-day free trial work?',
+    question: 'How does early access work?',
     answer:
-      'You get full access to all Fleet Master features during your trial. No credit card required to start. At the end of 14 days, choose the plan that fits your shop size and continue from where you left off.',
+      "Join our early access program to be among the first to use BayX. You'll get full access to all features at our founding member rates. Your feedback helps shape the product, and you'll lock in special pricing for life.",
   },
   {
     id: 3,
@@ -19,9 +19,9 @@ export const faqData = [
   },
   {
     id: 4,
-    question: 'What happens after my trial ends?',
+    question: 'Can I change plans later?',
     answer:
-      'All your data stays safe. Pick a plan (Basic Bay, Pro Bay, or Fleet Master) based on your shop size. Your jobs, customers, and history carry over seamlessly.',
+      'Yes. You can upgrade or downgrade your plan at any time. Your data stays safe and accessible. Early access members keep their special founding member rates when changing plans.',
   },
   {
     id: 5,

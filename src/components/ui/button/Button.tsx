@@ -1,5 +1,9 @@
+'use client';
+
 import { cn } from '@/utils/cn';
+import { useLenis } from 'lenis/react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface ButtonProps {
   className?: string;
@@ -9,6 +13,51 @@ interface ButtonProps {
 }
 
 const LinkButton = ({ className, href, btnClass, children }: ButtonProps) => {
+  const lenis = useLenis();
+  const pathname = usePathname();
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Handle hash links with Lenis smooth scroll
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      // Update URL without navigation
+      const newUrl = `${pathname}${href}`;
+      window.history.pushState(null, '', newUrl);
+      if (lenis) {
+        lenis.scrollTo(href, {
+          offset: -100,
+          duration: 1.2,
+        });
+      } else {
+        // Fallback if Lenis is not available
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    } else if (href.includes('#')) {
+      const [path, hash] = href.split('#');
+      // If it's the same page (path matches or is empty), handle hash scroll
+      if (pathname === path || path === '' || path === pathname) {
+        e.preventDefault();
+        // Update URL
+        window.history.pushState(null, '', href);
+        if (lenis) {
+          lenis.scrollTo(`#${hash}`, {
+            offset: -100,
+            duration: 1.2,
+          });
+        } else {
+          // Fallback if Lenis is not available
+          const element = document.querySelector(`#${hash}`);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      }
+    }
+  };
+
   return (
     <div
       className={cn(
@@ -17,6 +66,7 @@ const LinkButton = ({ className, href, btnClass, children }: ButtonProps) => {
       )}>
       <Link
         href={href}
+        onClick={handleClick}
         className={cn(
           'mx-auto inline-flex h-12 w-full cursor-pointer items-center justify-center gap-1.5 rounded-full text-center font-medium text-nowrap lowercase transition-all duration-500 ease-in-out md:mx-0 md:h-auto md:w-auto',
           btnClass,

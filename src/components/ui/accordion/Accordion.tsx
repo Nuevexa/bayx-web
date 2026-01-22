@@ -4,7 +4,7 @@ import { cn } from '@/utils/cn';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React, { createContext, useContext, useRef, useState } from 'react';
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -27,6 +27,7 @@ export interface AccordionProps {
   disabled?: boolean;
   enableScrollAnimation?: boolean;
   animationDelay?: number;
+  visibilityFallbackTimeout?: number;
 }
 
 // Create Accordion Context
@@ -49,6 +50,7 @@ const Accordion: React.FC<AccordionProps> = ({
   disabled = false,
   enableScrollAnimation = true,
   animationDelay = 0.1,
+  visibilityFallbackTimeout,
 }) => {
   const [activeItem, setActiveItem] = useState<string | null>(defaultValue || null);
   const accordionRef = useRef<HTMLDivElement>(null);
@@ -96,6 +98,40 @@ const Accordion: React.FC<AccordionProps> = ({
       );
     });
   }, [enableScrollAnimation, animationDelay]);
+
+  // Visibility fallback timeout - ensures items are visible if ScrollTrigger fails
+  useEffect(() => {
+    if (!visibilityFallbackTimeout || !accordionRef.current || !enableScrollAnimation) {
+      return;
+    }
+
+    const timeoutId = setTimeout(() => {
+      const items = accordionRef.current?.querySelectorAll('.accordion-item');
+      if (!items) return;
+
+      items.forEach((item) => {
+        const element = item as HTMLElement;
+        const computedStyle = window.getComputedStyle(element);
+        const currentOpacity = parseFloat(computedStyle.opacity);
+
+        // If item is still hidden (opacity < 0.1), force visibility
+        if (currentOpacity < 0.1) {
+          gsap.to(element, {
+            opacity: 1,
+            y: 0,
+            filter: 'blur(0px)',
+            duration: 0.3,
+            ease: 'power2.out',
+            overwrite: true,
+          });
+        }
+      });
+    }, visibilityFallbackTimeout);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [visibilityFallbackTimeout, enableScrollAnimation]);
 
   const handleItemToggle = (itemValue: string | null) => {
     if (disabled) {

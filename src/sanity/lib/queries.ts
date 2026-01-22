@@ -134,3 +134,60 @@ export const faqItemsByCategoryQuery = defineQuery(`
     order
   }
 `)
+
+// =====================
+// LEGAL DOCUMENT QUERIES
+// =====================
+
+// Query to get a published legal document by type
+export const legalDocumentByTypeQuery = defineQuery(`
+  *[_type == "legalDocument" && documentType == $documentType && publishStatus == "published"] | order(effectiveDate desc)[0] {
+    _id,
+    documentType,
+    title,
+    slug,
+    version,
+    effectiveDate,
+    lastUpdated,
+    summary,
+    introduction,
+    sections[] {
+      sectionTitle,
+      sectionId,
+      sectionContent,
+      subsections[] {
+        subsectionTitle,
+        subsectionId,
+        subsectionContent,
+        order
+      },
+      order
+    },
+    contactEmail,
+    governingLaw
+  }
+`)
+
+// Query to get all published legal documents
+export const allLegalDocumentsQuery = defineQuery(`
+  *[_type == "legalDocument" && publishStatus == "published"] | order(documentType asc, effectiveDate desc) {
+    _id,
+    documentType,
+    title,
+    slug,
+    version,
+    effectiveDate,
+    summary
+  }
+`)
+
+// Query to get version history for a specific document type
+export const legalDocumentVersionHistoryQuery = defineQuery(`
+  *[_type == "legalDocument" && documentType == $documentType] | order(effectiveDate desc) {
+    _id,
+    version,
+    effectiveDate,
+    publishStatus,
+    summary
+  }
+`)

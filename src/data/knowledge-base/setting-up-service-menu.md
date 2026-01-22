@@ -12,21 +12,21 @@ The Service Menu is a list of pre-configured services that your shop offers. Ins
 
 ## Accessing the Service Menu
 
-1. Go to **Settings** from the main menu
-2. Click on **Service Menu** in the settings sidebar
+1. Go to Settings from the main menu
+2. Click on Service Menu in the settings sidebar
 3. You'll see a list of all your configured services
 
 ## Adding a New Service
 
-Click **Add Service** and fill in:
+Click Add Service and fill in:
 
-1. **Service Name**: e.g., "Oil Change - Synthetic"
-2. **Category**: Select from Oil, Brakes, Tires, Engine, Diagnostic, Other
-3. **Description**: What's included in this service
-4. **Labor Hours**: Estimated time to complete
-5. **Labor Cost**: What you pay the technician
-6. **Labor Price**: What you charge the customer
-7. **Default Parts**: Any standard parts included
+1. Service Name: e.g., "Oil Change - Synthetic"
+2. Category: Select from Oil, Brakes, Tires, Engine, Diagnostic, Other
+3. Description: What's included in this service
+4. Labor Hours: Estimated time to complete
+5. Labor Cost: What you pay the technician
+6. Labor Price: What you charge the customer
+7. Default Parts: Any standard parts included
 
 ## Service Categories
 
@@ -35,7 +35,7 @@ Categorizing your services helps with:
 - Profitability analysis by service type
 - Understanding which services make the most money
 
-**Categories:**
+Categories:
 - Oil
 - Brakes
 - Tires
@@ -50,7 +50,7 @@ Click on any service to edit its details. Changes apply to new jobs only - exist
 ## Using Services in Jobs
 
 When adding line items to a job:
-1. Click **Add from Service Menu**
+1. Click Add from Service Menu
 2. Select the service you want
 3. Details are auto-filled
 4. Adjust quantities if needed

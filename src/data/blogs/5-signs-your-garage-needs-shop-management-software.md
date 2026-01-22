@@ -26,7 +26,7 @@ If you need to:
 
 ...then you're wasting time and frustrating customers.
 
-**The fix:** Shop management software with a job board shows every vehicle's status at a glance. Answer the question in seconds, not minutes.
+The fix: Shop management software with a job board shows every vehicle's status at a glance. Answer the question in seconds, not minutes.
 
 ### 2. You Don't Know Your Real Profit Margins
 
@@ -34,7 +34,7 @@ Quick: What's your average profit margin on brake jobs? How about oil changes?
 
 If you can't answer with confidence, you're not alone. Most shops using paper systems only see revenue—not the actual profit after parts and labor costs.
 
-**The fix:** Digital systems track parts costs and labor time per job. You see margin on every invoice, not just at the end of the month.
+The fix: Digital systems track parts costs and labor time per job. You see margin on every invoice, not just at the end of the month.
 
 ### 3. Technicians Waste Time Walking to the Front Desk
 
@@ -46,7 +46,7 @@ How often do your techs walk to the front to:
 
 Every trip is 5-10 minutes of non-billable time. Multiply that by several trips per day, per tech, and you're losing hours of productivity weekly.
 
-**The fix:** Mobile technician portals let techs see their assignments, update status, and upload photos without leaving the bay.
+The fix: Mobile technician portals let techs see their assignments, update status, and upload photos without leaving the bay.
 
 ### 4. Parts Tracking Is a Guessing Game
 
@@ -54,13 +54,13 @@ Do you know exactly which parts are on which jobs? Can you quickly see if a part
 
 Paper systems make this nearly impossible to track reliably. The result: double orders, missing parts, and jobs that stall waiting for items already on the shelf.
 
-**The fix:** Job-based parts tracking shows exactly what's been ordered, what's arrived, and what's still pending—per job.
+The fix: Job-based parts tracking shows exactly what's been ordered, what's arrived, and what's still pending—per job.
 
 ### 5. Month-End Reconciliation Takes Days
 
 If closing your books requires digging through stacks of work orders, matching them to deposits, and hunting down missing information, you're spending hours on work that should take minutes.
 
-**The fix:** Digital systems automatically connect estimates to invoices to payments. Reports generate instantly.
+The fix: Digital systems automatically connect estimates to invoices to payments. Reports generate instantly.
 
 ### The Real Question: What's It Costing You?
 
@@ -78,11 +78,11 @@ Every sign above represents hidden costs:
 
 When evaluating shop management software, look for:
 
-- **Simple setup** – You should be running in under an hour, not days
-- **Mobile access** – Techs and owners need to access it from anywhere
-- **Real-time visibility** – If it's not live, it's already outdated
-- **Customer communication** – Ways to update customers without phone calls
-- **Profitability tracking** – Revenue is vanity, profit is sanity
+- Simple setup – You should be running in under an hour, not days
+- Mobile access – Techs and owners need to access it from anywhere
+- Real-time visibility – If it's not live, it's already outdated
+- Customer communication – Ways to update customers without phone calls
+- Profitability tracking – Revenue is vanity, profit is sanity
 
 ### The Transition Doesn't Have to Be Painful
 

@@ -19,7 +19,7 @@ It seems harmless. But multiply that call by 10-20 customers per day, and you've
 
 ### Why Customers Call (It's Not What You Think)
 
-You might assume customers call because they're impatient. But research shows the real reason is simpler: **uncertainty creates anxiety**.
+You might assume customers call because they're impatient. But research shows the real reason is simpler: uncertainty creates anxiety.
 
 When someone hands over their car—often their second-most expensive possession—they enter an information vacuum. They don't know:
 
@@ -42,7 +42,7 @@ Each status call costs more than you think:
 | Customer frustration | They shouldn't have to chase you |
 | Staff burnout | Repetitive calls drain energy |
 
-**A shop with 15 status calls per day loses 45-75 minutes daily just answering questions that shouldn't need asking.**
+A shop with 15 status calls per day loses 45-75 minutes daily just answering questions that shouldn't need asking.
 
 ### The Solution: Proactive Updates
 
@@ -57,7 +57,7 @@ Send a simple text when:
 - Work begins
 - The car is ready for pickup
 
-Customers who receive updates are **80% less likely** to call for status.
+Customers who receive updates are 80% less likely to call for status.
 
 #### Option 2: Customer Tracking Portal
 
@@ -76,7 +76,7 @@ If technology isn't your thing, commit to calling customers at set times:
 - Afternoon: "Here's what we found."
 - End of day: "Here's where we stand."
 
-**The key is proactive communication.** Calling the customer before they call you completely changes the dynamic.
+The key is proactive communication. Calling the customer before they call you completely changes the dynamic.
 
 ### The Psychology Behind Proactive Updates
 
@@ -91,19 +91,19 @@ Customers stop worrying because they feel informed. And when customers aren't wo
 
 Shops that implement proactive customer updates typically see:
 
-- **60-70% reduction** in inbound status calls
-- **Higher customer satisfaction scores**
-- **More online reviews** (happy customers talk)
-- **Better staff morale** (fewer repetitive calls)
-- **Faster phone response** for new business
+- 60-70% reduction in inbound status calls
+- Higher customer satisfaction scores
+- More online reviews (happy customers talk)
+- Better staff morale (fewer repetitive calls)
+- Faster phone response for new business
 
 ### Getting Started: The 3-Day Challenge
 
 Try this for the next three days:
 
-1. **Day 1:** Count how many "where's my car?" calls you receive
-2. **Day 2:** Send a proactive text update when each car's status changes
-3. **Day 3:** Count the calls again
+1. Day 1: Count how many "where's my car?" calls you receive
+2. Day 2: Send a proactive text update when each car's status changes
+3. Day 3: Count the calls again
 
 Most shops see a noticeable difference in just one day.
 
@@ -121,4 +121,4 @@ The goal is a system where customers always know their status without you liftin
 
 "Where's my car?" calls aren't a customer problem. They're an information problem. Solve the information gap, and the calls disappear.
 
-**Your customers don't want to bother you. Give them a better option, and they won't.**
+Your customers don't want to bother you. Give them a better option, and they won't.

@@ -200,14 +200,14 @@ NextSaaS Buttons Styles
 }
 
 @utility btn-secondary-v2 {
-  @apply bg-primary-500 border-primary-600 border text-white shadow-[0_1px_2px_0_rgba(16,24,40,0.26)] transition-all duration-300;
+  @apply bg-primary-500 border-primary-600 border text-white shadow-1 transition-all duration-300;
 
   .btn-v2-icon {
     @apply fill-white;
   }
 
   &:hover {
-    @apply bg-[#0f766e] border-[#0f766e] shadow-[0_8px_25px_-5px_rgba(15,118,110,0.4)];
+    @apply bg-[#0f766e] border-[#0f766e] shadow-xl;
   }
 }
 
@@ -220,7 +220,7 @@ NextSaaS Buttons Styles
 }
 
 @utility btn-gray-v2 {
-  @apply bg-background-1 border-stroke-3 text-secondary border shadow-[0_1px_2px_0_rgba(16,24,40,0.05)];
+  @apply bg-background-1 border-stroke-3 text-secondary border shadow-1;
 
   .btn-v2-icon {
     @apply fill-secondary;
@@ -228,7 +228,7 @@ NextSaaS Buttons Styles
 }
 
 @utility btn-green-v2 {
-  @apply bg-ns-green border-ns-green-light text-secondary border shadow-[0_1px_2px_0_rgba(16,24,40,0.05)];
+  @apply bg-ns-green border-ns-green-light text-secondary border shadow-1;
 
   .btn-v2-icon {
     @apply fill-secondary;
@@ -236,7 +236,7 @@ NextSaaS Buttons Styles
 }
 
 @utility btn-ash-v2 {
-  @apply bg-background-4 border-stroke-3 text-secondary border shadow-[0_1px_2px_0_rgba(16,24,40,0.05)];
+  @apply bg-background-4 border-stroke-3 text-secondary border shadow-1;
 
   .btn-v2-icon {
     @apply fill-secondary;

@@ -1,6 +1,6 @@
 ---
 title: 'No more "Where''s my car?" calls'
-thumbnail: '/images/ns-img-326.png'
+thumbnail: '/landing-13.jpg'
 description: 'Customers get real-time updates without calling your shop. Your phone stays quiet.'
 result: Reduced incoming status calls by 70%
 showHomePage: true

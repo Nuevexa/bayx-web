@@ -86,8 +86,8 @@ const HowItsWork = () => {
 
         <RevealAnimation delay={0.5}>
           <div className="group mt-14 text-center">
-            <LinkButton href="https://bayx.app/auth/signup" btnClass="btn-xl-v2 btn-secondary-v2 group-hover/btn-v2:btn-primary-v2">
-              Start Free Trial
+            <LinkButton href="/early-access" btnClass="btn-xl-v2 btn-secondary-v2 group-hover/btn-v2:btn-primary-v2">
+              Join Early Access
             </LinkButton>
           </div>
         </RevealAnimation>

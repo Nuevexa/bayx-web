@@ -1,27 +1,128 @@
-import RefundPolicyContent from '@/components/refund-policy/RefundPolicyContent';
-import CTAV1 from '@/components/shared/cta/CTAV1';
-import { defaultMetadata } from '@/utils/generateMetaData';
-import { Metadata } from 'next';
+import LegalContent from '@/components/legal/LegalContent'
+import CTAV1 from '@/components/shared/cta/CTAV1'
+import { defaultMetadata } from '@/utils/generateMetaData'
+import { generateLegalMetaTags, generateLegalStructuredData } from '@/utils/legalStructuredData'
+import { getLegalDocumentRoute } from '@/utils/legalHelpers'
+import { Metadata } from 'next'
+import { client } from '@/sanity/lib/client'
+import { legalDocumentByTypeQuery } from '@/sanity/lib/queries'
+import { LegalDocument } from '@/interface/legalTypes'
 
-export const metadata: Metadata = {
-  ...defaultMetadata,
-  title: 'Refund Policy - AI Application || NextSaaS',
-};
+// Revalidate every hour
+export const revalidate = 3600
 
-const RefundPolicy = () => {
+/**
+ * Generate metadata for Refund Policy page
+ */
+export async function generateMetadata(): Promise<Metadata> {
+  try {
+    const document = await client.fetch<LegalDocument>(legalDocumentByTypeQuery, {
+      documentType: 'refund-policy',
+    })
+
+    if (document) {
+      const url = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://bayx.com'}${getLegalDocumentRoute('refund-policy')}`
+      return generateLegalMetaTags(document, url)
+    }
+  } catch (error) {
+    console.error('Error fetching legal document metadata:', error)
+  }
+
+  return {
+    ...defaultMetadata,
+    title: 'Refund Policy | BayX',
+    description: 'Learn about our refund policy and process. We offer a 14-day money-back guarantee.',
+  }
+}
+
+/**
+ * Refund Policy Page
+ */
+export default async function RefundPolicyPage() {
+  let document: LegalDocument | null = null
+  let error = false
+
+  try {
+    document = await client.fetch<LegalDocument>(legalDocumentByTypeQuery, {
+      documentType: 'refund-policy',
+    })
+  } catch (err) {
+    console.error('Error fetching Refund Policy:', err)
+    error = true
+  }
+
+  // Related documents
+  const relatedDocuments = [
+    {
+      type: 'terms-of-service',
+      title: 'Terms of Service',
+      href: '/terms-conditions',
+    },
+    {
+      type: 'privacy-policy',
+      title: 'Privacy Policy',
+      href: '/privacy-policy',
+    },
+    {
+      type: 'data-processing-agreement',
+      title: 'Data Processing Agreement',
+      href: '/data-processing-agreement',
+    },
+  ]
+
   return (
     <main className="bg-background-3 dark:bg-background-7">
-      <RefundPolicyContent />
+      {/* Structured Data for SEO */}
+      {document && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              generateLegalStructuredData(
+                document,
+                `${process.env.NEXT_PUBLIC_SITE_URL || 'https://bayx.com'}${getLegalDocumentRoute('refund-policy')}`
+              )
+            ),
+          }}
+        />
+      )}
+
+      {/* Legal Document Content */}
+      {document ? (
+        <LegalContent document={document} relatedDocuments={relatedDocuments} />
+      ) : (
+        <section className="pt-32 pb-14 sm:pt-36 md:pt-42 md:pb-16 lg:pb-[88px] xl:pt-[180px]">
+          <div className="main-container text-center">
+            <h1 className="text-heading-3 sm:text-heading-2 text-secondary dark:text-accent mb-6">Refund Policy</h1>
+            {error ? (
+              <p className="text-tagline-1 text-secondary/70 dark:text-accent/70 mb-8">
+                Unable to load the Refund Policy at this time. Please try again later.
+              </p>
+            ) : (
+              <div className="text-tagline-1 text-secondary/70 dark:text-accent/70 mb-8 space-y-4">
+                <p>The Refund Policy content is currently being prepared by our legal team.</p>
+                <p className="text-sm">
+                  Please check back soon or contact us at{' '}
+                  <a href="mailto:legal@bayx.com" className="text-primary-500 underline">
+                    legal@bayx.com
+                  </a>{' '}
+                  for more information.
+                </p>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* CTA Section */}
       <CTAV1
         className="dark:bg-background-5 bg-white"
-        badgeClass="badge-yellow-v2"
+        badgeClass="badge-primary"
         badgeText="Get Started"
-        ctaHeading="Ready to start earning with NextSaaS?"
-        description="If you have any questions, feel free to reach out to our team."
-        ctaBtnText="Get started"
+        ctaHeading="Ready to transform your garage operations?"
+        description="Join BayX today and start tracking profitability in real-time."
+        ctaBtnText="Start Free Trial"
       />
     </main>
-  );
-};
-
-export default RefundPolicy;
+  )
+}

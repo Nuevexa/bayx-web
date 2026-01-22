@@ -1,14 +1,11 @@
 'use client';
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import LinkButton from '@/components/ui/button/Button';
+import Logo from '@/components/shared/Logo';
 import { MobileMenuProvider } from '@/context/MobileMenuContext';
 import { mobileMenuData } from '@/data/navbar-data';
 import { useNavbarScroll } from '@/hooks/useScrollHeader';
 import { cn } from '@/utils/cn';
-import logoDark from '@public/images/shared/logo-dark.svg';
-import logo from '@public/images/shared/logo.svg';
-import mainLogo from '@public/images/shared/main-logo.svg';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import MobileMenu from '../mobile-menu/MobileMenu';
@@ -35,18 +32,7 @@ const Navbar = ({ showTopNav }: { showTopNav: boolean }) => {
         )}>
         <RevealAnimation direction="up" offset={100} delay={0.1} instant>
           <div className="dark:bg-background-7 flex items-center justify-between rounded-full bg-white/60 px-2.5 py-2.5 backdrop-blur-[25px] xl:py-0">
-            <div>
-              <Link href="/">
-                <span className="sr-only">Home</span>
-                <figure className="hidden lg:block lg:max-w-[198px]">
-                  <Image src={mainLogo} alt="BayX" className="dark:invert" />
-                </figure>
-                <figure className="block max-w-[44px] lg:hidden">
-                  <Image src={logo} alt="BayX" className="block w-full dark:hidden" />
-                  <Image src={logoDark} alt="BayX" className="hidden w-full dark:block" />
-                </figure>
-              </Link>
-            </div>
+            <Logo responsive size="md" />
             <nav className="hidden items-center xl:flex">
               <ul className="flex items-center">
                 {/* Features Dropdown */}
@@ -107,15 +93,15 @@ const Navbar = ({ showTopNav }: { showTopNav: boolean }) => {
                 </li>
               </ul>
             </nav>
-            {/* Right side: Login + Start Free Trial */}
+            {/* Right side: Join Early Access */}
             <div className="hidden items-center justify-center gap-2 xl:flex">
-              <Link
-                href="https://bayx.app/auth/login"
+              {/* <Link
+                href="/early-access"
                 className="text-tagline-1 text-secondary/60 hover:text-secondary dark:text-accent/60 dark:hover:text-accent px-4 py-2 font-normal transition-all duration-200">
                 Login
-              </Link>
-              <LinkButton href="https://bayx.app/auth/signup" btnClass="btn-md-v2 btn-secondary-v2 border group-hover/btn-v2:btn-v2-white">
-                Start Free Trial
+              </Link> */}
+              <LinkButton href="/early-access" btnClass="btn-md-v2 btn-secondary-v2 border group-hover/btn-v2:btn-v2-white">
+                Join Early Access
               </LinkButton>
             </div>
             <MobileMenuButton />

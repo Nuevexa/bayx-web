@@ -1,0 +1,41 @@
+{
+    "sections_7_to_18": [
+        {
+            "sectionTitle": "Customer Data",
+            "order": 7,
+            "subsections": [
+                {
+                    "title": "Ownership",
+                    "order": 1,
+                    "content": "The Customer retains all ownership rights, title, and interest in and to Customer Data. We acquire no ownership rights in Customer Data except as necessary to provide the Services."
+                },
+                {
+                    "title": "Licence to Process",
+                    "order": 2,
+                    "content": "The Customer grants Us a non-exclusive, worldwide, royalty-free licence to access, use, process, copy, store, transmit, and display Customer Data solely to the extent necessary to provide the Services, comply with legal obligations, and enforce these Terms."
+                },
+                {
+                    "title": "Customer Responsibilities",
+                    "order": 3,
+                    "content": "The Customer represents, warrants, and covenants that:\n\n• It has all necessary rights and consents to upload Customer Data to the Platform;\n• Customer Data does not infringe or violate any third party's intellectual property rights, privacy rights, or other legal rights;\n• Customer Data does not contain viruses, malware, or harmful code;\n• The Customer will comply with all applicable data protection and privacy laws in connection with Customer Data."
+                },
+                {
+                    "title": "Data Security",
+                    "order": 4,
+                    "content": "We implement commercially reasonable technical and organisational measures designed to protect Customer Data from unauthorised access, disclosure, alteration, or destruction. However, no security system is impenetrable, and We do not guarantee absolute security."
+                },
+                {
+                    "title": "Data Backup and Retrieval",
+                    "order": 5,
+                    "content": "The Customer is solely responsible for maintaining independent backups of Customer Data. Upon request during the Subscription Term or within thirty (30) days following termination, We will provide the Customer with an export of Customer Data in a commonly used format, subject to payment of applicable retrieval fees."
+                },
+                {
+                    "title": "Data Deletion",
+                    "order": 6,
+                    "content": "Following termination or upon Customer request, We will delete Customer Data in accordance with Our data retention policies and legal obligations. Once deleted, Customer Data cannot be recovered."
+                }
+            ]
+        }
+    ],
+    "NOTE": "This is a simplified JSON for reference. For actual import, use the provided script or Sanity Studio UI."
+}

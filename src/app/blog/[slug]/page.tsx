@@ -83,7 +83,7 @@ const portableTextComponents: Partial<PortableTextReactComponents> = {
   },
   types: {
     image: ({ value }) => {
-      if (!value?.asset?._ref) return null;
+      if (!value?.asset?._ref) {return null;}
       return (
         <figure className="my-10">
           <Image
@@ -187,8 +187,8 @@ const BlogDetailPage = async ({ params }: { params: Promise<{ slug: string }> })
         className="dark:bg-background-7 bg-white"
         badgeClass="hidden"
         ctaHeading="Ready to see your shop's true profit?"
-        description="Start your 14-day free trial."
-        ctaBtnText="Start Free Trial"
+        description="Join our early access program today."
+        ctaBtnText="Get Early Access"
       />
     </main>
   );

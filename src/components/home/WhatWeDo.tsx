@@ -9,7 +9,7 @@ const WhatWeDo = () => {
   return (
     <section className="max-[1920px]:px-5">
       <RevealAnimation delay={0.2}>
-        <div className="bg-secondary mx-auto max-w-[1880px] rounded-3xl px-5 lg:py-24 xl:rounded-4xl xl:py-28">
+        <div className="mx-auto max-w-[1880px] rounded-3xl px-5 lg:py-24 xl:rounded-4xl xl:py-28" style={{ backgroundColor: '#0f766e' }}>
           <div className="mx-auto max-w-[1400px] py-16 lg:py-20 xl:py-30">
             <h2
               ref={titleRef}

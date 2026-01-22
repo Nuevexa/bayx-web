@@ -1,10 +1,10 @@
-import { IService } from '@/interface';
+// import { IService } from '@/interface';
 import getMarkDownContent from '@/utils/getMarkDownContent';
 import ReactMarkdown from 'react-markdown';
 import rehypeSlug from 'rehype-slug';
 import RevealAnimation from '../animation/RevealAnimation';
 import TableOfContent from './TableOfContent';
-import UserReview from './UserReview';
+// import UserReview from './UserReview';
 
 const Contents = ({ slug }: { slug: string }) => {
   const service = getMarkDownContent('src/data/services/', slug);
@@ -20,8 +20,8 @@ const Contents = ({ slug }: { slug: string }) => {
               </div>
             </RevealAnimation>
 
-            {/* user review  */}
-            <UserReview service={service.data as IService} />
+            {/* user review - hidden for early access */}
+            {/* <UserReview service={service.data as IService} /> */}
           </div>
 
           {/* Table of Contents */}
