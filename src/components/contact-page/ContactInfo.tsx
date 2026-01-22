@@ -351,12 +351,12 @@ const ContactInfo = () => {
                     <button
                       type="submit"
                       disabled={formState.isSubmitting}
-                      className="btn btn-md btn-primary w-full first-letter:uppercase before:content-none disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center">
+                      className="btn btn-md btn-primary w-full first-letter:uppercase before:content-none disabled:opacity-60 disabled:cursor-not-allowed !inline-flex !flex-row items-center justify-center whitespace-nowrap">
                       {formState.isSubmitting ? (
-                        <span className="flex items-center justify-center gap-2 whitespace-nowrap">
-                          <Loader2 className="size-5 animate-spin" />
+                        <>
+                          <Loader2 className="size-5 animate-spin mr-2" />
                           Submitting...
-                        </span>
+                        </>
                       ) : (
                         'Submit'
                       )}

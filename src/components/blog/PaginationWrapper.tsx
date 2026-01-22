@@ -32,7 +32,7 @@ const PaginationWrapper = ({ blogs }: PaginationWrapperProps) => {
         {currentBlogs?.map((blog, index) => (
           <RevealAnimation key={blog?.slug} delay={0.3 + index * 0.1}>
             <div>
-              <BlogCard blog={blog} />
+              <BlogCard blog={blog as any} isSanity={false} />
             </div>
           </RevealAnimation>
         ))}

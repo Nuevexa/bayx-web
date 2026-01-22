@@ -9,14 +9,14 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "postinstall": "tsx folder-rename.ts --utb"
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@portabletext/react": "^6.0.2",
     "@sanity/image-url": "^1.2.0",
     "@sanity/vision": "^4.22.0",
+    "@vercel/analytics": "^1.4.1",
     "classnames": "^2.5.1",
     "gray-matter": "^4.0.3",
     "gsap": "^3.13.0",
