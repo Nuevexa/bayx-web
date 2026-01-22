@@ -1,5 +1,5 @@
+import ContactInfo from '@/components/contact-page/ContactInfo';
 import CTAV1 from '@/components/shared/cta/CTAV1';
-import Contact from '@/components/support/Contact';
 import NeedHelp from '@/components/support/NeedHelp';
 import Services from '@/components/support/Services';
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -16,7 +16,7 @@ const Support = () => {
     <main className="bg-background-3 dark:bg-background-7">
       <NeedHelp />
       <Services />
-      <Contact />
+      <ContactInfo />
       <CTAV1
         className="dark:bg-background-5 bg-white"
         badgeClass="hidden"

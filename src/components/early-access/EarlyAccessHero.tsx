@@ -48,9 +48,8 @@ const EarlyAccessHero = () => {
   // Input sanitization - prevent XSS and SQL injection attempts
   const sanitizeInput = (input: string): string => {
     return input
-      .trim()
       .replace(/[<>]/g, '') // Remove potential HTML tags
-      .replace(/['";\\]/g, '') // Remove SQL injection attempts
+      .replace(/['"`;\\]/g, '') // Remove SQL injection attempts
       .replace(/script/gi, '') // Remove script tags
       .slice(0, 200); // Limit length
   };
@@ -109,14 +108,13 @@ const EarlyAccessHero = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Handle input change
+  // Handle input change - no sanitization for smooth typing
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    const sanitizedValue = sanitizeInput(value);
 
     setFormData((prev) => ({
       ...prev,
-      [name]: sanitizedValue,
+      [name]: value,
     }));
 
     // Clear error for this field when user starts typing
@@ -152,17 +150,29 @@ const EarlyAccessHero = () => {
     });
 
     try {
-      // Simulate API call (replace with actual implementation later)
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Sanitize data once before submission (not on every keystroke)
+      const sanitizedData = {
+        fullName: sanitizeInput(formData.fullName),
+        email: sanitizeInput(formData.email),
+        phone: formData.phone ? sanitizeInput(formData.phone) : '',
+        companyName: sanitizeInput(formData.companyName),
+        agreedToTerms: formData.agreedToTerms,
+      };
 
-      // TODO: Replace with actual API call
-      // const response = await fetch('/api/early-access', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData),
-      // });
-      //
-      // if (!response.ok) throw new Error('Submission failed');
+      // Call Make.com webhook route
+      const response = await fetch('/api/make/early-access', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(sanitizedData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Submission failed');
+      }
 
       // Success state
       setFormState({
@@ -182,12 +192,12 @@ const EarlyAccessHero = () => {
 
       // TODO: Log submission to analytics/tracking service
       // console.log('Early Access Submission:', formData);
-    } catch {
+    } catch (error: any) {
       // Error state
       setFormState({
         isSubmitting: false,
         isSuccess: false,
-        error: 'Something went wrong. Please try again.',
+        error: error.message || 'Something went wrong. Please try again.',
       });
     }
   };
@@ -200,8 +210,7 @@ const EarlyAccessHero = () => {
             className="rotated-background mx-auto w-full max-w-[866px] overflow-hidden rounded-4xl sm:p-[70px]"
           >
             <RevealAnimation delay={0.1}>
-              <div className="bg-background-1 dark:bg-background-6 max-w-[480px] rounded-[20px] px-8 py-14">
-                {/* Success Message */}
+              <div className="bg-background-1 dark:bg-background-6 max-w-[480px] rounded-[20px] px-8 py-14 min-h-[600px] flex flex-col justify-center">
                 {formState.isSuccess ? (
                   <div className="space-y-6 text-center">
                     <div className="bg-primary-500/10 mx-auto flex size-20 items-center justify-center rounded-full">
@@ -215,18 +224,6 @@ const EarlyAccessHero = () => {
                         Thank you for your interest in BayX. We'll reach out soon with exclusive early access details.
                       </p>
                     </div>
-                    <button
-                      type="button"
-                      onClick={() =>
-                        setFormState({
-                          isSubmitting: false,
-                          isSuccess: false,
-                          error: null,
-                        })
-                      }
-                      className="text-primary-500 hover:text-primary-600 text-tagline-1 font-medium underline transition-colors">
-                      Submit another request
-                    </button>
                   </div>
                 ) : (
                   <>
@@ -400,9 +397,9 @@ const EarlyAccessHero = () => {
                         <button
                           type="submit"
                           disabled={formState.isSubmitting}
-                          className="btn btn-md btn-primary disabled:opacity-60 disabled:cursor-not-allowed w-full capitalize before:content-none">
+                          className="btn btn-md btn-primary disabled:opacity-60 disabled:cursor-not-allowed w-full capitalize before:content-none inline-flex items-center justify-center min-w-[200px]">
                           {formState.isSubmitting ? (
-                            <span className="flex items-center justify-center gap-2">
+                            <span className="flex items-center justify-center gap-2 whitespace-nowrap">
                               <Loader2 className="size-5 animate-spin" />
                               Submitting...
                             </span>

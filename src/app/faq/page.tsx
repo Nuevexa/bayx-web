@@ -1,4 +1,5 @@
-import Contact from '@/components/faq/Contact';
+
+import ContactInfo from '@/components/contact-page/ContactInfo';
 import FaqTab from '@/components/faq/FaqTab';
 import CTAV1 from '@/components/shared/cta/CTAV1';
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -17,7 +18,7 @@ const FAQ = () => {
   return (
     <main className="bg-background-3 dark:bg-background-7">
       <FaqTab />
-      <Contact />
+      <ContactInfo />
       <CTAV1
         className="dark:bg-background-6 bg-white"
         badgeClass="hidden"
