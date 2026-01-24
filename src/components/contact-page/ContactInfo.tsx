@@ -166,6 +166,7 @@ const ContactInfo = () => {
 
   return (
     <section
+      id="contact-form"
       className="pt-32 pb-14 sm:pt-36 md:pt-42 md:pb-16 lg:pb-20 xl:pt-[180px] xl:pb-[100px]"
       aria-label="Contact Information and Form">
       <div className="main-container">

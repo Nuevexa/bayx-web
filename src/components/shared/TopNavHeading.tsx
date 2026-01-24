@@ -1,7 +1,7 @@
 'use client';
 import { useAppContext } from '@/context/AppContext';
 import { cn } from '@/utils/cn';
-import logo from '@public/favicon.svg';
+import logo from '@public/favicon.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 
