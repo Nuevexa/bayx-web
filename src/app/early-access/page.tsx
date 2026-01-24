@@ -18,7 +18,8 @@ const EarlyAccessPage = () => {
         badgeClass="hidden"
         ctaHeading="Want to learn more first?"
         description="Check out our features and see how BayX can transform your garage operations."
-        ctaBtnText="Join Early Access"
+        ctaBtnText="Explore Features"
+        ctaLink="/features"
       />
     </main>
   );
