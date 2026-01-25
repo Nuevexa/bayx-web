@@ -3,10 +3,9 @@ import RevealAnimation from '@/components/animation/RevealAnimation';
 import { cn } from '@/utils/cn';
 import transactionChart from '@public/images/ns-img-235.svg';
 import profitChart from '@public/images/ns-img-240.png';
-import transactionRing from '@public/images/ns-img-240.png';
+import statsBackground from '@public/images/background-stats.jpg';
 import transactionChartDark from '@public/images/ns-img-dark-157.svg';
 import profitChartDark from '@public/images/ns-img-dark-161.png';
-import transactionRingDark from '@public/images/ns-img-dark-161.png';
 import Image from 'next/image';
 
 const WhyChooseUs = ({ className }: { className?: string }) => {
@@ -69,14 +68,9 @@ const WhyChooseUs = ({ className }: { className?: string }) => {
           <RevealAnimation delay={0.2} direction="up" offset={150}>
             <figure className="h-full w-full max-w-[735px] overflow-hidden rounded-[20px]">
               <Image
-                src={transactionRing}
+                src={statsBackground}
                 alt="BayX profitability dashboard"
-                className="block size-full rounded-[20px] object-cover dark:hidden"
-              />
-              <Image
-                src={transactionRingDark}
-                alt="BayX profitability dashboard"
-                className="hidden size-full rounded-[20px] object-cover dark:block"
+                className="block size-full rounded-[20px] object-cover"
               />
             </figure>
           </RevealAnimation>
