@@ -5,8 +5,9 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Contact Us - BayX Garage Management',
-  description: 'Get in touch with BayX support. We respond within 24 hours to help you with your garage management questions.',
+  title: 'Contact Us - BayX Support & Sales',
+  description:
+    'Get in touch with the BayX team. We are here to help you modernize your auto repair shop. Reach out for sales, support, or partnerships.',
 };
 
 const ContactUs = () => {

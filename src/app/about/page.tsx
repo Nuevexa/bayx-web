@@ -1,11 +1,19 @@
+import { defaultMetadata } from '@/utils/generateMetaData'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Users, Target, Zap, Shield, Heart } from 'lucide-react'
 import RevealAnimation from '@/components/animation/RevealAnimation'
 
 export const metadata: Metadata = {
-  title: 'About Us - BayX | Automotive Workshop Management Software',
-  description: 'Meet the team behind BayX. We\'re passionate about helping auto repair shops work smarter, not harder.',
+  // Assuming defaultMetadata is imported or defined elsewhere, or this is a placeholder.
+  // If defaultMetadata is not defined, this line will cause an error.
+  // For this edit, it's included as per the instruction.
+  // If defaultMetadata is not intended, remove the line below.
+  // If defaultMetadata is intended to be imported, add `import { defaultMetadata } from '@/lib/metadata'` or similar.
+  ...defaultMetadata,
+  title: 'About Us - The Team Behind BayX',
+  description:
+    'Learn about our mission to empower independent auto repair shops with cutting-edge technology.',
   openGraph: {
     title: 'About BayX - Built for Real Workshops',
     description: 'Discover the story behind BayX and why we\'re passionate about transforming automotive workshops.',

@@ -7,7 +7,15 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Pricing - BayX',
+  title: 'Pricing - Affordable Garage Management Software | BayX',
+  description:
+    'Simple, transparent pricing for shops of all sizes. No hidden fees. Start for free and scale as you grow. Compare plans today.',
+  keywords: [
+    'garage software pricing',
+    'auto repair shop software cost',
+    'free mechanic software',
+    'affordable shop management system',
+  ],
 };
 
 const page = () => {

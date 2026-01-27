@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'FAQ - BayX Garage Management',
+  title: 'FAQ - Frequently Asked Questions | BayX',
   description: 'Frequently asked questions about BayX garage management software. Find answers about pricing, features, getting started, and more.',
 };
 

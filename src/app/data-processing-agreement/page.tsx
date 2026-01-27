@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
         if (!document) {
             return {
-                title: 'Data Processing Agreement - BayX',
+                title: 'Data Processing Agreement | BayX',
                 description: 'GDPR-compliant Data Processing Agreement for BayX Platform',
             }
         }
@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
     } catch (error) {
         console.error('Error fetching DPA for metadata:', error)
         return {
-            title: 'Data Processing Agreement - BayX',
+            title: 'Data Processing Agreement | BayX',
             description: 'GDPR-compliant Data Processing Agreement for BayX Platform',
         }
     }

@@ -5,8 +5,9 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Early Access - BayX Garage Management',
-  description: 'Join the waitlist for early access to BayX garage management software.',
+  title: 'Early Access - Join the BayX Revolution',
+  description:
+    'Be the first to experience the future of garage management. Sign up for early access to BayX and shape the tools you need.',
 };
 
 const EarlyAccessPage = () => {

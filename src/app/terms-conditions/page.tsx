@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     ...defaultMetadata,
-    title: 'Terms of Service | BayX',
+    title: 'Terms and Conditions | BayX',
     description: 'Read our Terms of Service to understand the rules and regulations for using BayX services.',
   }
 }

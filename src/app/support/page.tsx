@@ -7,8 +7,9 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Support - BayX Garage Management',
-  description: 'Get help with BayX. Browse our knowledge base, email our support team, or submit a support request.',
+  title: 'Support - Help Center & Documentation | BayX',
+  description:
+    'Find answers, tutorials, and support for using BayX in your auto repair shop. Access our knowledge base and community.',
 };
 
 const Support = () => {
