@@ -1,6 +1,7 @@
 import HeaderWrapper from '@/components/shared/HeaderWrapper';
 import SmoothScrollProvider from '@/components/shared/SmoothScroll';
 import Footer from '@/components/shared/footer/Footer';
+import Clarity from '@/components/shared/Clarity';
 import { AppContextProvider } from '@/context/AppContext';
 import { interTight } from '@/utils/font';
 import { generateMetadata } from '@/utils/generateMetaData';
@@ -31,6 +32,7 @@ export default function RootLayout({
           </Suspense>
         </AppContextProvider>
         <Analytics />
+        <Clarity />
       </body>
     </html>
   );

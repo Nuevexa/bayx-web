@@ -139,7 +139,7 @@ const CtaInputForm = ({ ctaBtnText = 'Get Started', inputFieldClass }: CtaInputF
               onChange={(e) => {
                 const sanitized = sanitizeEmail(e.target.value);
                 setEmail(sanitized);
-                if (emailError) setEmailError('');
+                if (emailError) {setEmailError('');}
               }}
               disabled={isSubmitting}
               placeholder="Enter your email"
@@ -220,7 +220,7 @@ const CtaInputForm = ({ ctaBtnText = 'Get Started', inputFieldClass }: CtaInputF
                 checked={agreedToTerms}
                 onChange={(e) => {
                   setAgreedToTerms(e.target.checked);
-                  if (termsError) setTermsError('');
+                  if (termsError) {setTermsError('');}
                 }}
                 disabled={isSubmitting}
                 className="peer sr-only"
