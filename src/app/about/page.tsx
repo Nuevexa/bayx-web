@@ -5,6 +5,7 @@ import { CheckCircle2, Users, Target, Zap, Shield, Heart } from 'lucide-react'
 import RevealAnimation from '@/components/animation/RevealAnimation'
 
 export const metadata: Metadata = {
+  //
   // Assuming defaultMetadata is imported or defined elsewhere, or this is a placeholder.
   // If defaultMetadata is not defined, this line will cause an error.
   // For this edit, it's included as per the instruction.
