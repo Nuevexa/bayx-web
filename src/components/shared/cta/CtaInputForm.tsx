@@ -88,6 +88,14 @@ const CtaInputForm = ({ ctaBtnText = 'Get Started', inputFieldClass }: CtaInputF
       setIsSuccess(true);
       setEmail('');
       setAgreedToTerms(false);
+
+      // Track form submission in GA
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'form_submit', {
+          event_category: 'engagement',
+          event_label: 'newsletter_signup'
+        });
+      }
     } catch {
       setError('Something went wrong. Please try again.');
     } finally {

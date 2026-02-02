@@ -155,6 +155,14 @@ const ContactInfo = () => {
         message: '',
         agreedToTerms: false,
       });
+
+      // Track form submission in GA
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'form_submit', {
+          event_category: 'engagement',
+          event_label: 'contact_form'
+        });
+      }
     } catch (error: any) {
       setFormState({
         isSubmitting: false,
