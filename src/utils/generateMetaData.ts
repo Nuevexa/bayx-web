@@ -1,18 +1,25 @@
 import type { Metadata } from 'next';
 
-export const DEFAULT_URL = 'https://next-saas-next.vercel.app/';
-export const DEFAULT_TITLE = 'NextSaaS - Software, SaaS & Startup Tailwind Template';
+export const DEFAULT_URL = 'https://getbayx.com';
+export const DEFAULT_TITLE = 'BayX - Garage Management Software';
 export const DEFAULT_DESCRIPTION =
-  'NextSaaS - the ultimate collection of 38+ premium HTML templates for SaaS businesses and startups. Built with Tailwind CSS, featuring responsive design, authentication flows, pricing pages, and modern UI components. Perfect for web applications and digital products.';
-export const DEFAULT_IMAGE_URL = 'https://images.prismic.io/staticmania/aPD-K55xUNkB2D2X_og-image.jpg';
+  'BayX is the all-in-one garage management software for independent auto repair shops. Streamline operations, boost profits, and manage jobs, estimates, and invoices with ease.';
+export const DEFAULT_IMAGE_URL = '/bayx-logo.png';
 
 const defaultMetadata: Metadata = {
   metadataBase: new URL(DEFAULT_URL),
   title: DEFAULT_TITLE,
   description: DEFAULT_DESCRIPTION,
+  keywords: [
+    'garage management software',
+    'auto repair software',
+    'mechanic shop software',
+    'automotive POS',
+    'shop management system',
+  ],
   openGraph: {
     type: 'website',
-    siteName: 'NextSaaS',
+    siteName: 'BayX',
     url: DEFAULT_URL,
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,

@@ -13,7 +13,17 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'BayX - Garage Management Software',
+  title: 'BayX - #1 Garage Management Software for Independent Shops',
+  description:
+    'Transform your auto repair business with BayX. The modern, easy-to-use garage management system designed to increase efficiency and profitability.',
+  keywords: [
+    'garage management software',
+    'auto repair software',
+    'mechanic shop software',
+    'shop management system',
+    'repair shop POS',
+    'automotive workshop software',
+  ],
 };
 
 const page = () => {

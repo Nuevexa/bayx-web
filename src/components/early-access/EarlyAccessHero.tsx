@@ -190,8 +190,13 @@ const EarlyAccessHero = () => {
         agreedToTerms: false,
       });
 
-      // TODO: Log submission to analytics/tracking service
-      // console.log('Early Access Submission:', formData);
+      // Track form submission in GA
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'form_submit', {
+          event_category: 'engagement',
+          event_label: 'early_access_form'
+        });
+      }
     } catch (error: any) {
       // Error state
       setFormState({

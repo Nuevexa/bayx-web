@@ -46,7 +46,7 @@ export function createAnchorId(text: string): string {
  * @returns Array of hierarchical TOC items
  */
 export function generateTOCFromSections(sections: LegalSection[]): TOCItem[] {
-    if (!sections || sections.length === 0) return []
+    if (!sections || sections.length === 0) {return []}
 
     const tocItems: TOCItem[] = []
 
@@ -107,8 +107,8 @@ export function compareVersions(v1: string, v2: string): number {
     const parts2 = v2.split('.').map(Number)
 
     for (let i = 0; i < 3; i++) {
-        if (parts1[i] > parts2[i]) return 1
-        if (parts1[i] < parts2[i]) return -1
+        if (parts1[i] > parts2[i]) {return 1}
+        if (parts1[i] < parts2[i]) {return -1}
     }
     return 0
 }

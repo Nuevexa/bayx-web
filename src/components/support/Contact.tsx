@@ -171,6 +171,14 @@ const Contact = () => {
         message: '',
         agreedToTerms: false,
       });
+
+      // Track form submission in GA
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'form_submit', {
+          event_category: 'engagement',
+          event_label: 'support_form'
+        });
+      }
     } catch {
       // Error
       setFormState({

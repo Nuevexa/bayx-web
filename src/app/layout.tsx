@@ -1,6 +1,9 @@
 import HeaderWrapper from '@/components/shared/HeaderWrapper';
 import SmoothScrollProvider from '@/components/shared/SmoothScroll';
 import Footer from '@/components/shared/footer/Footer';
+import Clarity from '@/components/shared/Clarity';
+import GoogleAnalytics from '@/components/shared/GoogleAnalytics';
+import MetaPixel from '@/components/shared/MetaPixel';
 import { AppContextProvider } from '@/context/AppContext';
 import { interTight } from '@/utils/font';
 import { generateMetadata } from '@/utils/generateMetaData';
@@ -31,6 +34,9 @@ export default function RootLayout({
           </Suspense>
         </AppContextProvider>
         <Analytics />
+        <Clarity />
+        <GoogleAnalytics />
+        <MetaPixel />
       </body>
     </html>
   );

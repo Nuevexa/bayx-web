@@ -88,6 +88,14 @@ const CtaInputForm = ({ ctaBtnText = 'Get Started', inputFieldClass }: CtaInputF
       setIsSuccess(true);
       setEmail('');
       setAgreedToTerms(false);
+
+      // Track form submission in GA
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'form_submit', {
+          event_category: 'engagement',
+          event_label: 'newsletter_signup'
+        });
+      }
     } catch {
       setError('Something went wrong. Please try again.');
     } finally {
@@ -139,7 +147,7 @@ const CtaInputForm = ({ ctaBtnText = 'Get Started', inputFieldClass }: CtaInputF
               onChange={(e) => {
                 const sanitized = sanitizeEmail(e.target.value);
                 setEmail(sanitized);
-                if (emailError) setEmailError('');
+                if (emailError) {setEmailError('');}
               }}
               disabled={isSubmitting}
               placeholder="Enter your email"
@@ -220,7 +228,7 @@ const CtaInputForm = ({ ctaBtnText = 'Get Started', inputFieldClass }: CtaInputF
                 checked={agreedToTerms}
                 onChange={(e) => {
                   setAgreedToTerms(e.target.checked);
-                  if (termsError) setTermsError('');
+                  if (termsError) {setTermsError('');}
                 }}
                 disabled={isSubmitting}
                 className="peer sr-only"

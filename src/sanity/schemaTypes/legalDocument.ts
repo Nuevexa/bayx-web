@@ -47,7 +47,7 @@ export const legalDocument = defineType({
       type: 'string',
       validation: (Rule) =>
         Rule.required().custom((version) => {
-          if (!version) return true
+          if (!version) {return true}
           // Validate semantic versioning format (e.g., 1.0.0, 2.1.3)
           const semverRegex = /^\d+\.\d+\.\d+$/
           return semverRegex.test(version) || 'Version must follow semantic versioning (e.g., 1.0.0)'

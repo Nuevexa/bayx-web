@@ -107,7 +107,7 @@ const Accordion: React.FC<AccordionProps> = ({
 
     const timeoutId = setTimeout(() => {
       const items = accordionRef.current?.querySelectorAll('.accordion-item');
-      if (!items) return;
+      if (!items) {return;}
 
       items.forEach((item) => {
         const element = item as HTMLElement;

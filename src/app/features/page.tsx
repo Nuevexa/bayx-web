@@ -7,7 +7,16 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Features - BayX Garage Management Software',
+  title: 'Features - Powerful Tools for Auto Repair Shops | BayX',
+  description:
+    'Explore BayX features: Digital Vehicle Inspections (DVI), fast estimating, inventory management, customer communication, and technician scheduling.',
+  keywords: [
+    'digital vehicle inspection software',
+    'auto repair estimating',
+    'mechanic inventory management',
+    'automotive shop scheduling',
+    'garage workflow software',
+  ],
 };
 
 const page = () => {

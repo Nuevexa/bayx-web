@@ -9,7 +9,15 @@ import FeaturedBlogSwiper from '@/components/blog/FeaturedBlogSwiper';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Blog - BayX Garage Management Resources',
+  title: 'Blog - Auto Repair Shop Tips & Insights | BayX',
+  description:
+    'Expert advice on running a profitable auto repair shop. Tips on marketing, operations, and management for garage owners.',
+  keywords: [
+    'auto repair shop management tips',
+    'garage business advice',
+    'mechanic shop marketing',
+    'automotive industry insights',
+  ],
 };
 
 // Revalidate every 60 seconds
