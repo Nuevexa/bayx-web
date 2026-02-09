@@ -1,9 +1,6 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Use Webpack for production builds (stable)
-  // Turbopack is used in dev via `next dev --turbopack` in package.json
-
   // Enable styled-components support
   compiler: {
     styledComponents: true,
