@@ -130,7 +130,7 @@ const LeadCaptureModal = ({ isOpen, isProcessing, onSubmit, onClose }: LeadCaptu
                             onChange={handleInputChange}
                             disabled={isProcessing}
                             placeholder="John Doe"
-                            className="border-stroke-3 bg-background-1 dark:border-stroke-7 dark:bg-background-6 placeholder:text-tagline-1 placeholder:text-secondary/60 dark:placeholder:text-accent/60 dark:text-accent shadow-1 block h-12 w-full rounded-full border px-[18px] py-3 font-normal focus:ring-0 focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
+                            className="border-stroke-3 bg-background-1 dark:border-stroke-7 dark:bg-background-6 placeholder:text-tagline-1 placeholder:text-secondary/60 dark:placeholder:text-accent/60 dark:text-accent shadow-1 block h-12 w-full rounded-lg border px-[18px] py-3 font-normal focus:ring-0 focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
                         />
                         {errors.name && (
                             <p className="text-tagline-3 text-primary-500">{errors.name}</p>
@@ -150,7 +150,7 @@ const LeadCaptureModal = ({ isOpen, isProcessing, onSubmit, onClose }: LeadCaptu
                             onChange={handleInputChange}
                             disabled={isProcessing}
                             placeholder="john@example.com"
-                            className="border-stroke-3 bg-background-1 dark:border-stroke-7 dark:bg-background-6 placeholder:text-tagline-1 dark:text-accent placeholder:text-secondary/60 dark:placeholder:text-accent/60 shadow-1 block h-12 w-full rounded-full border px-[18px] py-3 font-normal focus:ring-0 focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
+                            className="border-stroke-3 bg-background-1 dark:border-stroke-7 dark:bg-background-6 placeholder:text-tagline-1 dark:text-accent placeholder:text-secondary/60 dark:placeholder:text-accent/60 shadow-1 block h-12 w-full rounded-lg border px-[18px] py-3 font-normal focus:ring-0 focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
                         />
                         {errors.email && (
                             <p className="text-tagline-3 text-primary-500">{errors.email}</p>

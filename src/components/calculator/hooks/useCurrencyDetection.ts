@@ -51,8 +51,8 @@ export const useCurrencyDetection = (): CurrencyInfo => {
     useEffect(() => {
         const detectCurrency = async () => {
             try {
-                // Use ipapi.co for free geolocation
-                const response = await fetch('https://ipapi.co/json/', {
+                // Use our internal API route to avoid CORS issues
+                const response = await fetch('/api/geolocation', {
                     method: 'GET',
                     headers: { 'Accept': 'application/json' },
                 });

@@ -1,6 +1,6 @@
 {
-  "name": "bayx-web",
-  "version": "1.0.2",
+  "name": "bayx-website",
+  "version": "1.1.7",
   "private": true,
   "engines": {
     "node": "20.x"

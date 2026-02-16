@@ -1029,6 +1029,27 @@ const DocsIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const CalculatorIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 18 18"
+    fill="none"
+    className={cn('stroke-secondary dark:stroke-accent size-[18px]', className)}>
+    <path
+      d="M3.5 1.5H14.5C15.0523 1.5 15.5 1.94772 15.5 2.5V15.5C15.5 16.0523 15.0523 16.5 14.5 16.5H3.5C2.94772 16.5 2.5 16.0523 2.5 15.5V2.5C2.5 1.94772 2.94772 1.5 3.5 1.5Z"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path d="M4.5 5.5H13.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M5.5 9H6.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M8.5 9H9.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M11.5 9H12.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M5.5 12H6.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M8.5 12H9.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M11.5 12H12.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 export {
   AboutIcon,
   AffiliateIcon,
@@ -1038,6 +1059,7 @@ export {
   AnalyticsIconV2,
   BlogIcon,
   BrandKitIcon,
+  CalculatorIcon,
   CareerIcon,
   CareerIconV2,
   CaseStudyICon,

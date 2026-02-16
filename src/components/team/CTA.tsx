@@ -30,12 +30,12 @@ const CTA = () => {
                   id="userEmail"
                   placeholder="Enter your email"
                   required
-                  className="shadow-1 placeholder:text-secondary/50 border-stroke-1 dark:bg-background-6 text-secondary/60 dark:bg-dark-200 focus:border-primary-500 dark:focus:border-primary-500 focus:ring-primary-500/20 h-12 w-full max-w-[440px] rounded-full border px-[18px] py-3 font-normal placeholder:font-normal focus:ring-2 focus:outline-none dark:border-[#31332F] dark:text-white/60 dark:placeholder:text-white/40"
+                  className="shadow-1 placeholder:text-secondary/50 border-stroke-1 dark:bg-background-6 text-secondary/60 dark:bg-dark-200 focus:border-primary-500 dark:focus:border-primary-500 focus:ring-primary-500/20 h-12 w-full max-w-[440px] rounded-lg border px-[18px] py-3 font-normal placeholder:font-normal focus:ring-2 focus:outline-none dark:border-[#31332F] dark:text-white/60 dark:placeholder:text-white/40"
                 />
-                <div className="group/btn-v2 mx-auto inline-block h-12 w-full rounded-full transition-transform duration-500 ease-in-out md:mx-0 md:w-auto">
+                <div className="group/btn-v2 mx-auto inline-block h-12 w-full rounded-lg transition-transform duration-500 ease-in-out md:mx-0 md:w-auto">
                   <button
                     type="submit"
-                    className="btn-lg-v2 btn-primary-v2 group-hover/btn-v2:btn-secondary-v2 mx-auto inline-flex h-12 w-full cursor-pointer items-center justify-center gap-1.5 rounded-full text-center font-medium text-nowrap lowercase transition-all duration-500 ease-in-out md:mx-0 md:h-auto md:w-auto">
+                    className="btn-lg-v2 btn-primary-v2 group-hover/btn-v2:btn-secondary-v2 mx-auto inline-flex h-12 w-full cursor-pointer items-center justify-center gap-1.5 rounded-lg text-center font-medium text-nowrap lowercase transition-all duration-500 ease-in-out md:mx-0 md:h-auto md:w-auto">
                     <span className="inline-block transition-transform duration-300 ease-in-out first-letter:uppercase">
                       Get started
                     </span>

@@ -13,7 +13,7 @@ const TestimonialsSection = () => {
             location: "Austin, TX",
         },
         {
-            quote: "Finally, a tool that shows the REAL cost. I'm sharing this with every shop owner I know. We can't keep subsidizing insurance companies.",
+            quote: "Finally, a tool that shows the REAL cost. I'm sharing this with every shop owner I know. We can't keep subsidising insurance companies.",
             author: "Dan M.",
             location: "Seattle, WA",
         },
@@ -24,7 +24,7 @@ const TestimonialsSection = () => {
             <div className="main-container">
                 <div className="max-w-5xl mx-auto">
                     <RevealAnimation delay={0.1}>
-                        <h2 className="text-heading-3 md:text-heading-2 text-secondary dark:text-accent font-bold text-center mb-12">
+                        <h2 className="text-heading-3 md:text-heading-2 text-secondary dark:text-accent font-medium text-center mb-12">
                             What Body Shop Owners Are Saying
                         </h2>
                     </RevealAnimation>

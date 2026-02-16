@@ -10,7 +10,7 @@ import ResultsModal from './ResultsModal';
 const Calculator = () => {
     const { symbol: currencySymbol, isLoading: currencyLoading } = useCurrencyDetection();
 
-    const [unit, setUnit] = useState<'oz' | 'L'>('oz');
+    const [unit, setUnit] = useState<'oz' | 'l'>('oz');
 
     const [inputs, setInputs] = useState<CalculatorInputs>({
         insurancePayout: 150,
@@ -33,23 +33,23 @@ const Calculator = () => {
 
     // Get display values based on current unit
     const getDisplayAmount = (ozValue: number) => {
-        return unit === 'L' ? (ozValue * OZ_TO_L).toFixed(2) : ozValue.toString();
+        return unit === 'l' ? (ozValue * OZ_TO_L).toFixed(2) : ozValue.toString();
     };
 
     const getMaxValue = () => {
-        return unit === 'L' ? parseFloat((64 * OZ_TO_L).toFixed(2)) : 64;
+        return unit === 'l' ? 8 : 270;
     };
 
     const getStepValue = () => {
-        return unit === 'L' ? 0.01 : 1;
+        return unit === 'l' ? 0.1 : 1;
     };
 
-    const handleUnitToggle = (newUnit: 'oz' | 'L') => {
+    const handleUnitToggle = (newUnit: 'oz' | 'l') => {
         if (newUnit === unit) return;
 
         setUnit(newUnit);
         // Convert costs when switching units
-        if (newUnit === 'L') {
+        if (newUnit === 'l') {
             setInputs(prev => ({
                 ...prev,
                 baseCoatCost: parseFloat((prev.baseCoatCost * L_TO_OZ).toFixed(2)),
@@ -66,7 +66,7 @@ const Calculator = () => {
 
     const handleAmountChange = (field: 'baseCoatAmount' | 'clearCoatAmount', value: number) => {
         // Always store in oz internally
-        const ozValue = unit === 'L' ? Math.round(value * L_TO_OZ) : value;
+        const ozValue = unit === 'l' ? Math.round(value * L_TO_OZ) : value;
         setInputs(prev => ({ ...prev, [field]: ozValue }));
     };
 
@@ -135,15 +135,15 @@ const Calculator = () => {
 
     return (
         <>
-            <div className="w-full rounded-[20px] bg-white dark:bg-background-8 p-6 shadow-6 lg:p-8">
+            <div className="w-full max-w-full overflow-hidden rounded-[20px] bg-white dark:bg-background-8 p-4 shadow-6 sm:p-6 lg:p-8 border border-stroke-3 dark:border-stroke-7">
                 <form onSubmit={handleCalculate} className="space-y-6">
                     {/* Unit Toggle */}
                     <div className="flex justify-end">
-                        <div className="inline-flex rounded-full bg-background-4 dark:bg-background-6 p-1">
+                        <div className="inline-flex rounded-lg bg-background-4 dark:bg-background-6 p-1">
                             <button
                                 type="button"
                                 onClick={() => handleUnitToggle('oz')}
-                                className={`px-4 py-1.5 rounded-full text-tagline-2 font-medium transition-all ${unit === 'oz'
+                                className={`px-4 py-1.5 rounded-lg text-tagline-2 font-medium transition-all ${unit === 'oz'
                                     ? 'bg-primary-500 text-white'
                                     : 'text-secondary/60 dark:text-accent/60 hover:text-secondary dark:hover:text-accent'
                                     }`}
@@ -152,13 +152,13 @@ const Calculator = () => {
                             </button>
                             <button
                                 type="button"
-                                onClick={() => handleUnitToggle('L')}
-                                className={`px-4 py-1.5 rounded-full text-tagline-2 font-medium transition-all ${unit === 'L'
+                                onClick={() => handleUnitToggle('l')}
+                                className={`px-4 py-1.5 rounded-lg text-tagline-2 font-medium transition-all ${unit === 'l'
                                     ? 'bg-primary-500 text-white'
                                     : 'text-secondary/60 dark:text-accent/60 hover:text-secondary dark:hover:text-accent'
                                     }`}
                             >
-                                L
+                                l
                             </button>
                         </div>
                     </div>
@@ -177,7 +177,7 @@ const Calculator = () => {
                                 id="insurance-payout"
                                 value={inputs.insurancePayout}
                                 onChange={(e) => setInputs((prev) => ({ ...prev, insurancePayout: parseFloat(e.target.value) || 0 }))}
-                                className="border-stroke-3 bg-background-1 dark:border-stroke-7 dark:bg-background-6 placeholder:text-tagline-1 dark:text-accent placeholder:text-secondary/60 dark:placeholder:text-accent/60 shadow-1 block h-12 w-full rounded-full border pl-10 pr-4 py-3 font-normal focus:ring-0 focus:outline-none"
+                                className="border-stroke-3 bg-background-1 dark:border-stroke-7 dark:bg-background-6 placeholder:text-tagline-1 dark:text-accent placeholder:text-secondary/60 dark:placeholder:text-accent/60 shadow-1 block h-12 w-full rounded-lg border pl-10 pr-4 py-3 font-normal focus:ring-0 focus:outline-none"
                                 min="0"
                                 step="0.01"
                                 required
@@ -201,7 +201,7 @@ const Calculator = () => {
                             min="0"
                             max={getMaxValue()}
                             step={getStepValue()}
-                            value={unit === 'L' ? parseFloat(getDisplayAmount(inputs.baseCoatAmount)) : inputs.baseCoatAmount}
+                            value={unit === 'l' ? parseFloat(getDisplayAmount(inputs.baseCoatAmount)) : inputs.baseCoatAmount}
                             onChange={(e) => handleAmountChange('baseCoatAmount', parseFloat(e.target.value))}
                             className="w-full h-2 bg-background-4 dark:bg-background-6 rounded-lg appearance-none cursor-pointer accent-primary-500"
                         />
@@ -218,7 +218,7 @@ const Calculator = () => {
                                     id="base-coat-cost"
                                     value={inputs.baseCoatCost}
                                     onChange={(e) => setInputs((prev) => ({ ...prev, baseCoatCost: parseFloat(e.target.value) || 0 }))}
-                                    className="border-stroke-3 bg-background-1 dark:border-stroke-7 dark:bg-background-6 text-tagline-2 dark:text-accent shadow-1 block h-10 w-full rounded-full border pl-8 pr-3 py-2 focus:ring-0 focus:outline-none"
+                                    className="border-stroke-3 bg-background-1 dark:border-stroke-7 dark:bg-background-6 text-tagline-2 dark:text-accent shadow-1 block h-10 w-full rounded-lg border pl-8 pr-3 py-2 focus:ring-0 focus:outline-none"
                                     min="0"
                                     step="0.01"
                                 />
@@ -242,7 +242,7 @@ const Calculator = () => {
                             min="0"
                             max={getMaxValue()}
                             step={getStepValue()}
-                            value={unit === 'L' ? parseFloat(getDisplayAmount(inputs.clearCoatAmount)) : inputs.clearCoatAmount}
+                            value={unit === 'l' ? parseFloat(getDisplayAmount(inputs.clearCoatAmount)) : inputs.clearCoatAmount}
                             onChange={(e) => handleAmountChange('clearCoatAmount', parseFloat(e.target.value))}
                             className="w-full h-2 bg-background-4 dark:bg-background-6 rounded-lg appearance-none cursor-pointer accent-primary-500"
                         />
@@ -259,7 +259,7 @@ const Calculator = () => {
                                     id="clear-coat-cost"
                                     value={inputs.clearCoatCost}
                                     onChange={(e) => setInputs((prev) => ({ ...prev, clearCoatCost: parseFloat(e.target.value) || 0 }))}
-                                    className="border-stroke-3 bg-background-1 dark:border-stroke-7 dark:bg-background-6 text-tagline-2 dark:text-accent shadow-1 block h-10 w-full rounded-full border pl-8 pr-3 py-2 focus:ring-0 focus:outline-none"
+                                    className="border-stroke-3 bg-background-1 dark:border-stroke-7 dark:bg-background-6 text-tagline-2 dark:text-accent shadow-1 block h-10 w-full rounded-lg border pl-8 pr-3 py-2 focus:ring-0 focus:outline-none"
                                     min="0"
                                     step="0.01"
                                 />
@@ -302,7 +302,7 @@ const Calculator = () => {
                                     id="consumables-cost"
                                     value={inputs.consumablesCost}
                                     onChange={(e) => setInputs((prev) => ({ ...prev, consumablesCost: parseFloat(e.target.value) || 0 }))}
-                                    className="border-stroke-3 bg-background-1 dark:border-stroke-7 dark:bg-background-6 text-tagline-2 dark:text-accent shadow-1 block h-10 w-full rounded-full border pl-8 pr-3 py-2 focus:ring-0 focus:outline-none"
+                                    className="border-stroke-3 bg-background-1 dark:border-stroke-7 dark:bg-background-6 text-tagline-2 dark:text-accent shadow-1 block h-10 w-full rounded-lg border pl-8 pr-3 py-2 focus:ring-0 focus:outline-none"
                                     min="0"
                                     step="0.01"
                                 />

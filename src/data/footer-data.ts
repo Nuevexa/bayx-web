@@ -16,6 +16,7 @@ export const footerLinks: FooterData[] = [
       { label: 'About Us', href: '/about' },
       { label: 'Contact Us', href: '/contact-us' },
       { label: 'Help Center', href: '/support' },
+      { label: 'Material Shortfall Calculator', href: '/insurance-material-shortfall-calculator' },
     ],
   },
   {

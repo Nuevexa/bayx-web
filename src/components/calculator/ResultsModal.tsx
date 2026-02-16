@@ -38,7 +38,7 @@ const ResultsModal = ({ isOpen, result, inputs, currencySymbol, onClose }: Resul
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm">
-            <div className="relative w-full max-w-2xl rounded-[20px] bg-white dark:bg-background-8 p-6 shadow-6 lg:p-10">
+            <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-[20px] bg-white dark:bg-background-8 p-4 shadow-6 sm:p-6 lg:p-10">
                 {/* Close Button */}
                 <button
                     onClick={onClose}
@@ -49,33 +49,33 @@ const ResultsModal = ({ isOpen, result, inputs, currencySymbol, onClose }: Resul
                 </button>
 
                 {/* Main Result */}
-                <div className="mb-8 text-center">
-                    <h2 className={`text-heading-3 mb-4 font-bold ${result.isLoss ? 'text-primary-500' : 'text-ns-green'}`}>
+                <div className="mb-4 sm:mb-6 text-center pt-8">
+                    <h2 className={`text-2xl sm:text-3xl md:text-heading-3 mb-3 font-bold ${result.isLoss ? 'text-primary-500' : 'text-ns-green'}`}>
                         {result.isLoss
                             ? `You just paid ${formatCurrency(Math.abs(result.materialShortfall))} out of your own pocket`
                             : "You're breaking even on this job"}
                     </h2>
-                    <p className="text-tagline-1 text-secondary/70 dark:text-accent/70">
+                    <p className="text-tagline-2 sm:text-tagline-1 text-secondary/70 dark:text-accent/70">
                         Your true material deficit is {Math.abs(result.deficitPercentage).toFixed(1)}%
                     </p>
                 </div>
 
                 {/* Breakdown */}
-                <div className="bg-background-1 dark:bg-background-6 rounded-[16px] p-6 mb-6 space-y-4">
-                    <h3 className="text-heading-6 text-secondary dark:text-accent font-semibold mb-4">Breakdown</h3>
+                <div className="bg-background-1 dark:bg-background-6 rounded-[16px] p-4 sm:p-6 mb-4 space-y-3">
+                    <h3 className="text-heading-6 text-secondary dark:text-accent font-semibold mb-3">Breakdown</h3>
 
-                    <div className="flex justify-between items-center pb-3 border-b border-stroke-3 dark:border-stroke-7">
-                        <span className="text-tagline-1 text-secondary/70 dark:text-accent/70">Insurance Paid:</span>
-                        <span className="text-tagline-1 text-secondary dark:text-accent font-semibold">{formatCurrency(inputs.insurancePayout)}</span>
+                    <div className="flex justify-between items-center pb-2.5 border-b border-stroke-3 dark:border-stroke-7">
+                        <span className="text-tagline-2 sm:text-tagline-1 text-secondary/70 dark:text-accent/70">Insurance Paid:</span>
+                        <span className="text-tagline-2 sm:text-tagline-1 text-secondary dark:text-accent font-semibold">{formatCurrency(inputs.insurancePayout)}</span>
                     </div>
 
-                    <div className="flex justify-between items-center pb-3 border-b border-stroke-3 dark:border-stroke-7">
-                        <span className="text-tagline-1 text-secondary/70 dark:text-accent/70">Actual Cost:</span>
-                        <span className="text-tagline-1 text-secondary dark:text-accent font-semibold">{formatCurrency(result.actualMaterialCost)}</span>
+                    <div className="flex justify-between items-center pb-2.5 border-b border-stroke-3 dark:border-stroke-7">
+                        <span className="text-tagline-2 sm:text-tagline-1 text-secondary/70 dark:text-accent/70">Actual Cost:</span>
+                        <span className="text-tagline-2 sm:text-tagline-1 text-secondary dark:text-accent font-semibold">{formatCurrency(result.actualMaterialCost)}</span>
                     </div>
 
                     <div className="flex justify-between items-center pt-2">
-                        <span className="text-tagline-1 text-secondary dark:text-accent font-semibold">Your {result.isLoss ? 'Loss' : 'Profit'}:</span>
+                        <span className="text-tagline-2 sm:text-tagline-1 text-secondary dark:text-accent font-semibold">Your {result.isLoss ? 'Loss' : 'Profit'}:</span>
                         <span className={`text-heading-6 font-bold ${result.isLoss ? 'text-primary-500' : 'text-ns-green'}`}>
                             {result.isLoss ? '-' : '+'}{formatCurrency(Math.abs(result.materialShortfall))}
                         </span>
@@ -83,13 +83,13 @@ const ResultsModal = ({ isOpen, result, inputs, currencySymbol, onClose }: Resul
                 </div>
 
                 {/* Share Section */}
-                <div className="bg-background-1 dark:bg-background-6 rounded-[16px] p-6 mb-6 text-center">
-                    <p className="text-tagline-2 text-secondary/70 dark:text-accent/70 mb-4">
+                <div className="bg-background-1 dark:bg-background-6 rounded-[16px] p-4 sm:p-6 mb-4 text-center">
+                    <p className="text-tagline-3 sm:text-tagline-2 text-secondary/70 dark:text-accent/70 mb-3">
                         Share this result to expose insurance underpayments
                     </p>
                     <button
                         onClick={shareResults}
-                        className="btn btn-md btn-primary inline-flex items-center gap-2"
+                        className="btn btn-sm sm:btn-md btn-primary inline-flex items-center gap-2 text-xs normal-case"
                     >
                         <Share2 className="size-4" />
                         Share Results
@@ -98,12 +98,12 @@ const ResultsModal = ({ isOpen, result, inputs, currencySymbol, onClose }: Resul
 
                 {/* CTA */}
                 <div className="text-center">
-                    <p className="text-tagline-1 text-secondary dark:text-accent mb-4">
+                    <p className="text-tagline-2 sm:text-tagline-1 text-secondary dark:text-accent mb-3">
                         Want to learn how to fight insurance underpayments?
                     </p>
                     <a
                         href="https://getbayx.com/contact-us"
-                        className="btn btn-lg btn-secondary-v2 inline-block"
+                        className="btn btn-md sm:btn-lg btn-secondary-v2 inline-block text-xs normal-case"
                     >
                         Contact Us
                     </a>
