@@ -15,6 +15,7 @@ interface LeadCaptureModalProps {
 interface FormErrors {
     name?: string;
     email?: string;
+    garageName?: string;
     agreedToTerms?: string;
 }
 
@@ -22,6 +23,7 @@ const LeadCaptureModal = ({ isOpen, isProcessing, onSubmit, onClose }: LeadCaptu
     const [formData, setFormData] = useState<LeadFormData>({
         name: '',
         email: '',
+        garageName: '',
         agreedToTerms: false,
     });
     const [errors, setErrors] = useState<FormErrors>({});
@@ -55,6 +57,12 @@ const LeadCaptureModal = ({ isOpen, isProcessing, onSubmit, onClose }: LeadCaptu
             newErrors.email = 'Email is required';
         } else if (!isValidEmail(formData.email)) {
             newErrors.email = 'Please enter a valid email address';
+        }
+
+        if (!formData.garageName.trim()) {
+            newErrors.garageName = 'Garage name is required';
+        } else if (formData.garageName.trim().length < 2) {
+            newErrors.garageName = 'Garage name must be at least 2 characters';
         }
 
         if (!formData.agreedToTerms) {
@@ -154,6 +162,26 @@ const LeadCaptureModal = ({ isOpen, isProcessing, onSubmit, onClose }: LeadCaptu
                         />
                         {errors.email && (
                             <p className="text-tagline-3 text-primary-500">{errors.email}</p>
+                        )}
+                    </fieldset>
+
+                    {/* Garage Name */}
+                    <fieldset className="space-y-2">
+                        <label htmlFor="lead-garage-name" className="text-tagline-1 text-secondary dark:text-accent block font-medium">
+                            Garage name <span className="text-primary-500">*</span>
+                        </label>
+                        <input
+                            type="text"
+                            name="garageName"
+                            id="lead-garage-name"
+                            value={formData.garageName}
+                            onChange={handleInputChange}
+                            disabled={isProcessing}
+                            placeholder="ABC Auto Body Shop"
+                            className="border-stroke-3 bg-background-1 dark:border-stroke-7 dark:bg-background-6 placeholder:text-tagline-1 dark:text-accent placeholder:text-secondary/60 dark:placeholder:text-accent/60 shadow-1 block h-12 w-full rounded-lg border px-[18px] py-3 font-normal focus:ring-0 focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
+                        />
+                        {errors.garageName && (
+                            <p className="text-tagline-3 text-primary-500">{errors.garageName}</p>
                         )}
                     </fieldset>
 

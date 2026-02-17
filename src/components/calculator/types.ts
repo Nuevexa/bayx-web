@@ -18,5 +18,6 @@ export interface CalculationResult {
 export interface LeadFormData {
     name: string;
     email: string;
+    garageName: string;
     agreedToTerms: boolean;
 }
