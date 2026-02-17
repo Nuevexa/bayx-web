@@ -14,6 +14,13 @@ export const mobileMenuData: MobileMenuGroup[] = [
     ],
   },
   {
+    id: 'tools',
+    title: 'Tools',
+    submenu: [
+      { id: 'calculator', label: 'Insurance Material Shortfall Calculator', href: '/insurance-material-shortfall-calculator' },
+    ],
+  },
+  {
     id: 'pricing',
     title: 'Pricing',
     href: '/pricing',

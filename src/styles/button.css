@@ -2,7 +2,7 @@
 NextSaaS Buttons Styles
 =========================== */
 @utility btn {
-  @apply relative inline-block cursor-pointer overflow-hidden rounded-full border text-center font-normal text-nowrap lowercase transition-all duration-500 ease-in-out hover:scale-102;
+  @apply relative inline-block cursor-pointer overflow-hidden rounded-lg border text-center font-normal text-nowrap lowercase transition-all duration-500 ease-in-out hover:scale-102;
 
   span {
     @apply inline-block transition-transform duration-300 ease-in-out first-letter:uppercase;
@@ -122,7 +122,7 @@ NextSaaS Buttons Styles
 
 /* btn size variants */
 @utility btn-sm {
-  @apply px-4 py-1;
+  @apply px-3 py-1;
 
   &::before {
     content: none;
@@ -130,7 +130,7 @@ NextSaaS Buttons Styles
 }
 
 @utility btn-base {
-  @apply text-tagline-1 px-[18px] py-2.5;
+  @apply text-tagline-1 px-4 py-2;
 
   &:hover {
     &::before {
@@ -140,7 +140,7 @@ NextSaaS Buttons Styles
 }
 
 @utility btn-md {
-  @apply text-tagline-2 min-w-[90px] px-5 py-2.5;
+  @apply text-tagline-2 min-w-[90px] px-4 py-2;
 
   &:hover {
     &::before {
@@ -150,11 +150,11 @@ NextSaaS Buttons Styles
 }
 
 @utility btn-lg {
-  @apply text-tagline-1 px-6 py-2.5;
+  @apply text-tagline-1 px-5 py-2;
 }
 
 @utility btn-xl {
-  @apply text-tagline-1 px-8 py-3.5;
+  @apply text-tagline-1 px-6 py-2.5;
 
   &:hover {
     &::before {
@@ -167,15 +167,15 @@ NextSaaS Buttons Styles
 
 /* size variants */
 @utility btn-sm-v2 {
-  @apply text-tagline-2 px-4 py-1;
+  @apply text-tagline-2 px-3 py-1;
 }
 
 @utility btn-base-v2 {
-  @apply text-tagline-1 h-[43px] px-[18px] py-2.5;
+  @apply text-tagline-1 px-4 py-2;
 }
 
 @utility btn-md-v2 {
-  @apply text-tagline-1 min-w-[90px] px-5 py-2.5;
+  @apply text-tagline-1 min-w-[90px] px-4 py-2;
 
   .btn-v2-icon {
     @apply mt-px;
@@ -183,11 +183,11 @@ NextSaaS Buttons Styles
 }
 
 @utility btn-lg-v2 {
-  @apply text-tagline-1 px-6 py-3 hover:scale-102;
+  @apply text-tagline-1 px-5 py-2.5 hover:scale-102;
 }
 
 @utility btn-xl-v2 {
-  @apply text-tagline-1 h-[54px] px-8 py-3.5 hover:scale-102;
+  @apply text-tagline-1 px-6 py-2.5 hover:scale-102;
 }
 
 /* color variants  */
