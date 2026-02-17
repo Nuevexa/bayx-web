@@ -9,6 +9,7 @@ import { interTight } from '@/utils/font';
 import { generateMetadata } from '@/utils/generateMetaData';
 import { Analytics } from '@vercel/analytics/next';
 import { Metadata } from 'next';
+import Script from 'next/script';
 import { ReactNode, Suspense } from 'react';
 import './globals.css';
 
@@ -21,9 +22,27 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'BayX',
+    alternateName: 'BayX Garage Management',
+    url: 'https://getbayx.com',
+    logo: 'https://getbayx.com/favicon.png',
+    sameAs: [
+      'https://www.linkedin.com/company/bayx',
+      'https://www.facebook.com/share/17hDjThhxc/',
+    ],
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${interTight.variable} antialiased`}>
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <AppContextProvider>
           <Suspense>
             <SmoothScrollProvider>
