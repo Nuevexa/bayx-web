@@ -45,16 +45,6 @@ const Contact = () => {
     error: null,
   });
 
-  // Input sanitization - prevent XSS and SQL injection
-  const sanitizeInput = (input: string): string => {
-    return input
-      .trim()
-      .replace(/[<>]/g, '') // Remove HTML tags
-      .replace(/['";\\]/g, '') // Remove SQL injection chars
-      .replace(/script/gi, '') // Remove script tags
-      .slice(0, 500); // Limit length (higher for message field)
-  };
-
   // Email validation
   const isValidEmail = (email: string): boolean => {
     const emailRegex = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -103,11 +93,10 @@ const Contact = () => {
   // Handle input change
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    const sanitizedValue = sanitizeInput(value);
 
     setFormData((prev) => ({
       ...prev,
-      [name]: sanitizedValue,
+      [name]: value,
     }));
 
     // Clear error for this field

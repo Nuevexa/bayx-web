@@ -45,15 +45,6 @@ const EarlyAccessHero = () => {
     error: null,
   });
 
-  // Input sanitization - prevent XSS and SQL injection attempts
-  const sanitizeInput = (input: string): string => {
-    return input
-      .replace(/[<>]/g, '') // Remove potential HTML tags
-      .replace(/['"`;\\]/g, '') // Remove SQL injection attempts
-      .replace(/script/gi, '') // Remove script tags
-      .slice(0, 200); // Limit length
-  };
-
   // Email validation
   const isValidEmail = (email: string): boolean => {
     const emailRegex = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -150,22 +141,13 @@ const EarlyAccessHero = () => {
     });
 
     try {
-      // Sanitize data once before submission (not on every keystroke)
-      const sanitizedData = {
-        fullName: sanitizeInput(formData.fullName),
-        email: sanitizeInput(formData.email),
-        phone: formData.phone ? sanitizeInput(formData.phone) : '',
-        companyName: sanitizeInput(formData.companyName),
-        agreedToTerms: formData.agreedToTerms,
-      };
-
-      // Call Make.com webhook route
+      // Call Make.com webhook route (the API route cleans the fields server-side)
       const response = await fetch('/api/make/early-access', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(sanitizedData),
+        body: JSON.stringify(formData),
       });
 
       const data = await response.json();

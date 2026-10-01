@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { cleanText, isValidEmail } from '@/utils/formSubmission';
 
 interface SenderSubscriber {
     email: string;
@@ -69,10 +70,13 @@ async function submitToSender(
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
-        const { name, email, garageName, agreedToTerms, calculationInputs, calculationResult } = body;
+        const { agreedToTerms, calculationInputs, calculationResult } = body;
+        const name = cleanText(body.name, 100);
+        const email = cleanText(body.email, 254).toLowerCase();
+        const garageName = cleanText(body.garageName, 200);
 
         // Validate required fields
-        if (!name || !email || !garageName || !agreedToTerms) {
+        if (!name || !isValidEmail(email) || !garageName || !agreedToTerms) {
             return NextResponse.json(
                 { error: 'Missing required fields' },
                 { status: 400 }
@@ -90,7 +94,11 @@ export async function POST(request: NextRequest) {
         const senderResult = await submitToSender(name, email, garageName);
 
         if (!senderResult.success) {
-            console.error('Failed to submit to Sender.net:', senderResult.error);
+            console.error(
+                '[form-submission-undelivered] Calculator Lead: Sender.net failed:',
+                senderResult.error,
+                JSON.stringify({ name, email, garageName, calculationInputs, calculationResult })
+            );
             // Continue anyway - don't fail the whole request if email service fails
         }
 
