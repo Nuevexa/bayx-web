@@ -9,7 +9,7 @@ import { interTight } from '@/utils/font';
 import { generateMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 import Script from 'next/script';
-import { ReactNode, Suspense } from 'react';
+import { ReactNode } from 'react';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -43,13 +43,14 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         <AppContextProvider>
-          <Suspense>
-            <SmoothScrollProvider>
-              <HeaderWrapper />
-              {children}
-              <Footer />
-            </SmoothScrollProvider>
-          </Suspense>
+          {/* No Suspense wrapper here: a useSearchParams() call anywhere inside it would
+              silently drop every page's content from the server HTML. Without it,
+              Next fails the build instead, so the problem can't ship unnoticed. */}
+          <SmoothScrollProvider>
+            <HeaderWrapper />
+            {children}
+            <Footer />
+          </SmoothScrollProvider>
         </AppContextProvider>
         <Clarity />
         <GoogleAnalytics />
