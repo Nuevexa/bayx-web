@@ -1,0 +1,7 @@
+# Copy to .dev.vars for `npm run preview`. In production, set these as Worker secrets:
+#   npx wrangler secret put MAKE_WEBHOOK_CONTACT_FORM   (and so on)
+MAKE_WEBHOOK_CONTACT_FORM=
+MAKE_WEBHOOK_SUPPORT=
+MAKE_WEBHOOK_EARLY_ACCESS=
+SENDER_API_TOKEN=
+SENDER_GROUP_ID=
