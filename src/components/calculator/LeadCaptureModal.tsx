@@ -30,15 +30,6 @@ const LeadCaptureModal = ({ isOpen, isProcessing, onSubmit, onClose }: LeadCaptu
 
     if (!isOpen) return null;
 
-    const sanitizeInput = (input: string): string => {
-        return input
-            .trim()
-            .replace(/[<>]/g, '')
-            .replace(/['";\\]/g, '')
-            .replace(/script/gi, '')
-            .slice(0, 200);
-    };
-
     const isValidEmail = (email: string): boolean => {
         const emailRegex = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return emailRegex.test(email);
@@ -75,11 +66,10 @@ const LeadCaptureModal = ({ isOpen, isProcessing, onSubmit, onClose }: LeadCaptu
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
-        const sanitizedValue = sanitizeInput(value);
 
         setFormData((prev) => ({
             ...prev,
-            [name]: sanitizedValue,
+            [name]: value,
         }));
 
         if (errors[name as keyof FormErrors]) {

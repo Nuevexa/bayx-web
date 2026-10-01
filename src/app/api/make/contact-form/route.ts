@@ -1,61 +1,45 @@
 import { NextRequest, NextResponse } from 'next/server';
-
-function sanitize(input: string): string {
-    return input
-        .replace(/[<>]/g, '')
-        .replace(/['"`;\\]/g, '')
-        .replace(/script/gi, '')
-        .slice(0, 500);
-}
+import { cleanText, forwardToWebhook, isValidEmail } from '@/utils/formSubmission';
 
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
         const { fullname, number, email, subject, message, agreedToTerms } = body;
 
-        // Validation
-        if (!fullname || !email || !subject || !message || !agreedToTerms) {
-            return NextResponse.json(
-                { error: 'All required fields must be filled' },
-                { status: 400 }
-            );
-        }
-
-        // Sanitize data
         const sanitizedData = {
-            fullname: sanitize(fullname),
-            number: number ? sanitize(number) : '',
-            email: sanitize(email.toLowerCase()),
-            subject: sanitize(subject),
-            message: sanitize(message),
+            fullname: cleanText(fullname, 100),
+            number: cleanText(number, 30),
+            email: cleanText(email, 254).toLowerCase(),
+            subject: cleanText(subject, 200),
+            message: cleanText(message, 5000),
             agreedToTerms: agreedToTerms === true,
             source: 'Contact Form',
             submittedAt: new Date().toISOString(),
         };
 
-        const makeWebhookUrl = process.env.MAKE_WEBHOOK_CONTACT_FORM;
-
-        if (!makeWebhookUrl) {
-            console.error('Make.com webhook URL not configured');
+        // Validation
+        if (!sanitizedData.fullname || !sanitizedData.subject || !sanitizedData.message || !sanitizedData.agreedToTerms) {
             return NextResponse.json(
-                { error: 'Server configuration error' },
-                { status: 500 }
+                { error: 'All required fields must be filled' },
+                { status: 400 }
+            );
+        }
+        if (!isValidEmail(sanitizedData.email)) {
+            return NextResponse.json(
+                { error: 'Please enter a valid email address' },
+                { status: 400 }
             );
         }
 
-        // Send to Make.com webhook
-        const response = await fetch(makeWebhookUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(sanitizedData),
-        });
+        const delivered = await forwardToWebhook(
+            process.env.MAKE_WEBHOOK_CONTACT_FORM,
+            sanitizedData,
+            'Contact Form'
+        );
 
-        if (!response.ok) {
-            console.error('Make.com webhook error:', response.status);
+        if (!delivered) {
             return NextResponse.json(
-                { error: 'Submission failed. Please try again.' },
+                { error: 'Submission failed. Please try again or email support@bayx.app.' },
                 { status: 500 }
             );
         }

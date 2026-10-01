@@ -1,55 +1,44 @@
 import { NextRequest, NextResponse } from 'next/server';
-
-function sanitize(input: string): string {
-    return input.trim().replace(/[<>]/g, '').replace(/['";\\]/g, '').slice(0, 500);
-}
+import { cleanText, forwardToWebhook, isValidEmail } from '@/utils/formSubmission';
 
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
         const { name, email, subject, message, agreedToTerms } = body;
 
-        // Validation
-        if (!name || !email || !subject || !message || !agreedToTerms) {
-            return NextResponse.json(
-                { error: 'All fields are required' },
-                { status: 400 }
-            );
-        }
-
         const sanitizedData = {
-            name: sanitize(name),
-            email: sanitize(email.toLowerCase()),
-            subject: sanitize(subject),
-            message: sanitize(message),
+            name: cleanText(name, 100),
+            email: cleanText(email, 254).toLowerCase(),
+            subject: cleanText(subject, 200),
+            message: cleanText(message, 5000),
             agreedToTerms: agreedToTerms === true,
             source: 'Support Form',
             submittedAt: new Date().toISOString(),
         };
 
-        const makeWebhookUrl = process.env.MAKE_WEBHOOK_SUPPORT;
-
-        if (!makeWebhookUrl) {
-            console.error('Make.com webhook URL not configured');
+        // Validation
+        if (!sanitizedData.name || !sanitizedData.subject || !sanitizedData.message || !sanitizedData.agreedToTerms) {
             return NextResponse.json(
-                { error: 'Server configuration error' },
-                { status: 500 }
+                { error: 'All fields are required' },
+                { status: 400 }
+            );
+        }
+        if (!isValidEmail(sanitizedData.email)) {
+            return NextResponse.json(
+                { error: 'Please enter a valid email address' },
+                { status: 400 }
             );
         }
 
-        // Send to Make.com webhook
-        const response = await fetch(makeWebhookUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(sanitizedData),
-        });
+        const delivered = await forwardToWebhook(
+            process.env.MAKE_WEBHOOK_SUPPORT,
+            sanitizedData,
+            'Support Form'
+        );
 
-        if (!response.ok) {
-            console.error('Make.com webhook error:', response.status);
+        if (!delivered) {
             return NextResponse.json(
-                { error: 'Submission failed. Please try again.' },
+                { error: 'Submission failed. Please try again or email support@bayx.app.' },
                 { status: 500 }
             );
         }

@@ -1,14 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { cleanText, forwardToWebhook, isValidEmail } from '@/utils/formSubmission';
 
-function validateEarlyAccessData(data: any) {
+function validateEarlyAccessData(data: { email: string; fullName: string; companyName: string; agreedToTerms: boolean }) {
     const errors: string[] = [];
-    if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+    if (!isValidEmail(data.email)) {
         errors.push('Invalid email');
     }
-    if (!data.fullName || data.fullName.length < 2) {
+    if (data.fullName.length < 2) {
         errors.push('Invalid name');
     }
-    if (!data.companyName || data.companyName.length < 2) {
+    if (data.companyName.length < 2) {
         errors.push('Invalid company name');
     }
     if (!data.agreedToTerms) {
@@ -17,14 +18,24 @@ function validateEarlyAccessData(data: any) {
     return errors;
 }
 
-function sanitize(input: string): string {
-    return input.trim().replace(/[<>]/g, '').replace(/['";\\]/g, '').slice(0, 200);
-}
-
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
-        const errors = validateEarlyAccessData(body);
+        const fullName = cleanText(body.fullName, 100);
+
+        const sanitizedData = {
+            email: cleanText(body.email, 254).toLowerCase(),
+            fullName,
+            firstName: fullName.split(' ')[0] || '',
+            lastName: fullName.split(' ').slice(1).join(' ') || '',
+            phone: cleanText(body.phone, 30),
+            companyName: cleanText(body.companyName, 200),
+            agreedToTerms: body.agreedToTerms === true,
+            source: 'Early Access Form',
+            submittedAt: new Date().toISOString(),
+        };
+
+        const errors = validateEarlyAccessData(sanitizedData);
 
         if (errors.length > 0) {
             return NextResponse.json(
@@ -33,41 +44,15 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        const sanitizedData = {
-            email: sanitize(body.email.toLowerCase()),
-            fullName: sanitize(body.fullName),
-            firstName: sanitize(body.fullName.split(' ')[0] || ''),
-            lastName: sanitize(body.fullName.split(' ').slice(1).join(' ') || ''),
-            phone: body.phone ? sanitize(body.phone) : '',
-            companyName: sanitize(body.companyName),
-            agreedToTerms: body.agreedToTerms === true,
-            source: 'Early Access Form',
-            submittedAt: new Date().toISOString(),
-        };
+        const delivered = await forwardToWebhook(
+            process.env.MAKE_WEBHOOK_EARLY_ACCESS,
+            sanitizedData,
+            'Early Access Form'
+        );
 
-        const makeWebhookUrl = process.env.MAKE_WEBHOOK_EARLY_ACCESS;
-
-        if (!makeWebhookUrl) {
-            console.error('Make.com webhook URL not configured');
+        if (!delivered) {
             return NextResponse.json(
-                { error: 'Server configuration error' },
-                { status: 500 }
-            );
-        }
-
-        // Send to Make.com webhook
-        const response = await fetch(makeWebhookUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(sanitizedData),
-        });
-
-        if (!response.ok) {
-            console.error('Make.com webhook error:', response.status);
-            return NextResponse.json(
-                { error: 'Submission failed. Please try again.' },
+                { error: 'Submission failed. Please try again or email support@bayx.app.' },
                 { status: 500 }
             );
         }

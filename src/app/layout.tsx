@@ -7,7 +7,6 @@ import MetaPixel from '@/components/shared/MetaPixel';
 import { AppContextProvider } from '@/context/AppContext';
 import { interTight } from '@/utils/font';
 import { generateMetadata } from '@/utils/generateMetaData';
-import { Analytics } from '@vercel/analytics/next';
 import { Metadata } from 'next';
 import Script from 'next/script';
 import { ReactNode, Suspense } from 'react';
@@ -52,7 +51,6 @@ export default function RootLayout({
             </SmoothScrollProvider>
           </Suspense>
         </AppContextProvider>
-        <Analytics />
         <Clarity />
         <GoogleAnalytics />
         <MetaPixel />
