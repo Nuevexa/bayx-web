@@ -7,4 +7,10 @@ import { defineCliConfig } from 'sanity/cli'
 const projectId = process.env.SANITY_STUDIO_PROJECT_ID || process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 const dataset = process.env.SANITY_STUDIO_DATASET || process.env.NEXT_PUBLIC_SANITY_DATASET
 
-export default defineCliConfig({ api: { projectId, dataset } })
+export default defineCliConfig({
+  api: { projectId, dataset },
+  // Hosted Studio at https://bayx.sanity.studio
+  deployment: {
+    appId: 'ox33hokbwf7ij6k4eioxc71u',
+  },
+})
